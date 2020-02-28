@@ -1,2 +1,2 @@
-# Lesson_12
-Lesson 12
+# GLO_Academy
+glo_academy
