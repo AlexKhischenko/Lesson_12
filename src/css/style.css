@@ -314,7 +314,8 @@ template {
 
 .menu {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  align-items: center; }
 
 .logo {
   color: #E3B873;
