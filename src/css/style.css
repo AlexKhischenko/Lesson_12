@@ -318,11 +318,52 @@ template {
 [hidden] {
   display: none; }
 
+.button {
+  padding: 13px 20px;
+  border: none;
+  border-radius: 2px;
+  text-transform: uppercase; }
+  .button:hover {
+    cursor: pointer; }
+  .button--primary {
+    background-color: #E3B873;
+    color: #ffffff;
+    box-shadow: 0 5px 15px rgba(227, 184, 115, 0.2);
+    transition: box-shadow 0.3s; }
+    .button--primary:hover {
+      box-shadow: none; }
+  .button--outline {
+    border: 1px solid #ffffff;
+    background-color: transparent;
+    color: #ffffff; }
+
+.section-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Yeseva One', cursive; }
+  .section-title__image {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .section-title__image::before, .section-title__image::after {
+      content: '';
+      width: 32px;
+      height: 2px;
+      margin: 0 10px;
+      background-color: #E3B873; }
+
 .container {
   width: 85%;
   max-width: 1256px;
   width: 100%;
   margin: auto; }
+
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Futura Book', sans-serif;
+  font-size: 14px; }
 
 .header {
   position: fixed;
@@ -441,29 +482,3 @@ template {
   font-size: 40px; }
   .title--primary {
     color: #E3B873; }
-
-.button {
-  padding: 13px 20px;
-  border: none;
-  border-radius: 2px;
-  text-transform: uppercase; }
-  .button:hover {
-    cursor: pointer; }
-  .button--primary {
-    background-color: #E3B873;
-    color: #ffffff;
-    box-shadow: 0 5px 15px rgba(227, 184, 115, 0.2);
-    transition: box-shadow 0.3s; }
-    .button--primary:hover {
-      box-shadow: none; }
-  .button--outline {
-    border: 1px solid #ffffff;
-    background-color: transparent;
-    color: #ffffff; }
-
-*, *:before, *:after {
-  box-sizing: border-box; }
-
-body {
-  font-family: 'Futura Book', sans-serif;
-  font-size: 14px; }
