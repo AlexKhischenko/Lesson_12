@@ -20,11 +20,17 @@
   &__content
     position: relative
     max-width: 670px
+    margin-left: 60px
+  &__title
+    // margin-bottom: 50px
   &__text
-    font-size: 22px
+    font-size: 1.571rem
+    line-height: 30px
     max-width: 500px
+    margin: 16px 0 45px 0
   &__button
-    margin-right: 20px
+    margin-right: 16px    
+    letter-spacing: 0.02rem
   &__instagram
     position: absolute
     left: 0
@@ -41,6 +47,8 @@
     min-width: 247px
     min-height: 97px
     background-color: $dark
+    font-family: 'Yeseva One', cursive
+    font-size: 0.857rem
     text-transform: uppercase
     text-decoration: none
     color: $light
@@ -51,7 +59,7 @@
       background-position: center
       width: 30px
       height: 30px
-      margin-left: 12px
+      margin-left: 16px
       border: 2px solid $primary
       border-radius: 50%
 .instagram
@@ -59,6 +67,7 @@
   justify-content: center
   align-items: center
   background-color: $dark
+  font-family: 'Futura Demi'
   &__link
     display: flex
     align-items: center
@@ -71,12 +80,13 @@
       content: ''
       width: 50px
       height: 1px
-      margin-left: 8px
+      margin-left: 14px
       background-color: $primary
 .title
   margin: 0
   font-family: 'Yeseva One', cursive
   text-transform: uppercase
-  font-size: 40px
-  &--primary
+  font-size: 2.857rem
+  line-height: 3.786rem
+  &--primary    
     color: $primary
