@@ -397,13 +397,14 @@ body {
   letter-spacing: 0.033rem; }
 
 .nav__item {
-  margin-left: 2.643rem;
   color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
   transition: color 0.2s; }
   .nav__item:hover {
     color: #E3B873; }
+  .nav__item:nth-of-type(n+2):nth-of-type(-n+6) {
+    margin-left: 2.643rem; }
 
 .phone {
   color: #E3B873; }
@@ -435,12 +436,12 @@ body {
     background-color: rgba(19, 19, 19, 0.7); }
   .hero__content {
     position: relative;
-    max-width: 670px;
-    margin-left: 60px; }
+    max-width: 47.857rem;
+    margin-left: 4.286rem; }
   .hero__text {
     font-size: 1.571rem;
     line-height: 2.143rem;
-    max-width: 500px;
+    max-width: 35.714rem;
     margin: 1.143rem 0 3.214rem 0; }
   .hero__button {
     margin-right: 1.143rem;
@@ -458,8 +459,8 @@ body {
     align-items: center;
     left: 0;
     bottom: 0;
-    min-width: 247px;
-    min-height: 97px;
+    min-width: 17.643rem;
+    min-height: 6.929rem;
     background-color: #131313;
     font-family: 'Yeseva One', cursive;
     font-size: 0.857rem;
@@ -506,3 +507,56 @@ body {
   line-height: 3.786rem; }
   .title--primary {
     color: #E3B873; }
+
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 12px; }
+  .menu {
+    justify-content: space-between; }
+    .menu__logo {
+      margin-left: 2rem; }
+    .menu__contacts {
+      margin-left: auto;
+      margin-right: 2rem; }
+  .instagram {
+    display: none; }
+  __item:nth-of-type(n+2):nth-of-type(-n+6) {
+    margin-left: 2rem; }
+  .hero__scroll-down {
+    min-height: 5rem; } }
+
+@media screen and (max-width: 992px) {
+  .menu__logo {
+    margin-left: 1.5rem; }
+  .menu__contacts {
+    margin-right: 1.5rem; }
+  .nav {
+    display: none; }
+  .button--primary {
+    box-shadow: none; }
+  .hero__content {
+    max-width: 28.25rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem; }
+  .hero__text {
+    margin: 1.333rem 0 2.666rem 0;
+    font-size: 1.5rem; }
+  .hero__button {
+    display: block;
+    width: 100%;
+    margin-bottom: 2.167rem; }
+  .hero__scroll-down {
+    display: none; }
+  .title {
+    font-size: 1.917rem;
+    line-height: 2.583rem; }
+  .section-title {
+    display: none; } }
+
+@media screen and (max-width: 768px) {
+  .contacts__phone {
+    margin-right: 0;
+    color: #ffffff;
+    text-decoration: none; }
+  .contacts__button {
+    display: none; } }

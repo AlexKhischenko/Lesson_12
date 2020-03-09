@@ -1,0 +1,60 @@
+@media screen and ( max-width: 1200px )
+  html
+    font-size: 12px
+  .menu
+    justify-content: space-between
+    &__logo
+      margin-left: 2rem
+    &__contacts
+      margin-left: auto
+      margin-right: 2rem
+  .instagram
+    display: none
+  .nav
+  &__item
+    &:nth-of-type(n+2):nth-of-type(-n+6)
+      margin-left: 2rem
+  .hero
+    &__scroll-down
+      min-height: 5rem
+
+@media screen and ( max-width: 992px )
+  .menu
+    &__logo
+      margin-left: 1.5rem
+    &__contacts
+      margin-right: 1.5rem
+  .nav
+    display: none
+  .button
+    &--primary
+      box-shadow: none
+  .hero
+    &__content
+      max-width: 28.25rem
+      margin-left: 1.5rem
+      margin-right: 1.5rem
+    &__text
+      margin: 1.333rem 0 2.666rem 0
+      font-size: 1.5rem
+    &__button
+      display: block
+      width: 100%
+      margin-bottom: 2.167rem
+    &__scroll-down
+      display: none
+  .title
+    font-size: 1.917rem
+    line-height: 2.583rem
+  .section
+    &-title
+      display: none
+
+@media screen and ( max-width: 768px )
+  .contacts
+    &__phone
+      margin-right: 0
+      color: #ffffff
+      text-decoration: none
+    &__button
+      display: none

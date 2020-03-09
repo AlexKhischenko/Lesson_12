@@ -20,14 +20,15 @@
   font-weight: 500
   letter-spacing: 0.033rem
 .nav
-  &__item
-    margin-left: 2.643rem
+  &__item    
     color: $light
     text-decoration: none
     text-transform: uppercase
     transition: color 0.2s
     &:hover
       color: $primary
+    &:nth-of-type(n+2):nth-of-type(-n+6)
+      margin-left: 2.643rem
 .phone
   color: $primary
 .contacts
