@@ -508,9 +508,7 @@ body {
   .title--primary {
     color: #E3B873; }
 
-@media screen and (max-width: 1200px) {
-  html {
-    font-size: 12px; }
+@media screen and (max-width: 1320px) {
   .menu {
     justify-content: space-between; }
     .menu__logo {
@@ -518,9 +516,13 @@ body {
     .menu__contacts {
       margin-left: auto;
       margin-right: 2rem; }
-  .instagram {
-    display: none; }
-  __item:nth-of-type(n+2):nth-of-type(-n+6) {
+  .hero__instagram {
+    max-width: 40px; } }
+
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 12px; }
+  .nav__item:nth-of-type(n+2):nth-of-type(-n+6) {
     margin-left: 2rem; }
   .hero__scroll-down {
     min-height: 5rem; } }
@@ -530,8 +532,8 @@ body {
     margin-left: 1.5rem; }
   .menu__contacts {
     margin-right: 1.5rem; }
-  .nav {
-    display: none; }
+  .nav__item:nth-of-type(n+2):nth-of-type(-n+6) {
+    margin-left: 1.643rem; }
   .button--primary {
     box-shadow: none; }
   .hero__content {
@@ -543,9 +545,12 @@ body {
     font-size: 1.5rem; }
   .hero__button {
     display: block;
+    max-width: 31.25rem;
     width: 100%;
     margin-bottom: 2.167rem; }
   .hero__scroll-down {
+    display: none; }
+  .instagram {
     display: none; }
   .title {
     font-size: 1.917rem;
@@ -553,10 +558,15 @@ body {
   .section-title {
     display: none; } }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
   .contacts__phone {
     margin-right: 0;
-    color: #ffffff;
     text-decoration: none; }
   .contacts__button {
     display: none; } }
+
+@media screen and (max-width: 700px) {
+  .nav {
+    display: none; }
+  .contacts__phone {
+    color: #ffffff; } }

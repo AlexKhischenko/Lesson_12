@@ -1,6 +1,4 @@
-@media screen and ( max-width: 1200px )
-  html
-    font-size: 12px
+@media screen and ( max-width: 1320px )
   .menu
     justify-content: space-between
     &__logo
@@ -8,12 +6,17 @@
     &__contacts
       margin-left: auto
       margin-right: 2rem
-  .instagram
-    display: none
+  .hero
+    &__instagram
+      max-width: 40px
+
+@media screen and ( max-width: 1200px )
+  html
+    font-size: 12px
   .nav
-  &__item
-    &:nth-of-type(n+2):nth-of-type(-n+6)
-      margin-left: 2rem
+    &__item
+      &:nth-of-type(n+2):nth-of-type(-n+6)
+        margin-left: 2rem
   .hero
     &__scroll-down
       min-height: 5rem
@@ -25,7 +28,9 @@
     &__contacts
       margin-right: 1.5rem
   .nav
-    display: none
+    &__item
+      &:nth-of-type(n+2):nth-of-type(-n+6)
+        margin-left: 1.643rem
   .button
     &--primary
       box-shadow: none
@@ -39,10 +44,13 @@
       font-size: 1.5rem
     &__button
       display: block
+      max-width: 31.25rem
       width: 100%
       margin-bottom: 2.167rem
     &__scroll-down
       display: none
+  .instagram
+    display: none
   .title
     font-size: 1.917rem
     line-height: 2.583rem
@@ -50,11 +58,17 @@
     &-title
       display: none
 
-@media screen and ( max-width: 768px )
+@media screen and ( max-width: 900px )
   .contacts
     &__phone
       margin-right: 0
-      color: #ffffff
       text-decoration: none
     &__button
       display: none
+
+@media screen and ( max-width: 700px )
+  .nav
+    display: none
+  .contacts
+    &__phone
+      color: #ffffff
