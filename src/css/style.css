@@ -554,12 +554,14 @@ img {
   position: absolute;
   left: 0;
   bottom: -1.79rem;
+  width: 16.285rem;
   font-size: 1.29rem;
   font-family: 'Yeseva One', cursive;
   text-transform: uppercase;
+  text-align: center;
   background-color: #E3B873;
   color: #ffffff;
-  padding: 1.214rem 2.6rem; }
+  padding: 1.214rem 0; }
 
 .design__info {
   margin: 0 auto 3rem auto;
@@ -650,6 +652,9 @@ img {
     line-height: 1.9rem; }
   .card__item {
     font-size: 1.083rem; }
+  .card__pricetag {
+    width: 15.833rem;
+    padding: 0.917rem 0; }
   .design__info {
     margin-bottom: 2.5rem;
     max-width: 25.5rem;
