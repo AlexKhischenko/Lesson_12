@@ -38,8 +38,7 @@
     opacity: 0
     visibility: hidden
     &:checked +
-      .policy__label
-        font-size: 1.143rem
+      .policy__label        
         &::before
           background-color: $primary
           background-image: url("../img/check.svg")
@@ -48,6 +47,7 @@
   &__label
     display: flex
     align-items: center
+    font-size: 1.143rem
     &::before
       content: ''
       width: 18px
