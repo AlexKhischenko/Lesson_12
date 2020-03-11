@@ -31,5 +31,5 @@ document.addEventListener("DOMContentLoaded", function(event) {
   closeBtn.addEventListener('click', switchModal);
   closeBtn.addEventListener('click', switchModal);
   document.addEventListener('keydown', escapeBtn);  
-  document.addEventListener('click', clickFreeSpace);
+  modal.addEventListener('click', clickFreeSpace);
 });
