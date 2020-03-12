@@ -52,11 +52,12 @@ $(document).ready(function () {
   let modal = $('.modal');
   let modalBtn = $('[data-toggle=modal]');
   let closeBtn = $('.modal__close');
+  let scrollUpBtn = $('.scrollup');
 
   modalBtn.click( () => {
     modal.toggleClass('modal--visible');
   });
-  
+
   closeBtn.click( () => {
     modal.toggleClass('modal--visible');
   });
@@ -74,4 +75,17 @@ $(document).ready(function () {
       modal.toggleClass('modal--visible');
     };
   });
+
+  $(window).scroll( () => {
+    if ($(this).scrollTop() > 200) {
+      scrollUpBtn.fadeIn();
+    } else {
+      scrollUpBtn.fadeOut();
+    }    
+  });
+
+  scrollUpBtn.click( () => {
+    $('html').animate({scrollTop : 0}, 900);
+});
+
 });
