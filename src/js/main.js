@@ -77,7 +77,7 @@ $(document).ready(function () {
   });
 
   $(window).scroll( () => {
-    if ($(this).scrollTop() > 200) {
+    if ($(this).scrollTop() > 150) {
       scrollUpBtn.fadeIn();
     } else {
       scrollUpBtn.fadeOut();
