@@ -58,8 +58,13 @@
       margin-right: 0.64rem
 .scrollup
   position: fixed
+  display: hidden
+  opacity: 0
   right: 20px
   bottom: 20px
+  &--visible
+    display: visible
+    opacity: 1
   &__content
     display: flex
     justify-content: center

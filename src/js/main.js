@@ -78,9 +78,11 @@ $(document).ready(function () {
 
   $(window).scroll( () => {
     if ($(this).scrollTop() > 150) {
+      scrollUpBtn.addClass('scrollup--visible');
       scrollUpBtn.fadeIn();
     } else {
       scrollUpBtn.fadeOut();
+      scrollUpBtn.removeClass('scrollup--visible');
     }    
   });
 

@@ -388,8 +388,13 @@ template {
 
 .scrollup {
   position: fixed;
+  display: hidden;
+  opacity: 0;
   right: 20px;
   bottom: 20px; }
+  .scrollup--visible {
+    display: visible;
+    opacity: 1; }
   .scrollup__content {
     display: flex;
     justify-content: center;
