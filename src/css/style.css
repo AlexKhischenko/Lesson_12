@@ -982,6 +982,4 @@ img {
     align-items: left; }
   .col-40 {
     width: 100%;
-    padding-left: 0; }
-  .swiper-container-horizontal > .swiper-pagination-bullets {
-    transform: translateX(50%); } }
+    padding-left: 0; } }
