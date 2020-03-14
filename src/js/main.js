@@ -90,8 +90,7 @@ $(document).ready(function () {
     $('html').animate({scrollTop : 0}, 900);
 });
 
-//initialize swiper when document ready
-var mySwiper = new Swiper ('.swiper1', {
+var mySwiper1 = new Swiper ('.swiper1', {
   loop: true,
   pagination: {
     el: '.swiper-pagination',
@@ -103,12 +102,48 @@ var mySwiper = new Swiper ('.swiper1', {
   },
 });
 
+var mySwiper2 = new Swiper ('.swiper2', {
+  controller: {
+    control: [mySwiper3],
+  },
+    pagination: {
+      el: '.pagination-top',
+      type: 'fraction',
+    },    
+  });
+
+var mySwiper3 = new Swiper ('.swiper3', {
+  controller: {
+    control: [mySwiper2],
+  },
+  pagination: {
+    el: '.pagination-bottom',
+  },  
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+
+$('.one').click( () => {
+  console.log('click');
+  mySwiper3.slideTo(0,700);
+});
+$('.two').click( () => {
+  console.log('click');
+  mySwiper3.slideTo(1,700);
+});
+$('.three').click( () => {
+  console.log('click');
+  mySwiper3.slideTo(2,700);
+});
+
 var next = $('.swiper-button-next');
 var prev = $('.swiper-button-prev');
 var bullets = $('.swiper-pagination');
 
 next.css('left', prev.width() + 20 + bullets.width() + 20);
 bullets.css('left', prev.width() + 20);
-
 
 });

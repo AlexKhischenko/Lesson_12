@@ -53,15 +53,17 @@ img
         margin: 0 10px
         background-color: $primary
 .row
+  position: relative
   display: flex
   align-items: flex-start
   justify-content: space-around
+  &__col-40
+    padding-left: 0.5rem
 .col
   &-32
     flex-basis: 32%
   &-40
     width: 38%
-    padding-left: 0.5rem
   &-60
     width: 62%
     text-align: right
