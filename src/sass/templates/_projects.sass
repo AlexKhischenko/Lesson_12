@@ -1,31 +1,30 @@
-.swiper
-  &-slide
+.swiper1
+  &__slide
     display: flex
     flex-wrap: wrap
     padding-bottom: 5.6rem
-    &__text
-      flex-basis: 40%
-      margin-bottom: 0.85rem
-      padding-bottom: 0.8rem
-    &__heading
-      font-size: 1.285rem
-      line-height: 1.78rem
-      font-family: 'Yeseva One', cursive
-      font-weight: normal
-      text-transform: uppercase
-      color: $primary
-      margin-bottom: 0.6rem
-    &__value
-      letter-spacing: 0.04rem
-    &__word
-      display: block
-      margin-top: 0.15rem   
-    &__image
-      display: block
-      margin-left: auto
+  &__text
+    flex-basis: 40%
+    margin-bottom: 0.85rem
+    padding-bottom: 0.8rem
+  &__heading
+    font-size: 1.285rem
+    line-height: 1.78rem
+    font-family: 'Yeseva One', cursive
+    font-weight: normal
+    text-transform: uppercase
+    color: $primary
+    margin-bottom: 0.6rem
+  &__value
+    letter-spacing: 0.04rem
+  &__word
+    display: block
+    margin-top: 0.15rem
+  &__image
+    display: block
+    margin-left: auto
+.swiper
   &-pagination
-    &-bullets
-
     &-bullet
       background-color: rgba($light, 0.3)
       &-active
@@ -50,6 +49,8 @@
       background-position: center
 .swiper-container-horizontal>.swiper-pagination-bullets
   width: auto
-  bottom: -1px
+  bottom: -2px
 .swiper-container-horizontal>.swiper-pagination-bullets>.swiper-pagination-bullet
-  margin: 0 0.7rem
+  margin: 0 0.6rem
+  width: 10px
+  height: 10px

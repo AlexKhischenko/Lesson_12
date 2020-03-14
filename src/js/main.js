@@ -91,7 +91,7 @@ $(document).ready(function () {
 });
 
 //initialize swiper when document ready
-var mySwiper = new Swiper ('.swiper-container', {
+var mySwiper = new Swiper ('.swiper1', {
   loop: true,
   pagination: {
     el: '.swiper-pagination',
@@ -105,7 +105,6 @@ var mySwiper = new Swiper ('.swiper-container', {
 
 var next = $('.swiper-button-next');
 var prev = $('.swiper-button-prev');
-var bullets = $('.swiper-pagination');
 var bullets = $('.swiper-pagination');
 
 next.css('left', prev.width() + 20 + bullets.width() + 20);
