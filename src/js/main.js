@@ -90,6 +90,7 @@ $(document).ready(function () {
     $('html').animate({scrollTop : 0}, 900);
 });
 
+// Инициализация слайдера "Завершенные проекты"
 var mySwiper1 = new Swiper ('.swiper1', {
   loop: true,
   pagination: {
@@ -102,6 +103,7 @@ var mySwiper1 = new Swiper ('.swiper1', {
   },
 });
 
+// Инициализация слайдеров "6 шагов до цели"
 var mySwiper2 = new Swiper ('.swiper2', {
   controller: {
     control: [mySwiper3],
@@ -109,9 +111,8 @@ var mySwiper2 = new Swiper ('.swiper2', {
     pagination: {
       el: '.pagination-top',
       type: 'fraction',
-    },    
+    },
   });
-
 var mySwiper3 = new Swiper ('.swiper3', {
   controller: {
     control: [mySwiper2],
@@ -130,14 +131,88 @@ getAllSteps = $('.steps-content__step');
 getAllSwipers = $('.swiper2__item');
 getPrevClick = $('.swiper2-prev');
 getNextClick = $('.swiper2-next');
-// a = mySwiper2.realIndex;
-// b = mySwiper3.realIndex;
 
-// $('.swiper2-next').click( () => {
-//   console.log(a);
-//   console.log(b);
-// });
+// Переключение активного разеда по кнопке вперед
+getNextClick.click( () => {
+  if (mySwiper3.activeIndex === 0) {
+    getAllSteps.each(function (indes, element) {
+      $(element).removeClass('active');    
+    });
+    $('.steps-content__step--1').addClass('active');
+  }
+  if (mySwiper3.activeIndex === 1) {
+    getAllSteps.each(function (indes, element) {
+      $(element).removeClass('active');    
+    });
+    $('.steps-content__step--2').addClass('active');
+  }
+  if (mySwiper3.activeIndex === 2) {
+    getAllSteps.each(function (indes, element) {
+      $(element).removeClass('active');    
+    });
+    $('.steps-content__step--3').addClass('active');
+  }
+  if (mySwiper3.activeIndex === 3) {
+    getAllSteps.each(function (indes, element) {
+      $(element).removeClass('active');    
+    });
+    $('.steps-content__step--4').addClass('active');
+  }
+  if (mySwiper3.activeIndex === 4) {
+    getAllSteps.each(function (indes, element) {
+      $(element).removeClass('active');    
+    });
+    $('.steps-content__step--5').addClass('active');
+  }
+  if (mySwiper3.activeIndex === 5) {
+    getAllSteps.each(function (indes, element) {
+      $(element).removeClass('active');    
+    });
+    $('.steps-content__step--6').addClass('active');
+  }
+});
 
+// Переключение активного разеда по кнопке назад
+getPrevClick.click( () => {
+  if (mySwiper3.activeIndex === 0) {
+    getAllSteps.each(function (indes, element) {
+      $(element).removeClass('active');    
+    });
+    $('.steps-content__step--1').addClass('active');
+  }
+  if (mySwiper3.activeIndex === 1) {
+    getAllSteps.each(function (indes, element) {
+      $(element).removeClass('active');    
+    });
+    $('.steps-content__step--2').addClass('active');
+  }
+  if (mySwiper3.activeIndex === 2) {
+    getAllSteps.each(function (indes, element) {
+      $(element).removeClass('active');    
+    });
+    $('.steps-content__step--3').addClass('active');
+  }
+  if (mySwiper3.activeIndex === 3) {
+    getAllSteps.each(function (indes, element) {
+      $(element).removeClass('active');    
+    });
+    $('.steps-content__step--4').addClass('active');
+  }
+  if (mySwiper3.activeIndex === 4) {
+    getAllSteps.each(function (indes, element) {
+      $(element).removeClass('active');    
+    });
+    $('.steps-content__step--5').addClass('active');
+  }
+  if (mySwiper3.activeIndex === 5) {
+    getAllSteps.each(function (indes, element) {
+      $(element).removeClass('active');    
+    });
+    $('.steps-content__step--6').addClass('active');
+  }
+});
+
+// Переключение слайдеров нажатием на раздел
 $('.steps-content__step--1').click( () => {
   getAllSteps.each(function (indes, element) {
     $(element).removeClass('active');    
@@ -183,16 +258,12 @@ $('.steps-content__step--6').click( () => {
 });
 
 
-
-
-
 var next = $('.swiper-button-next');
 var prev = $('.swiper-button-prev');
 var bullets = $('.swiper-pagination');
-
-
 next.css('left', prev.width() + 20 + bullets.width() + 20);
 bullets.css('left', prev.width() + 20);
+
 
 var nextSteps = $('.swiper2-next');
 var prevSteps = $('.swiper2-prev');
