@@ -207,7 +207,7 @@
     padding-left: 0  
   .control
     padding-top: 2.9rem
-    padding-bottom: 2rem
+    padding-bottom: 0
     background-color: $dark
     &__section
       &-title
@@ -216,14 +216,44 @@
     &__video
       max-width: 28.33rem
       min-height: 17.25rem
+      margin-bottom: 2.1rem
       box-shadow: none
+    &__text
+      margin-bottom: 2.3rem
+      font-size: 1.167rem
+      line-height: 2rem
+      color: $light
+      &::before
+        margin-bottom: 1.35rem
     &__form
       flex-direction: column
     &__input-group
       flex-basis: 100%
+      margin-bottom: 5.15rem
+    &__label
+      margin-bottom: -4px
+      font-size: 1.25rem
+      color: rgba(255, 255, 255, 0.5)
+    &__input
+      border-bottom: 1px solid $light
+      font-size: 1.5rem
+      color: $light
+      &::placeholder
+        color: $light
+    &__policy
+      margin-top: -4.2rem
+      margin-bottom: 5.1rem
+      color: $light
+      &-label
+        justify-content: flex-start
+        font-size: 1.333rem
     &__button
       order: 1
+      margin-bottom: -25px
+      font-size: 1.25rem
   .video
     &__play
       width: 5.083rem
       height: 5.083rem
+  .types
+    padding-top: 5.3rem

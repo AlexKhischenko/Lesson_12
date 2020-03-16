@@ -1215,7 +1215,7 @@ img {
     padding-left: 0; }
   .control {
     padding-top: 2.9rem;
-    padding-bottom: 2rem;
+    padding-bottom: 0;
     background-color: #131313; }
     .control__section-title {
       margin-top: 0;
@@ -1223,13 +1223,51 @@ img {
     .control__video {
       max-width: 28.33rem;
       min-height: 17.25rem;
+      margin-bottom: 2.1rem;
       box-shadow: none; }
+    .control__text {
+      margin-bottom: 2.3rem;
+      font-size: 1.167rem;
+      line-height: 2rem;
+      color: #ffffff; }
+      .control__text::before {
+        margin-bottom: 1.35rem; }
     .control__form {
       flex-direction: column; }
     .control__input-group {
-      flex-basis: 100%; }
+      flex-basis: 100%;
+      margin-bottom: 5.15rem; }
+    .control__label {
+      margin-bottom: -4px;
+      font-size: 1.25rem;
+      color: rgba(255, 255, 255, 0.5); }
+    .control__input {
+      border-bottom: 1px solid #ffffff;
+      font-size: 1.5rem;
+      color: #ffffff; }
+      .control__input::-webkit-input-placeholder {
+        color: #ffffff; }
+      .control__input::-moz-placeholder {
+        color: #ffffff; }
+      .control__input:-ms-input-placeholder {
+        color: #ffffff; }
+      .control__input::-ms-input-placeholder {
+        color: #ffffff; }
+      .control__input::placeholder {
+        color: #ffffff; }
+    .control__policy {
+      margin-top: -4.2rem;
+      margin-bottom: 5.1rem;
+      color: #ffffff; }
+      .control__policy-label {
+        justify-content: flex-start;
+        font-size: 1.333rem; }
     .control__button {
-      order: 1; }
+      order: 1;
+      margin-bottom: -25px;
+      font-size: 1.25rem; }
   .video__play {
     width: 5.083rem;
-    height: 5.083rem; } }
+    height: 5.083rem; }
+  .types {
+    padding-top: 5.3rem; } }
