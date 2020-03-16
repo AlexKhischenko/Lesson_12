@@ -74,6 +74,7 @@
     font-size: 1.917rem
     line-height: 2.583rem
   .section
+    padding-top: 0
     &-title
       &__heading
         &--primary
@@ -182,13 +183,47 @@
       color: #ffffff
 
 @media screen and ( max-width: 570px )
+  .section
+    padding: 0
+  .projects
+    padding-bottom: 0
+    &__swiper
+      padding-bottom: 3rem
+    &__pagination
+      left: calc(50% - 37px) !important
+  .swiper
+    &-button
+      &-prev
+        left: calc(50% - 100px) !important
+      &-next
+        left: calc(50% + 62px) !important
   .swiper1
-    &__slide
-      padding-bottom: 2rem
     &__text
       flex-basis: 47.5%
   .row
     align-items: left
   .col-40
     width: 100%
-    padding-left: 0
+    padding-left: 0  
+  .control
+    padding-top: 2.9rem
+    padding-bottom: 2rem
+    background-color: $dark
+    &__section
+      &-title
+        margin-top: 0
+        margin-bottom: 3.5rem
+    &__video
+      max-width: 28.33rem
+      min-height: 17.25rem
+      box-shadow: none
+    &__form
+      flex-direction: column
+    &__input-group
+      flex-basis: 100%
+    &__button
+      order: 1
+  .video
+    &__play
+      width: 5.083rem
+      height: 5.083rem
