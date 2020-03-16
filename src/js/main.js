@@ -54,6 +54,8 @@ $(document).ready(function () {
   let closeBtn = $('.modal__close');
   let scrollUpBtn = $('.scrollup');
 
+  new WOW().init();
+
   modalBtn.click( () => {
     modal.toggleClass('modal--visible');
   });
