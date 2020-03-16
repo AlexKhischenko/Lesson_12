@@ -534,6 +534,34 @@ img {
   background-color: #E3B873;
   color: #ffffff; }
 
+.myFadeInUp {
+  -webkit-animation-name: myFadeInUp;
+  animation-name: myFadeInUp;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }
+
+.myZoomIn {
+  -webkit-animation-name: myZoomIn;
+  animation-name: myZoomIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }
+
+.animateProjects {
+  opacity: 0; }
+
+.animateControl {
+  opacity: 0; }
+
+.animateDesign {
+  opacity: 0; }
+
+.animateSteps {
+  opacity: 0; }
+
 .header {
   position: fixed;
   left: 0;
@@ -1029,6 +1057,36 @@ img {
   .modal__button {
     align-self: flex-end;
     min-width: 15.214rem; }
+
+@-webkit-keyframes myFadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0); }
+  100% {
+    opacity: 1;
+    transform: none; } }
+
+@keyframes myFadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0); }
+  100% {
+    opacity: 1;
+    transform: none; } }
+
+@-webkit-keyframes myZoomIn {
+  0% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3); }
+  50% {
+    opacity: 1; } }
+
+@keyframes myZoomIn {
+  0% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3); }
+  50% {
+    opacity: 1; } }
 
 @media screen and (max-width: 1320px) {
   .menu {

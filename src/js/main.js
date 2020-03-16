@@ -54,7 +54,7 @@ $(document).ready(function () {
   let closeBtn = $('.modal__close');
   let scrollUpBtn = $('.scrollup');
 
-  new WOW().init();
+  // new WOW().init();
 
   modalBtn.click( () => {
     modal.toggleClass('modal--visible');
@@ -272,5 +272,51 @@ var prevSteps = $('.swiper2-prev');
 var bulletsSteps = $('.pagination-bottom');
 nextSteps.css('left', prevSteps.width() + 20 + bulletsSteps.width() + 20);
 bulletsSteps.css('left', prevSteps.width() + 20);
+
+
+
+
+// Запуск анимации при скролле
+var documentEl = $(document);
+
+// Анимация секции "Завершенные проекты"
+var projects = $('.projects');
+var animateProjects = $('.animateProjects');
+var startAnimateProjects = projects.offset().top/3;
+documentEl.scroll( () => {
+  if (documentEl.scrollTop() > startAnimateProjects) {
+    animateProjects.addClass('myFadeInUp');
+  }
+});
+
+// Анимация секции "Онлайн контроль"
+var control = $('.control');
+var animateControl = $('.animateControl');
+var startAnimateControl = control.offset().top/3;
+documentEl.scroll( () => {
+  if (documentEl.scrollTop() > startAnimateControl) {
+    animateControl.addClass('myFadeInUp');
+  }
+});
+
+// Анимация секции "Дизайн проект"
+var design = $('.design');
+var animateDesign = $('.animateDesign');
+var startAnimateDesign = design.offset().top;
+documentEl.scroll( () => {
+  if (documentEl.scrollTop() > startAnimateDesign) {
+    animateDesign.addClass('myFadeInUp');
+  }
+});
+
+// Анимация секции "6 шагов до цели"
+var steps = $('.steps');
+var animateSteps = $('.animateSteps');
+var startAnimateSteps = steps.offset().top;
+documentEl.scroll( () => {
+  if (documentEl.scrollTop() > startAnimateSteps) {
+    animateSteps.addClass('myFadeInUp');
+  }
+});
 
 });
