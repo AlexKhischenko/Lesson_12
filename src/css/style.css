@@ -1325,8 +1325,7 @@ img {
     width: 100%;
     order: -1; }
   .design {
-    margin-bottom: 60px;
-    background-color: #131313; }
+    margin-bottom: 60px; }
   .steps {
     display: none; }
   .team {
@@ -1489,4 +1488,60 @@ img {
     width: 5.083rem;
     height: 5.083rem; }
   .types {
-    padding-top: 5.3rem; } }
+    padding-top: 5.3rem; }
+  .design {
+    margin-bottom: 0;
+    background-color: #131313; }
+  .team {
+    margin-top: -1rem; }
+    .team__heading {
+      margin-top: 0;
+      margin-bottom: 1.1rem; }
+    .team__image {
+      margin-top: 0.5rem; }
+    .team__info {
+      margin-top: 1.7rem;
+      margin-bottom: 6.8rem;
+      font-size: 1.25rem;
+      line-height: 1.667rem; }
+    .team__col-32 {
+      margin-left: 2rem; }
+    .team__text {
+      display: none; }
+    .team-card__container {
+      padding-top: 1.8rem; }
+    .team-card__name {
+      margin-bottom: 0.5rem;
+      font-size: 1.5rem; }
+    .team-card__position {
+      font-size: 1.5rem; }
+    .team-card__experience {
+      margin-top: 2rem;
+      font-size: 1.083rem; }
+  .footer {
+    padding-top: 0;
+    background-image: none;
+    background-color: #131313; }
+    .footer__title {
+      margin-bottom: 4.5rem;
+      font-size: 1.667rem; }
+    .footer__wrap {
+      padding: 0;
+      background-image: none; }
+    .footer__label {
+      margin-bottom: -3px;
+      font-size: 1.25rem; }
+    .footer__input {
+      font-size: 1.5rem; }
+      .footer__input-group {
+        flex-basis: 100%;
+        margin-bottom: 5.2rem; }
+    .footer__button {
+      width: 100%;
+      font-size: 1.25rem; }
+  .policy {
+    margin-bottom: 3.7rem; }
+    .policy__label--center {
+      justify-content: flex-start;
+      margin-top: -4.5rem;
+      font-size: 1.333rem; } }
