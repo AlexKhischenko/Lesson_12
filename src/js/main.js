@@ -55,7 +55,7 @@ $(document).ready(function () {
   let scrollUpBtn = $('.scrollup');
 
   //Подключение библиотеки анимации
-  // new WOW().init();
+  new WOW().init();
 
   modalBtn.click( () => {
     modal.toggleClass('modal--visible');
@@ -274,60 +274,141 @@ var bulletsSteps = $('.pagination-bottom');
 nextSteps.css('left', prevSteps.width() + 20 + bulletsSteps.width() + 20);
 bulletsSteps.css('left', prevSteps.width() + 20);
 
-
-
-
-// Запуск анимации при скролле
-var documentEl = $(document);
-
-// Анимация секции "Завершенные проекты"
-var projects = $('.projects');
-var animateProjects = $('.animateProjects');
-var startAnimateProjects = projects.offset().top/3;
-documentEl.scroll( () => {
-  if (documentEl.scrollTop() > startAnimateProjects) {
-    animateProjects.addClass('myFadeInUp');
+// Валидация форм
+// Control Form
+$('.control__form').validate({
+  errorElement: "div",
+  errorClass: "invalid",
+  rules: {
+    // simple rule, converted to {required:true}
+    controlUserName: {
+      required: true,
+      minlength: 2,
+    },
+    controlUserPhone: "required",
+  },
+  messages: {
+    controlUserName: {
+      required: "Заполните поле",
+      minlength: "Имя должно содержать не менее двух символов",
+    },
+    controlUserPhone: "Заполните поле",
   }
 });
 
-// Анимация секции "Онлайн контроль"
-var control = $('.control');
-var animateControl = $('.animateControl');
-var startAnimateControl = control.offset().top/3;
-documentEl.scroll( () => {
-  if (documentEl.scrollTop() > startAnimateControl) {
-    animateControl.addClass('myFadeInUp');
+// Modal Form
+$('.modal__form').validate({
+  errorElement: "div",
+  errorClass: "invalid",
+  rules: {
+    // simple rule, converted to {required:true}
+    modalUserName: {
+      required: true,
+      minlength: 2,
+    },
+    modalUserPhone: "required",
+    // compound rule
+    modalUserEmail: {
+      required: true,
+      email: true
+    }
+  },
+  messages: {
+    modalUserName: {
+      required: "Заполните поле",
+      minlength: "Имя должно содержать не менее двух символов",
+    },
+    modalUserPhone: "Заполните поле",
+    modalUserEmail: {
+      required: "Заполните поле",
+      email: "Введите корректный email"
+    },
   }
 });
 
-// Анимация секции "Виды ремонта"
-var types = $('.types');
-var animateTypes = $('.animateTypes');
-var startAnimateTypes = types.offset().top;
-documentEl.scroll( () => {
-  if (documentEl.scrollTop() > startAnimateTypes) {
-    animateTypes.addClass('myFadeInUp');
+// Footer Form
+$('.footer__form').validate({
+  errorElement: "div",
+  errorClass: "invalid",
+  rules: {
+      // simple rule, converted to {required:true}
+    footerUserName: {
+      required: true,
+      minlength: 2,
+    },
+    footerUserPhone: "required",
+      // compound rule
+      footerUserText: {
+      required: true,
+    }
+  },
+  messages: {
+    footerUserName: {
+      required: "Заполните поле",
+      minlength: "Имя должно содержать не менее двух символов",
+    },
+    footerUserPhone: "Заполните поле",
+    footerUserText: {
+      required: "Заполните поле",
+    },
   }
 });
 
-// Анимация секции "Дизайн проект"
-var design = $('.design');
-var animateDesign = $('.animateDesign');
-var startAnimateDesign = design.offset().top;
-documentEl.scroll( () => {
-  if (documentEl.scrollTop() > startAnimateDesign) {
-    animateDesign.addClass('myFadeInUp');
-  }
-});
+// Маска для номера телефона
+$('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
 
-// Анимация секции "6 шагов до цели"
-var steps = $('.steps');
-var animateSteps = $('.animateSteps');
-var startAnimateSteps = steps.offset().top;
-documentEl.scroll( () => {
-  if (documentEl.scrollTop() > startAnimateSteps) {
-    animateSteps.addClass('myFadeInUp');
-  }
-});
+
+// // Запуск анимации при скролле
+// var documentEl = $(document);
+
+// // Анимация секции "Завершенные проекты"
+// var projects = $('.projects');
+// var animateProjects = $('.animateProjects');
+// var startAnimateProjects = projects.offset().top/3;
+// documentEl.scroll( () => {
+//   if (documentEl.scrollTop() > startAnimateProjects) {
+//     animateProjects.addClass('myFadeInUp');
+//   }
+// });
+
+// // Анимация секции "Онлайн контроль"
+// var control = $('.control');
+// var animateControl = $('.animateControl');
+// var startAnimateControl = control.offset().top/3;
+// documentEl.scroll( () => {
+//   if (documentEl.scrollTop() > startAnimateControl) {
+//     animateControl.addClass('myFadeInUp');
+//   }
+// });
+
+// // Анимация секции "Виды ремонта"
+// var types = $('.types');
+// var animateTypes = $('.animateTypes');
+// var startAnimateTypes = types.offset().top;
+// documentEl.scroll( () => {
+//   if (documentEl.scrollTop() > startAnimateTypes) {
+//     animateTypes.addClass('myFadeInUp');
+//   }
+// });
+
+// // Анимация секции "Дизайн проект"
+// var design = $('.design');
+// var animateDesign = $('.animateDesign');
+// var startAnimateDesign = design.offset().top;
+// documentEl.scroll( () => {
+//   if (documentEl.scrollTop() > startAnimateDesign) {
+//     animateDesign.addClass('myFadeInUp');
+//   }
+// });
+
+// // Анимация секции "6 шагов до цели"
+// var steps = $('.steps');
+// var animateSteps = $('.animateSteps');
+// var startAnimateSteps = steps.offset().top;
+// documentEl.scroll( () => {
+//   if (documentEl.scrollTop() > startAnimateSteps) {
+//     animateSteps.addClass('myFadeInUp');
+//   }
+// });
 
 });

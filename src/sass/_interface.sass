@@ -34,6 +34,10 @@
   &--light
     &::placeholder
       color: $light
+  &--dark
+    color: $dark
+    &::placeholder
+      color: $dark
 .policy
   &__checkbox
     opacity: 0
@@ -81,3 +85,12 @@
     color: $primary
     font-size: 18px
     font-weight: bold
+label
+  &.invalid
+    color: tomato
+input
+  &.invalid
+    border-bottom: 1px solid tomato
+div
+  &.invalid
+    color: tomato
