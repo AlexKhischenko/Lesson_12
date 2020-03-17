@@ -54,6 +54,7 @@ $(document).ready(function () {
   let closeBtn = $('.modal__close');
   let scrollUpBtn = $('.scrollup');
 
+  //Подключение библиотеки анимации
   // new WOW().init();
 
   modalBtn.click( () => {
@@ -296,6 +297,16 @@ var startAnimateControl = control.offset().top/3;
 documentEl.scroll( () => {
   if (documentEl.scrollTop() > startAnimateControl) {
     animateControl.addClass('myFadeInUp');
+  }
+});
+
+// Анимация секции "Виды ремонта"
+var types = $('.types');
+var animateTypes = $('.animateTypes');
+var startAnimateTypes = types.offset().top;
+documentEl.scroll( () => {
+  if (documentEl.scrollTop() > startAnimateTypes) {
+    animateTypes.addClass('myFadeInUp');
   }
 });
 

@@ -385,6 +385,8 @@ template {
     border-radius: 1px;
     cursor: pointer;
     margin-right: 0.64rem; }
+  .policy__label--center {
+    justify-content: center; }
 
 .scrollup {
   position: fixed;
@@ -554,6 +556,9 @@ img {
   opacity: 0; }
 
 .animateControl {
+  opacity: 0; }
+
+.animateTypes {
   opacity: 0; }
 
 .animateDesign {
@@ -894,7 +899,8 @@ img {
   background-color: #131313;
   background-image: url("../img/bg-lines.svg");
   background-repeat: no-repeat;
-  background-position: center; }
+  background-position: center;
+  background-size: cover; }
   .steps-title {
     position: absolute;
     left: 0;
@@ -994,6 +1000,58 @@ img {
 
 .active::before {
   display: none; }
+
+.footer {
+  padding-top: 3rem;
+  background-color: #131313;
+  background-image: url("../img/footer/footer-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+  .footer__wrap {
+    background-color: #131313;
+    background-image: url("../img/bg-lines.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    max-width: 63.07rem;
+    margin: auto;
+    margin-bottom: 3.71rem;
+    padding: 2.5rem; }
+  .footer__title {
+    margin-top: 0;
+    margin-bottom: 3.2rem;
+    text-transform: uppercase;
+    font-family: 'Yeseva One', cursive;
+    font-size: 1.428rem;
+    font-weight: normal;
+    text-align: center; }
+  .footer__form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 37.142rem;
+    margin: auto; }
+  .footer__input {
+    padding-top: 0.3rem; }
+    .footer__input-group {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 44%;
+      margin-bottom: 3.2rem; }
+      .footer__input-group--full-width {
+        flex-basis: 100%;
+        margin-bottom: 2rem; }
+  .footer__policy {
+    flex-basis: 100%;
+    margin-bottom: 3.6rem; }
+  .footer__button {
+    margin: auto;
+    padding: 1.28rem 4.38rem;
+    font-size: 1.071rem; }
+  .footer__menu {
+    padding: 4.285rem 0;
+    background-color: #131313; }
 
 .modal {
   opacity: 0;
