@@ -13,6 +13,7 @@
     padding-left: 1rem
     padding-right: 1rem
   .steps
+    padding-bottom: 400px
     &-title
       padding-left: 1rem
 
@@ -33,6 +34,13 @@
   .steps
     &-title
       padding-left: 0
+  .team
+    &__row
+      justify-content: space-around
+    &__col
+      &-32
+        &--second
+          margin: 0
 
 @media screen and ( max-width: 992px )
   .menu
@@ -100,8 +108,28 @@
   .col-60
     width: 100%
     order: -1
-  .steps
+  .design
+    margin-bottom: 60px
+    background-color: $dark
+  .steps    
     display: none
+  .team
+    margin-top: 60px
+    background-color: $dark
+    &__heading
+      
+    &__info
+      
+    &-card
+      max-width: 304px
+      &__image
+        &-1
+          display: none
+        &-2
+          display: block
+    &__col
+      &-32
+        margin-left: 1.5rem
 
 @media screen and ( max-width: 900px )
   .contacts

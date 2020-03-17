@@ -896,6 +896,7 @@ img {
   margin-top: -500px;
   margin-bottom: 100px;
   padding-top: 520px;
+  padding-bottom: 500px;
   background-color: #131313;
   background-image: url("../img/bg-lines.svg");
   background-repeat: no-repeat;
@@ -1000,6 +1001,88 @@ img {
 
 .active::before {
   display: none; }
+
+.team {
+  margin-top: -41.7rem; }
+  .team__heading {
+    color: #ffffff; }
+  .team__info {
+    margin: 1.2rem auto 5.7rem auto;
+    max-width: 32rem;
+    text-align: center;
+    font-size: 1.428rem;
+    line-height: 2rem;
+    color: #ffffff; }
+  .team__row {
+    justify-content: center; }
+  .team__col-32--second {
+    margin: 0 7.5rem; }
+  .team-card {
+    position: relative;
+    max-width: 272px; }
+    .team-card__icon {
+      position: absolute;
+      left: -35px;
+      top: -35px;
+      display: flex;
+      justify-content: center;
+      align-self: center;
+      width: 70px;
+      height: 70px;
+      background-color: #E3B873;
+      box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.5); }
+    .team-card__image-2 {
+      display: none; }
+    .team-card__container {
+      transform: translateY(-61%);
+      padding-top: 1.571rem;
+      width: 233px;
+      margin: 0 auto;
+      box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05);
+      background-color: #ffffff; }
+    .team-card__person {
+      margin: 0 auto;
+      text-align: center; }
+    .team-card__name {
+      margin: 0 0 0.2rem 0;
+      font-family: 'Yeseva One', cursive;
+      font-weight: normal;
+      font-size: 1.285rem;
+      line-height: 1.785rem; }
+    .team-card__position {
+      margin: 0;
+      font-weight: normal;
+      font-size: 1.285rem;
+      line-height: 1.857rem;
+      text-align: center;
+      color: #959595; }
+    .team-card__experience {
+      margin: 1.44rem 0 0 0;
+      padding: 0.928rem 0;
+      background-color: #E3B873;
+      font-family: 'Yeseva One', cursive;
+      font-weight: normal;
+      font-size: 0.928rem;
+      line-height: 1.428rem;
+      text-align: center;
+      text-transform: uppercase;
+      color: #ffffff; }
+  .team__text {
+    max-width: 40.765rem;
+    margin: -2.4rem auto 0;
+    margin-bottom: 4.285rem;
+    text-align: center;
+    font-size: 1.428rem;
+    line-height: 2.45rem; }
+    .team__text::before {
+      content: '';
+      display: block;
+      margin: auto;
+      margin-bottom: 0.7rem;
+      width: 55px;
+      height: 2px;
+      background-color: #E3B873;
+      border-radius: 30px; }
 
 .footer {
   padding-top: 3rem;
@@ -1159,8 +1242,10 @@ img {
   .row {
     padding-left: 1rem;
     padding-right: 1rem; }
-  .steps-title {
-    padding-left: 1rem; } }
+  .steps {
+    padding-bottom: 400px; }
+    .steps-title {
+      padding-left: 1rem; } }
 
 @media screen and (max-width: 1200px) {
   html {
@@ -1174,7 +1259,11 @@ img {
   .row {
     padding: 0; }
   .steps-title {
-    padding-left: 0; } }
+    padding-left: 0; }
+  .team__row {
+    justify-content: space-around; }
+  .team__col-32--second {
+    margin: 0; } }
 
 @media screen and (max-width: 992px) {
   .menu__logo {
@@ -1235,8 +1324,22 @@ img {
   .col-60 {
     width: 100%;
     order: -1; }
+  .design {
+    margin-bottom: 60px;
+    background-color: #131313; }
   .steps {
-    display: none; } }
+    display: none; }
+  .team {
+    margin-top: 60px;
+    background-color: #131313; }
+    .team-card {
+      max-width: 304px; }
+      .team-card__image-1 {
+        display: none; }
+      .team-card__image-2 {
+        display: block; }
+    .team__col-32 {
+      margin-left: 1.5rem; } }
 
 @media screen and (max-width: 900px) {
   .contacts__phone {
