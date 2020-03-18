@@ -362,7 +362,7 @@ $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
 ymaps.ready(function () {
   var myMap = new ymaps.Map('map', {
           center: [55.786774, 49.142715],
-          zoom: 18
+          zoom: 17
       }, {
           searchControlProvider: 'yandex#search'
       }),

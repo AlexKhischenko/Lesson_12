@@ -1159,9 +1159,9 @@ img {
   .footer__map {
     margin: auto;
     margin-bottom: 4.7rem;
-    max-width: 925px; }
-    .footer__map-mobile {
-      display: none; }
+    max-width: 925px;
+    min-height: 465px;
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.15); }
 
 .address {
   margin: auto;
@@ -1191,11 +1191,6 @@ img {
     background-color: #E3B873; }
     .address__icon-image {
       width: 50%; }
-
-.map {
-  max-width: 925px;
-  min-height: 465px;
-  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.15); }
 
 .modal {
   opacity: 0;
@@ -1338,8 +1333,6 @@ img {
   .button {
     font-size: 1.083rem; }
     .button--primary {
-      padding-top: 1.5rem;
-      padding-bottom: 1.5rem;
       box-shadow: none; }
     .button--outline {
       padding-top: 1.5rem;
@@ -1355,7 +1348,9 @@ img {
     display: block;
     max-width: 31.25rem;
     width: 100%;
-    margin-bottom: 2.15rem; }
+    margin-bottom: 2.15rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem; }
   .hero__scroll-down {
     display: none; }
   .instagram {
@@ -1630,9 +1625,11 @@ img {
       width: 100%;
       font-size: 1.25rem; }
     .footer__map {
-      display: none; }
-      .footer__map-mobile {
-        display: block; }
+      order: -1;
+      margin-bottom: 0;
+      width: 100%;
+      max-height: 255px;
+      min-height: 255px; }
     .footer__menu {
       display: none; }
   .policy__label--center {
@@ -1642,9 +1639,6 @@ img {
   .location {
     display: flex;
     flex-direction: column; }
-  .map {
-    order: -1;
-    min-height: 255px; }
   .address__title {
     margin-top: 3.3rem;
     max-width: 27rem;

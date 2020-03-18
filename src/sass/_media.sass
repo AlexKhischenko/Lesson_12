@@ -54,9 +54,7 @@
         margin-left: 1.643rem
   .button
     font-size: 1.083rem
-    &--primary
-      padding-top: 1.5rem
-      padding-bottom: 1.5rem      
+    &--primary     
       box-shadow: none
     &--outline
       padding-top: 1.5rem
@@ -74,6 +72,8 @@
       max-width: 31.25rem
       width: 100%
       margin-bottom: 2.15rem
+      padding-top: 1.5rem
+      padding-bottom: 1.5rem  
     &__scroll-down
       display: none
   .instagram
@@ -366,9 +366,11 @@
     &__policy
     margin-bottom: 3.3rem
     &__map
-      display: none
-      &-mobile
-        display: block
+      order: -1
+      margin-bottom: 0
+      width: 100%
+      max-height: 255px
+      min-height: 255px
     &__menu
       display: none
   .policy
@@ -380,9 +382,6 @@
   .location
     display: flex
     flex-direction: column
-  .map
-    order: -1
-    min-height: 255px
   .address
     &__title
       margin-top: 3.3rem
