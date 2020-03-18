@@ -358,6 +358,40 @@ $('.footer__form').validate({
 $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
 
 
+// Инициализация карты Yandex Map API
+ymaps.ready(function () {
+  var myMap = new ymaps.Map('map', {
+          center: [55.786774, 49.142715],
+          zoom: 18
+      }, {
+          searchControlProvider: 'yandex#search'
+      }),
+
+      // Создаём макет содержимого.
+      MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+          '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+      ),
+
+      myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+          hintContent: 'Александр Хищенко',
+          balloonContent: 'GLO Academy'
+      }, {
+          // Опции.
+          // Необходимо указать данный тип макета.
+          iconLayout: 'default#image',
+          // Своё изображение иконки метки.
+          iconImageHref: '../img/footer/map-icon.jpg',
+          // Размеры метки.
+          iconImageSize: [32, 32],
+          // Смещение левого верхнего угла иконки относительно
+          // её "ножки" (точки привязки).
+          iconImageOffset: [-5, -38]
+      });
+
+  myMap.geoObjects
+      .add(myPlacemark);
+});
+
 // // Запуск анимации при скролле
 // var documentEl = $(document);
 

@@ -120,6 +120,8 @@
     margin-top: 60px
     padding-top: 2rem
     background-color: $dark
+    &__text
+      color: $light
     &-card
       max-width: 304px
       &__image
@@ -130,6 +132,9 @@
     &__col
       &-32
         margin-left: 1.5rem
+  .footer
+    &__wrap
+      margin-top: auto
 
 @media screen and ( max-width: 900px )
   .contacts
@@ -211,8 +216,6 @@
       text-align: center
   .team
     margin-top: 0
-    &__text
-      color: $light
     &-card
       &__icon
         left: -30px
@@ -338,6 +341,7 @@
         margin-top: 2rem
         font-size: 1.083rem
   .footer
+    margin-bottom: 0 !important
     padding-top: 0
     background-image: none
     background-color: $dark
@@ -345,6 +349,7 @@
       margin-bottom: 4.5rem
       font-size: 1.667rem
     &__wrap
+      margin-bottom: 3.9rem
       padding: 0
       background-image: none
     &__label
@@ -358,11 +363,41 @@
     &__button
       width: 100%
       font-size: 1.25rem
+    &__policy
+    margin-bottom: 3.3rem
+    &__map
+      display: none
+      &-mobile
+        display: block
+    &__menu
+      display: none
   .policy
-    margin-bottom: 3.2rem
     &__label
       &--center
         justify-content: flex-start
         margin-top: -4.5rem
         font-size: 1.333rem
+  .location
+    display: flex
+    flex-direction: column
+  .map
+    order: -1
+    min-height: 255px
+  .address
+    &__title
+      margin-top: 3.3rem
+      max-width: 27rem
+      font-size: 1.5rem
+      letter-spacing: 0
+      line-height: 2.1rem
+    &__icons
+      max-width: 8.2rem
+    &__icon
+      width: 3.25rem
+      height: 3.25rem
+      &-image
+        width: 50%
+  .scrollup
+    display: none
+
       
