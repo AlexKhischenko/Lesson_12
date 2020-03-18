@@ -94,7 +94,7 @@ $(document).ready(function () {
 });
 
 // Инициализация слайдера "Завершенные проекты"
-var mySwiper1 = new Swiper ('.swiper1', {
+var mySwiper1 = new Swiper ('.swiper1', {  
   loop: true,
   pagination: {
     el: '.swiper-pagination',
@@ -107,11 +107,12 @@ var mySwiper1 = new Swiper ('.swiper1', {
 });
 
 // Инициализация слайдеров "6 шагов до цели"
-var mySwiper2 = new Swiper ('.swiper2', {
-  controller: {
-    control: [mySwiper3],
+var mySwiper2 = new Swiper ('.swiper2', {  
+  fadeEffect: {
+    crossFade: true
   },
-    pagination: {
+  effect: 'fade',
+  pagination: {
       el: '.pagination-top',
       type: 'fraction',
     },
@@ -120,6 +121,10 @@ var mySwiper3 = new Swiper ('.swiper3', {
   controller: {
     control: [mySwiper2],
   },
+  fadeEffect: {
+    crossFade: true
+  },
+  effect: 'fade',
   pagination: {
     el: '.pagination-bottom',
   },  
