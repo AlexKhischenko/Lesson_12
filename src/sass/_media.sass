@@ -108,17 +108,18 @@
   .col-60
     width: 100%
     order: -1
+  .types
+    &__card
+      margin-bottom: 5.6rem
   .design
-    margin-bottom: 60px
+    &__card
+      margin-bottom: 5.6rem
   .steps    
     display: none
   .team
     margin-top: 60px
+    padding-top: 2rem
     background-color: $dark
-    &__heading
-      
-    &__info
-      
     &-card
       max-width: 304px
       &__image
@@ -142,6 +143,7 @@
   .section
     &-title
       &__heading
+        margin-top: 0
         font-size: 1.833rem
       &__text
         margin-top: 2.1rem
@@ -164,11 +166,12 @@
   .row
     flex-direction: column
     align-items: center
+  .control
+    &__heading
+      margin-top: 2rem
   .types
     &__section-title
       margin-bottom: 2.35rem
-    &__card
-      margin-bottom: 5.6rem
     &__pricetag
       padding: 0.917rem 0
   .card
@@ -191,16 +194,33 @@
       width: 15.833rem
       font-size: 1.25rem
   .design
-    &__card
-      margin-bottom: 5.6rem
+    margin-bottom: 0
+    padding-top: 3rem
+    background-color: $dark
+    &__heading
+      &--light
+        color: $light
     &__info
       margin: 1.5rem auto 2rem auto
       max-width: 25.5rem
       font-size: 1.25rem
       line-height: 1.667rem
+      color: $light
     &__pricetag
       padding: 0.917rem 0
       text-align: center
+  .team
+    margin-top: 0
+    &__text
+      color: $light
+    &-card
+      &__icon
+        left: -30px
+        top: -30px
+        width: 60px
+        height: 60px
+        &-image
+          width: 60%
 
 @media screen and ( max-width: 700px )
   .nav
@@ -286,9 +306,11 @@
     padding-top: 5.3rem
   .design
     margin-bottom: 0
+    padding-top: 3rem
     background-color: $dark
   .team
-    margin-top: -1rem
+    margin-top: 0
+    padding-top: 2.5rem
     &__heading
       margin-top: 0
       margin-bottom: 1.1rem
@@ -337,7 +359,7 @@
       width: 100%
       font-size: 1.25rem
   .policy
-    margin-bottom: 3.7rem
+    margin-bottom: 3.2rem
     &__label
       &--center
         justify-content: flex-start

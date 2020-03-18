@@ -1346,12 +1346,15 @@ img {
   .col-60 {
     width: 100%;
     order: -1; }
-  .design {
-    margin-bottom: 60px; }
+  .types__card {
+    margin-bottom: 5.6rem; }
+  .design__card {
+    margin-bottom: 5.6rem; }
   .steps {
     display: none; }
   .team {
     margin-top: 60px;
+    padding-top: 2rem;
     background-color: #131313; }
     .team-card {
       max-width: 304px; }
@@ -1371,6 +1374,7 @@ img {
 
 @media screen and (max-width: 760px) {
   .section-title__heading {
+    margin-top: 0;
     font-size: 1.833rem; }
   .section-title__text {
     margin-top: 2.1rem;
@@ -1392,10 +1396,10 @@ img {
   .row {
     flex-direction: column;
     align-items: center; }
+  .control__heading {
+    margin-top: 2rem; }
   .types__section-title {
     margin-bottom: 2.35rem; }
-  .types__card {
-    margin-bottom: 5.6rem; }
   .types__pricetag {
     padding: 0.917rem 0; }
   .card__text {
@@ -1416,16 +1420,32 @@ img {
   .card__pricetag {
     width: 15.833rem;
     font-size: 1.25rem; }
-  .design__card {
-    margin-bottom: 5.6rem; }
-  .design__info {
-    margin: 1.5rem auto 2rem auto;
-    max-width: 25.5rem;
-    font-size: 1.25rem;
-    line-height: 1.667rem; }
-  .design__pricetag {
-    padding: 0.917rem 0;
-    text-align: center; } }
+  .design {
+    margin-bottom: 0;
+    padding-top: 3rem;
+    background-color: #131313; }
+    .design__heading--light {
+      color: #ffffff; }
+    .design__info {
+      margin: 1.5rem auto 2rem auto;
+      max-width: 25.5rem;
+      font-size: 1.25rem;
+      line-height: 1.667rem;
+      color: #ffffff; }
+    .design__pricetag {
+      padding: 0.917rem 0;
+      text-align: center; }
+  .team {
+    margin-top: 0; }
+    .team__text {
+      color: #ffffff; }
+    .team-card__icon {
+      left: -30px;
+      top: -30px;
+      width: 60px;
+      height: 60px; }
+      .team-card__icon-image {
+        width: 60%; } }
 
 @media screen and (max-width: 700px) {
   .nav {
@@ -1513,9 +1533,11 @@ img {
     padding-top: 5.3rem; }
   .design {
     margin-bottom: 0;
+    padding-top: 3rem;
     background-color: #131313; }
   .team {
-    margin-top: -1rem; }
+    margin-top: 0;
+    padding-top: 2.5rem; }
     .team__heading {
       margin-top: 0;
       margin-bottom: 1.1rem; }
@@ -1562,7 +1584,7 @@ img {
       width: 100%;
       font-size: 1.25rem; }
   .policy {
-    margin-bottom: 3.7rem; }
+    margin-bottom: 3.2rem; }
     .policy__label--center {
       justify-content: flex-start;
       margin-top: -4.5rem;
