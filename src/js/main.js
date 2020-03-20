@@ -53,6 +53,9 @@ $(document).ready(function () {
   let modalBtn = $('[data-toggle=modal]');
   let closeBtn = $('.modal__close');
   let scrollUpBtn = $('.scrollup');
+  
+  let controlSuccessMessage = $('.control__success-message');
+  let controlForm = $('.control__form');
 
   let closeSuccessBtn = $('.modal-success__close');
   let modalSuccess = $('.modal-success');
@@ -330,7 +333,9 @@ $('.control__form').validate({
       // dataType: "dataType",
       success: function (response) {
         $(form)[0].reset();
-        modalSuccess.addClass('modal-success--visible');
+        controlForm.addClass('control__form--hidden');
+        controlSuccessMessage.addClass('control__success-message--visible');
+        // modalSuccess.addClass('modal-success--visible');
       }
     });
   }
@@ -372,18 +377,21 @@ $('.modal__form').validate({
       // dataType: "dataType",
       success: function (response) {
         $(form)[0].reset();
-        modal.toggleClass('modal--visible');
-        modalSuccess.addClass('modal-success--visible');
-
-        // modalTitle.addClass('modal__title--hidden');
-        // modalForm.addClass('modal__form--hidden');
-        // modalSuccessMessage.addClass('modal__success-message--visible');
+        modalTitle.addClass('modal__title--hidden');
+        modalForm.addClass('modal__form--hidden');
+        modalSuccessMessage.addClass('modal__success-message--visible');
+        
+        // modal.toggleClass('modal--visible');
+        // modalSuccess.addClass('modal-success--visible');
       }
     });
   }
 });
 
 // Footer Form
+let footerSuccessMessage = $('.footer__success-message');
+let footerForm = $('.footer__form');
+let footerTitle = $('.footer__title');
 $('.footer__form').validate({
   errorElement: "div",
   errorClass: "invalid",
@@ -419,7 +427,10 @@ $('.footer__form').validate({
         // console.log('Ajax сработал. Ответ сервера: ' + response);
         // alert('Форма отправлена, ждите звонка!');
         $(form)[0].reset();
-        modalSuccess.addClass('modal-success--visible');
+        footerTitle.addClass('footer__title--hidden');
+        footerForm.addClass('footer__form--hidden');
+        footerSuccessMessage.addClass('footer__success-message--visible');
+        // modalSuccess.addClass('modal-success--visible');
       }
     });
   }

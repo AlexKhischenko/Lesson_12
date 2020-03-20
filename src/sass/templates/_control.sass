@@ -43,6 +43,8 @@
     flex-wrap: wrap
     max-width: 55rem
     margin: auto
+    &--hidden
+      display: none
   &__input
     &::placeholder
         color: $dark
@@ -60,6 +62,10 @@
     margin-top: 1.2rem
     &-label
       justify-content: center
+  &__success-message
+    display: none
+    &--visible
+      display: block
 .video
   &__play
     position: relative
