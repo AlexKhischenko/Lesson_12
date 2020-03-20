@@ -1,53 +1,3 @@
-/*document.addEventListener("DOMContentLoaded", function(event) {
-  const modal = document.querySelector('.modal');
-  const modalBtn = document.querySelectorAll('[data-toggle=modal]');
-  const closeBtn = document.querySelector('.modal__close');
-  
-  // Функция добавляет класс "modal--visible"
-  const switchModal = () => {
-    modal.classList.toggle('modal--visible');
-  };
-
-  // Функция закрывает модальное окно клавишей "Escape"
-  const escapeBtn = (event) => {
-    if (modal.classList.contains('modal--visible')) {
-      if (event.which == 27) {
-        switchModal();
-      };
-    };
-  };
-
-  // Функция закрывает модальное окно при клике вне модального окна
-  const clickFreeSpace = (e) => {
-    if (e.target.classList.contains('modal')) {
-      switchModal();
-    };
-  };
-
-  modalBtn.forEach(element => {
-    element.addEventListener('click', switchModal);
-  });
-
-  closeBtn.addEventListener('click', switchModal);
-  closeBtn.addEventListener('click', switchModal);
-  document.addEventListener('keydown', escapeBtn);  
-  modal.addEventListener('click', clickFreeSpace);
-}); */
-
-/*$(document).ready(function () {
-  let modal = $('.modal');
-  let modalBtn = $('[data-toggle=modal]');
-  let closeBtn = $('.modal__close');
-
-  modalBtn.on('click', function() {
-    modal.toggleClass('modal--visible');
-  });
-  closeBtn.on('click', function() {
-    modal.toggleClass('modal--visible');
-  });
-
-}); */
-
 $(document).ready(function () {
   let modal = $('.modal');
   let modalBtn = $('[data-toggle=modal]');
@@ -65,6 +15,14 @@ $(document).ready(function () {
 
   //Подключение библиотеки анимации
   new WOW().init();
+
+  // Плавная прокрутка к якорю
+  const navbar = $('.header');
+  $(".nav__item").click(function(e) {
+    e.preventDefault();
+    var anchor = $(this);
+    $('html, body').animate({scrollTop: $(anchor.attr('href')).position().top - navbar.outerHeight()}, 1000);
+  });
 
   // Вызов модального окна любой из кнопок
   modalBtn.click( () => {
@@ -106,6 +64,7 @@ $(document).ready(function () {
     };
   });
 
+  // Кнопка возврата в начало страницы
   $(window).scroll( () => {
     if ($(this).scrollTop() > 150) {
       scrollUpBtn.addClass('scrollup--visible');
@@ -115,10 +74,11 @@ $(document).ready(function () {
       scrollUpBtn.removeClass('scrollup--visible');
     }    
   });
-
   scrollUpBtn.click( () => {
     $('html').animate({scrollTop : 0}, 900);
-});
+  });
+
+
 
 // Инициализация слайдера "Завершенные проекты"
 var mySwiper1 = new Swiper ('.swiper1', {  
@@ -316,7 +276,7 @@ $('.control__form').validate({
       required: true,
       minlength: 2,
     },
-    controlUserPhone: "required",
+    controlUserPhone: "required",    
   },
   messages: {
     controlUserName: {
@@ -335,7 +295,6 @@ $('.control__form').validate({
         $(form)[0].reset();
         controlForm.addClass('control__form--hidden');
         controlSuccessMessage.addClass('control__success-message--visible');
-        // modalSuccess.addClass('modal-success--visible');
       }
     });
   }
@@ -345,6 +304,16 @@ $('.control__form').validate({
 $('.modal__form').validate({
   errorElement: "div",
   errorClass: "invalid",
+  errorPlacement: function(error, element) {
+    if (element.attr("name") == "modalCheckbox") {
+    //Здесь пиши любые операции если чекбокс не отмечен
+        error.insertBefore(element.parent());
+    } else {
+        error.insertBefore(element);
+    }
+    return true;
+},
+ignore: ":disabled",
   rules: {
     // simple rule, converted to {required:true}
     modalUserName: {
@@ -356,7 +325,10 @@ $('.modal__form').validate({
     modalUserEmail: {
       required: true,
       email: true
-    }
+    },
+    modalCheckbox: {
+      required: true,
+    },
   },
   messages: {
     modalUserName: {
@@ -368,6 +340,7 @@ $('.modal__form').validate({
       required: "Заполните поле",
       email: "Введите корректный email"
     },
+    modalCheckbox: "Это поле обязательно",
   },
   submitHandler: function(form) {
     $.ajax({
@@ -380,9 +353,6 @@ $('.modal__form').validate({
         modalTitle.addClass('modal__title--hidden');
         modalForm.addClass('modal__form--hidden');
         modalSuccessMessage.addClass('modal__success-message--visible');
-        
-        // modal.toggleClass('modal--visible');
-        // modalSuccess.addClass('modal-success--visible');
       }
     });
   }
@@ -430,7 +400,6 @@ $('.footer__form').validate({
         footerTitle.addClass('footer__title--hidden');
         footerForm.addClass('footer__form--hidden');
         footerSuccessMessage.addClass('footer__success-message--visible');
-        // modalSuccess.addClass('modal-success--visible');
       }
     });
   }
@@ -438,101 +407,5 @@ $('.footer__form').validate({
 
 // Маска для номера телефона
 $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
-
-
-// Очистка форм после отправки
-// $('.modal__button').click(setTimeout(function() {
-//   $('#modal-user-name').val('');
-//   $('#modal-user-phone').val('');
-//   $('#modal-user-email').val('');
-// }, 1500));
-
-
-// Инициализация карты Yandex Map API
-// ymaps.ready(function () {
-//   var myMap = new ymaps.Map('map', {
-//           center: [55.786774, 49.142715],
-//           zoom: 17
-//       }, {
-//           searchControlProvider: 'yandex#search'
-//       }),
-
-//       // Создаём макет содержимого.
-//       MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-//           '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-//       ),
-
-//       myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-//           hintContent: 'Александр Хищенко',
-//           balloonContent: 'GLO Academy'
-//       }, {
-//           // Опции.
-//           // Необходимо указать данный тип макета.
-//           iconLayout: 'default#image',
-//           // Своё изображение иконки метки.
-//           iconImageHref: '../img/footer/map-icon.jpg',
-//           // Размеры метки.
-//           iconImageSize: [32, 32],
-//           // Смещение левого верхнего угла иконки относительно
-//           // её "ножки" (точки привязки).
-//           iconImageOffset: [-5, -38]
-//       });
-
-//   myMap.geoObjects
-//       .add(myPlacemark);
-// });
-
-// // Запуск анимации при скролле
-// var documentEl = $(document);
-
-// // Анимация секции "Завершенные проекты"
-// var projects = $('.projects');
-// var animateProjects = $('.animateProjects');
-// var startAnimateProjects = projects.offset().top/3;
-// documentEl.scroll( () => {
-//   if (documentEl.scrollTop() > startAnimateProjects) {
-//     animateProjects.addClass('myFadeInUp');
-//   }
-// });
-
-// // Анимация секции "Онлайн контроль"
-// var control = $('.control');
-// var animateControl = $('.animateControl');
-// var startAnimateControl = control.offset().top/3;
-// documentEl.scroll( () => {
-//   if (documentEl.scrollTop() > startAnimateControl) {
-//     animateControl.addClass('myFadeInUp');
-//   }
-// });
-
-// // Анимация секции "Виды ремонта"
-// var types = $('.types');
-// var animateTypes = $('.animateTypes');
-// var startAnimateTypes = types.offset().top;
-// documentEl.scroll( () => {
-//   if (documentEl.scrollTop() > startAnimateTypes) {
-//     animateTypes.addClass('myFadeInUp');
-//   }
-// });
-
-// // Анимация секции "Дизайн проект"
-// var design = $('.design');
-// var animateDesign = $('.animateDesign');
-// var startAnimateDesign = design.offset().top;
-// documentEl.scroll( () => {
-//   if (documentEl.scrollTop() > startAnimateDesign) {
-//     animateDesign.addClass('myFadeInUp');
-//   }
-// });
-
-// // Анимация секции "6 шагов до цели"
-// var steps = $('.steps');
-// var animateSteps = $('.animateSteps');
-// var startAnimateSteps = steps.offset().top;
-// documentEl.scroll( () => {
-//   if (documentEl.scrollTop() > startAnimateSteps) {
-//     animateSteps.addClass('myFadeInUp');
-//   }
-// });
 
 });
