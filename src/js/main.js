@@ -54,25 +54,49 @@ $(document).ready(function () {
   let closeBtn = $('.modal__close');
   let scrollUpBtn = $('.scrollup');
 
+  let closeSuccessBtn = $('.modal-success__close');
+  let modalSuccess = $('.modal-success');
+  let modalTitle = $('.modal__title');
+  let modalForm = $('.modal__form');
+  let modalSuccessMessage = $('.modal__success-message');
+
   //Подключение библиотеки анимации
   new WOW().init();
 
+  // Вызов модального окна любой из кнопок
   modalBtn.click( () => {
     modal.toggleClass('modal--visible');
   });
 
-  closeBtn.click( () => {
-    modal.toggleClass('modal--visible');
+  // Закрытие модального окна крестиком
+  closeBtn.click( () => {       
+    modal.toggleClass('modal--visible');   
+    if (modalSuccessMessage.hasClass('modal__success-message--visible')) {
+      modalSuccessMessage.removeClass('modal__success-message--visible');
+    };
+    if (modalTitle.hasClass('modal__title--hidden')) {
+      modalTitle.removeClass('modal__title--hidden');
+    };
+    if (modalForm.hasClass('modal__form--hidden')) {
+      modalForm.removeClass('modal__form--hidden');
+    };  
   });
 
+  // Закрытие модального окна об успешной отправке крестиком
+  closeSuccessBtn.click( () => {       
+    modalSuccess.removeClass('modal-success--visible');      
+  });
+  
+  // Закрытие модального окна клавишей Esc
   $(document).keydown((event) => {
     if (modal.hasClass('modal--visible')) {
-      if (event.which == 27) {
-        modal.toggleClass('modal--visible');
+      if (event.which == 27) {        
+        modal.toggleClass('modal--visible');        
       };
     };
   });
 
+  // Закрытие модального окна кликом вне модального окна
   modal.click((e) => {
     if (modal.is(e.target) && modal.has(e.target).length === 0) {
       modal.toggleClass('modal--visible');
@@ -297,6 +321,18 @@ $('.control__form').validate({
       minlength: "Имя должно содержать не менее двух символов",
     },
     controlUserPhone: "Заполните поле",
+  },
+  submitHandler: function(form) {
+    $.ajax({
+      type: "POST",
+      url: "controlSend.php",
+      data: $(form).serialize(),
+      // dataType: "dataType",
+      success: function (response) {
+        $(form)[0].reset();
+        modalSuccess.addClass('modal-success--visible');
+      }
+    });
   }
 });
 
@@ -327,6 +363,23 @@ $('.modal__form').validate({
       required: "Заполните поле",
       email: "Введите корректный email"
     },
+  },
+  submitHandler: function(form) {
+    $.ajax({
+      type: "POST",
+      url: "modalSend.php",
+      data: $(form).serialize(),
+      // dataType: "dataType",
+      success: function (response) {
+        $(form)[0].reset();
+        modal.toggleClass('modal--visible');
+        modalSuccess.addClass('modal-success--visible');
+
+        // modalTitle.addClass('modal__title--hidden');
+        // modalForm.addClass('modal__form--hidden');
+        // modalSuccessMessage.addClass('modal__success-message--visible');
+      }
+    });
   }
 });
 
@@ -355,6 +408,20 @@ $('.footer__form').validate({
     footerUserText: {
       required: "Заполните поле",
     },
+  },
+  submitHandler: function(form) {
+    $.ajax({
+      type: "POST",
+      url: "footerSend.php",
+      data: $(form).serialize(),
+      // dataType: "dataType",
+      success: function (response) {
+        // console.log('Ajax сработал. Ответ сервера: ' + response);
+        // alert('Форма отправлена, ждите звонка!');
+        $(form)[0].reset();
+        modalSuccess.addClass('modal-success--visible');
+      }
+    });
   }
 });
 
@@ -363,11 +430,11 @@ $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
 
 
 // Очистка форм после отправки
-$('.modal__button').click(setTimeout(function() {
-  $('#modal-user-name').val('');
-  $('#modal-user-phone').val('');
-  $('#modal-user-email').val('');
-}, 1500));
+// $('.modal__button').click(setTimeout(function() {
+//   $('#modal-user-name').val('');
+//   $('#modal-user-phone').val('');
+//   $('#modal-user-email').val('');
+// }, 1500));
 
 
 // Инициализация карты Yandex Map API

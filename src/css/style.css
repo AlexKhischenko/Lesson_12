@@ -432,6 +432,15 @@ input.invalid {
 div.invalid {
   color: tomato; }
 
+.success-message {
+  text-align: center; }
+  .success-message__text {
+    font-size: 1.25rem; }
+  .success-message__invintation {
+    margin-bottom: 0.5rem; }
+  .success-message__link {
+    color: #E3B873; }
+
 .container {
   width: 85%;
   max-width: 1256px;
@@ -1318,9 +1327,13 @@ img {
     line-height: 1.82rem;
     margin: 0 auto;
     margin-bottom: 2.1rem; }
+    .modal__title--hidden {
+      display: none; }
   .modal__form {
     display: flex;
     flex-direction: column; }
+    .modal__form--hidden {
+      display: none; }
   .modal__input-group {
     display: flex;
     flex-direction: column;
@@ -1332,6 +1345,65 @@ img {
   .modal__button {
     align-self: flex-end;
     min-width: 15.214rem; }
+  .modal__success-message {
+    display: none; }
+    .modal__success-message--visible {
+      display: block; }
+
+.modal-success {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  z-index: 200;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(19, 19, 19, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .modal-success--visible {
+    opacity: 1;
+    visibility: visible; }
+  .modal-success__dialog {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 30rem;
+    width: 100%;
+    min-height: 10rem;
+    background-color: #131313;
+    background-image: url("../img/bg-lines.svg");
+    box-shadow: 0px 0px 10px 1px #615858;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 2.357rem 3.65rem 1.928rem;
+    color: #ffffff; }
+  .modal-success__close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 28px;
+    height: 28px;
+    background-color: transparent;
+    background-image: url("../img/btn-close.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    margin: 12px;
+    cursor: pointer; }
+  .modal-success__message {
+    max-width: 25.86rem;
+    font-family: 'Yeseva One', cursive;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: normal;
+    line-height: 1.82rem;
+    margin: 0 auto; }
 
 @-webkit-keyframes myFadeInUp {
   0% {

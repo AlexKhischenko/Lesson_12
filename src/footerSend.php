@@ -34,8 +34,15 @@ try {
     // $mail->Subject = 'New request from web site';
     $mail->Body    = "Имя пользователя: ${footerUserName}, телефон: ${footerUserPhone}. Сообщение пользователя: ${footerUserText}";
 
-    $mail->send();
-    header('Location: thanks.html');
+    if ($mail->send()) {
+      echo "ok";
+    } else {
+      echo "Письмо не отправлено, есть ошибка. Код ошибки: {$mail->ErrorInfo}";
+    }
+    
+    // $mail->send();
+    // header('Location: thanks.html');
+
 } catch (Exception $e) {
     echo "Письмо не отправлено, есть ошибка. Код ошибки: {$mail->ErrorInfo}";
 }
