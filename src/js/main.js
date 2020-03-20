@@ -135,6 +135,19 @@ var mySwiper3 = new Swiper ('.swiper3', {
   },
 });
 
+var next = $('.swiper-button-next');
+var prev = $('.swiper-button-prev');
+var bullets = $('.swiper-pagination');
+next.css('left', prev.width() + 20 + bullets.width() + 20);
+bullets.css('left', prev.width() + 20);
+
+
+var nextSteps = $('.swiper2-next');
+var prevSteps = $('.swiper2-prev');
+var bulletsSteps = $('.pagination-bottom');
+nextSteps.css('left', prevSteps.width() + 20 + bulletsSteps.width() + 20);
+bulletsSteps.css('left', prevSteps.width() + 20);
+
 getAllSteps = $('.steps-content__step');
 getAllSwipers = $('.swiper2__item');
 getPrevClick = $('.swiper2-prev');
@@ -265,20 +278,6 @@ $('.steps-content__step--6').click( () => {
   mySwiper3.slideTo(5, 700); 
 });
 
-
-var next = $('.swiper-button-next');
-var prev = $('.swiper-button-prev');
-var bullets = $('.swiper-pagination');
-next.css('left', prev.width() + 20 + bullets.width() + 20);
-bullets.css('left', prev.width() + 20);
-
-
-var nextSteps = $('.swiper2-next');
-var prevSteps = $('.swiper2-prev');
-var bulletsSteps = $('.pagination-bottom');
-nextSteps.css('left', prevSteps.width() + 20 + bulletsSteps.width() + 20);
-bulletsSteps.css('left', prevSteps.width() + 20);
-
 // Валидация форм
 // Control Form
 $('.control__form').validate({
@@ -363,39 +362,47 @@ $('.footer__form').validate({
 $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
 
 
+// Очистка форм после отправки
+$('.modal__button').click(setTimeout(function() {
+  $('#modal-user-name').val('');
+  $('#modal-user-phone').val('');
+  $('#modal-user-email').val('');
+}, 1500));
+
+
 // Инициализация карты Yandex Map API
-ymaps.ready(function () {
-  var myMap = new ymaps.Map('map', {
-          center: [55.786774, 49.142715],
-          zoom: 17
-      }, {
-          searchControlProvider: 'yandex#search'
-      }),
+// ymaps.ready(function () {
+//   var myMap = new ymaps.Map('map', {
+//           center: [55.786774, 49.142715],
+//           zoom: 17
+//       }, {
+//           searchControlProvider: 'yandex#search'
+//       }),
 
-      // Создаём макет содержимого.
-      MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-          '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-      ),
+//       // Создаём макет содержимого.
+//       MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+//           '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+//       ),
 
-      myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-          hintContent: 'Александр Хищенко',
-          balloonContent: 'GLO Academy'
-      }, {
-          // Опции.
-          // Необходимо указать данный тип макета.
-          iconLayout: 'default#image',
-          // Своё изображение иконки метки.
-          iconImageHref: '../img/footer/map-icon.jpg',
-          // Размеры метки.
-          iconImageSize: [32, 32],
-          // Смещение левого верхнего угла иконки относительно
-          // её "ножки" (точки привязки).
-          iconImageOffset: [-5, -38]
-      });
+//       myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+//           hintContent: 'Александр Хищенко',
+//           balloonContent: 'GLO Academy'
+//       }, {
+//           // Опции.
+//           // Необходимо указать данный тип макета.
+//           iconLayout: 'default#image',
+//           // Своё изображение иконки метки.
+//           iconImageHref: '../img/footer/map-icon.jpg',
+//           // Размеры метки.
+//           iconImageSize: [32, 32],
+//           // Смещение левого верхнего угла иконки относительно
+//           // её "ножки" (точки привязки).
+//           iconImageOffset: [-5, -38]
+//       });
 
-  myMap.geoObjects
-      .add(myPlacemark);
-});
+//   myMap.geoObjects
+//       .add(myPlacemark);
+// });
 
 // // Запуск анимации при скролле
 // var documentEl = $(document);

@@ -1,13 +1,8 @@
 <?php
 
-// header('Content-Type: text/html; charset=UTF-8');
-
-
 $modalUserName = $_POST['modalUserName'];
 $modalUserEmail = $_POST['modalUserEmail'];
 $modalUserPhone = $_POST['modalUserPhone'];
-
-// echo 'Привет, ' . $modalUserName . ' Твой номер ' . $modalUserPhone;
 
 // Load Composer's autoloader
 require 'phpmailer/PHPMailer.php';
@@ -32,7 +27,8 @@ try {
     //Recipients
     $mail->setFrom('khischenko.a@gmail.com');
     $mail->addAddress('khischenkoas@dex-ua.com');      // Add a recipient
-
+    $mail->addAddress('khischenko.a@gmail.com');      // Add a recipient
+    
     // Content
     $mail->isHTML(true);                              // Set email format to HTML
     $mail->Subject = 'Новая заявка с сайта';
