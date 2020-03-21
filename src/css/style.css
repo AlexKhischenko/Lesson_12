@@ -1462,17 +1462,17 @@ img {
     justify-content: space-between;
     margin: auto;
     margin-bottom: 3.15rem;
-    max-width: 5.071rem; }
+    max-width: 8.2rem; }
   .address__icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 2rem;
-    height: 2rem;
+    width: 39px;
+    height: 39px;
     border-radius: 50%;
-    background-color: #E3B873; }
+    transition: all 0.2s; }
+    .address__icon:hover {
+      transform: scale(1.05);
+      box-shadow: 0 5px 15px rgba(227, 184, 115, 0.2); }
     .address__icon-image {
-      width: 50%; }
+      width: 100%; }
 
 .modal {
   opacity: 0;
@@ -1870,6 +1870,8 @@ img {
     color: #ffffff; } }
 
 @media screen and (max-width: 570px) {
+  .modal {
+    padding: 0 1.5rem; }
   .section {
     padding: 0; }
   .projects {
@@ -2038,12 +2040,8 @@ img {
     font-size: 1.5rem;
     letter-spacing: 0;
     line-height: 2.1rem; }
-  .address__icons {
-    max-width: 8.2rem; }
-  .address__icon {
-    width: 3.25rem;
-    height: 3.25rem; }
-    .address__icon-image {
-      width: 50%; }
+  .address__icon:hover {
+    transform: none;
+    box-shadow: none; }
   .scrollup {
     display: none; } }

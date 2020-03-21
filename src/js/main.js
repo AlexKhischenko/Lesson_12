@@ -33,10 +33,18 @@ $(document).ready(function () {
   });
 
   // Плавная прокрутка к якорю по нажатию на "Листайте вниз"
-  var scrollDown = $('.hero__scroll-down');
+  const scrollDown = $('.hero__scroll-down');
   scrollDown.click(function(e) {
     e.preventDefault();
     $('html, body').animate({scrollTop: $(scrollDown.attr('href')).position().top - navbar.outerHeight()}, 1000);
+  });
+
+  // Плавная прокрутка к якорю по нажатию на "Логотип"
+  const getHome = $('.logo');
+  getHome.click(function(e) {
+    e.preventDefault();
+    var anchor = $(this);
+    $('html, body').animate({scrollTop: $(anchor.attr('href')).position().top - navbar.outerHeight()}, 1000);
   });
 
   // Вызов модального окна любой из кнопок
