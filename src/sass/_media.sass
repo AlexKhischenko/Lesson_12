@@ -80,6 +80,12 @@
     &--outline
       padding-top: 1.5rem
       padding-bottom: 1.5rem
+  .contacts
+    &__phone
+      margin-right: 0
+      text-decoration: none
+    &__button
+      display: none
   .hero
     &__content
       max-width: 28.25rem
@@ -164,15 +170,11 @@
       margin-top: auto
       min-height: 0
 
-@media screen and ( max-width: 900px )
-  .contacts
-    &__phone
-      margin-right: 0
-      text-decoration: none
-    &__button
-      display: none
-
-@media screen and ( max-width: 760px )  
+@media screen and ( max-width: 760px )
+  .nav
+    &__item
+      &:nth-of-type(n+2):nth-of-type(-n+6)
+        margin-left: 1rem
   .section
     &-title
       &__heading

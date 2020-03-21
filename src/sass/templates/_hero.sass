@@ -60,6 +60,9 @@
     text-transform: uppercase
     text-decoration: none
     color: $light
+    transition: color 0.2s
+    &:hover
+      color: $primary
     &::after
       content: ''
       background-image: url("../img/arrow-down.svg")
@@ -69,7 +72,7 @@
       height: 30px
       margin-left: 1.143rem
       border: 2px solid $primary
-      border-radius: 50%
+      border-radius: 50%   
 .instagram
   display: flex
   justify-content: center
