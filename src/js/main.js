@@ -7,6 +7,14 @@ $(document).ready(function () {
   let controlSuccessMessage = $('.control__success-message');
   let controlForm = $('.control__form');
 
+  let sampleSuccessMessage = $('.sample__success-message');
+  let sampleForm = $('.sample__form');
+  let sampleTitle = $('.sample__title');
+
+  let footerSuccessMessage = $('.footer__success-message');
+  let footerForm = $('.footer__form');
+  let footerTitle = $('.footer__title');
+
   let closeSuccessBtn = $('.modal-success__close');
   let modalSuccess = $('.modal-success');
   let modalTitle = $('.modal__title');
@@ -277,6 +285,9 @@ $('.control__form').validate({
       minlength: 2,
     },
     controlUserPhone: "required",    
+    controlCheckbox: {
+      required: true,
+    },  
   },
   messages: {
     controlUserName: {
@@ -284,6 +295,7 @@ $('.control__form').validate({
       minlength: "Имя должно содержать не менее двух символов",
     },
     controlUserPhone: "Заполните поле",
+    controlCheckbox: "Подтвердите соглашение на обработку Ваших данных",
   },
   submitHandler: function(form) {
     $.ajax({
@@ -304,16 +316,6 @@ $('.control__form').validate({
 $('.modal__form').validate({
   errorElement: "div",
   errorClass: "invalid",
-  errorPlacement: function(error, element) {
-    if (element.attr("name") == "modalCheckbox") {
-    //Здесь пиши любые операции если чекбокс не отмечен
-        error.insertBefore(element.parent());
-    } else {
-        error.insertBefore(element);
-    }
-    return true;
-},
-ignore: ":disabled",
   rules: {
     // simple rule, converted to {required:true}
     modalUserName: {
@@ -340,7 +342,7 @@ ignore: ":disabled",
       required: "Заполните поле",
       email: "Введите корректный email"
     },
-    modalCheckbox: "Это поле обязательно",
+    modalCheckbox: "Подтвердите соглашение на обработку Ваших данных",
   },
   submitHandler: function(form) {
     $.ajax({
@@ -358,13 +360,61 @@ ignore: ":disabled",
   }
 });
 
+// Sample Form
+$('.sample__form').validate({
+  errorElement: "div",
+  errorClass: "invalid",
+  rules: {
+    // simple rule, converted to {required:true}
+    sampleUserName: {
+      required: true,
+      minlength: 2,
+    },
+    sampleUserPhone: "required",
+    // compound rule
+    sampleUserEmail: {
+      required: true,
+      email: true
+    },
+    sampleCheckbox: {
+      required: true,
+    },
+  },
+  messages: {
+    sampleUserName: {
+      required: "Заполните поле",
+      minlength: "Имя должно содержать не менее двух символов",
+    },
+    sampleUserPhone: {
+      required: "Заполните поле",
+    },
+    sampleUserEmail: {
+      required: "Заполните поле",
+      email: "Введите корректный email"
+    },
+    sampleCheckbox: "Подтвердите соглашение на обработку Ваших данных",
+  },
+  submitHandler: function(form) {
+    $.ajax({
+      type: "POST",
+      url: "sampleSend.php",
+      data: $(form).serialize(),
+      // dataType: "dataType",
+      success: function (response) {
+        $(form)[0].reset();
+        sampleTitle.addClass('sample__title--hidden');
+        sampleForm.addClass('sample__form--hidden');
+        sampleSuccessMessage.addClass('sample__success-message--visible');
+      }
+    });
+  }
+});
+
 // Footer Form
-let footerSuccessMessage = $('.footer__success-message');
-let footerForm = $('.footer__form');
-let footerTitle = $('.footer__title');
 $('.footer__form').validate({
   errorElement: "div",
   errorClass: "invalid",
+ignore: ":disabled",
   rules: {
       // simple rule, converted to {required:true}
     footerUserName: {
@@ -375,7 +425,10 @@ $('.footer__form').validate({
       // compound rule
       footerUserText: {
       required: true,
-    }
+    },
+    footerCheckbox: {
+      required: true,
+    },
   },
   messages: {
     footerUserName: {
@@ -386,6 +439,7 @@ $('.footer__form').validate({
     footerUserText: {
       required: "Заполните поле",
     },
+    footerCheckbox: "Подтвердите соглашение на обработку Ваших данных",
   },
   submitHandler: function(form) {
     $.ajax({

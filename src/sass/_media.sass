@@ -31,6 +31,26 @@
       min-height: 5rem
   .row
     padding: 0
+  .sample
+    &-image
+      width: 80%
+    &__image
+      top: -12%
+    &__description
+      &-1
+        left: 28%
+        top: 0
+        max-width: 20rem
+        text-align: left
+      &-2
+        left: 33%
+        top: 19%
+      &-3
+        left: 35%
+        top: 42%
+      &-4
+        left: 30%
+        top: 64%
   .steps
     padding-bottom: 450px
     &-title
@@ -112,6 +132,8 @@
   .types
     &__card
       margin-bottom: 5.6rem
+  .sample
+    display: none
   .design
     &__card
       margin-bottom: 5.6rem
@@ -307,6 +329,13 @@
       order: 1
       margin-bottom: -25px
       font-size: 1.25rem
+  #control-user-name-error, #control-user-phone-error
+    position: absolute
+    left: 0
+    bottom: -1.5rem
+  #controlCheckbox-error
+    left: 0
+    bottom: -1.5rem
   .video
     &__play
       width: 5.083rem
@@ -384,6 +413,9 @@
         display: block
     &__menu
       display: none
+  #footerCheckbox-error
+    left: 0
+    bottom: 0
   .policy
     &__label
       &--center
