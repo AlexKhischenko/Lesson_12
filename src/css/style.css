@@ -616,10 +616,10 @@ img {
   color: #ffffff; }
 
 .team-customers {
-  background-image: url("../img/team-customers-bg.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; }
+  background-image: url("../img/team-customers.svg"), url("../img/team-customers-bg.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, bottom;
+  background-size: cover, auto; }
 
 .header {
   position: fixed;
@@ -773,6 +773,10 @@ img {
     color: #E3B873; }
 
 .projects {
+  background-image: url("../img/projects-bg.png"), url("../img/team-customers.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom, center;
+  background-size: auto, cover;
   padding-bottom: 30rem; }
   .projects__swiper {
     padding-bottom: 5.6rem; }
