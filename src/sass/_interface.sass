@@ -39,10 +39,11 @@
     &::placeholder
       color: $dark
 .policy
+  position: relative
   &__checkbox
     opacity: 0
-    visibility: hidden
-    &:checked +
+    position: absolute
+    &:checked ~
       .policy__label        
         &::before
           background-color: $primary
@@ -69,6 +70,7 @@
   opacity: 0
   right: 20px
   bottom: 20px
+  transform: rotate(-90deg)
   &--visible
     display: visible
     opacity: 1
@@ -76,15 +78,17 @@
     display: flex
     justify-content: center
     align-items: center
-    width: 50px
-    height: 50px
+    width: 36px
+    height: 36px
     border-radius: 50%
-    border: 1px solid black
-    background-color: rgba(30, 30, 30, 0.5)
+    background-color: $primary
     cursor: pointer
-    color: $primary
     font-size: 18px
     font-weight: bold
+    transition: all 0.2s
+    &:hover
+      transform: scale(1.05)
+      box-shadow: 0 5px 15px rgba($primary, 0.2)
 label
   &.invalid
     color: tomato
