@@ -418,7 +418,6 @@ template {
   right: 20px;
   bottom: 20px;
   -webkit-transform: rotate(-90deg);
-  -ms-transform: rotate(-90deg);
   transform: rotate(-90deg); }
   .scrollup--visible {
     display: visible;
@@ -447,7 +446,6 @@ template {
     transition: all 0.2s; }
     .scrollup__content:hover {
       -webkit-transform: scale(1.05);
-      -ms-transform: scale(1.05);
       transform: scale(1.05);
       box-shadow: 0 5px 15px rgba(227, 184, 115, 0.2); }
 
@@ -526,7 +524,13 @@ body {
   font-size: 1rem; }
 
 img {
-  max-width: 100%; }
+  max-width: 100%;
+  opacity: 1;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s; }
+
+img[data-src] {
+  opacity: 0; }
 
 .section {
   padding: 30px 0; }
@@ -672,6 +676,11 @@ img {
   background-repeat: no-repeat, no-repeat;
   background-position: center, bottom;
   background-size: cover, auto; }
+
+.fix-align-items::before {
+  content: '';
+  min-height: inherit;
+  font-size: 0; }
 
 .header {
   position: fixed;
@@ -848,7 +857,6 @@ img {
     text-decoration: none;
     color: #E3B873;
     -webkit-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
     transform: rotate(90deg);
     line-height: 0.8; }
     .instagram__link::after {
@@ -1096,7 +1104,6 @@ img {
   background-repeat: no-repeat;
   background-position: left; }
   .sample-text {
-    marging: 0;
     font-size: 1.285rem;
     line-height: 1.5rem;
     letter-spacing: 0.01rem;
@@ -1205,6 +1212,7 @@ img {
       margin-bottom: 1rem; }
   .sample__policy {
     position: relative;
+    margin-top: 1.5rem;
     margin-bottom: 2.9rem; }
   .sample__button {
     -webkit-align-self: flex-end;
@@ -1572,7 +1580,6 @@ img {
       display: none; }
     .team-card__container {
       -webkit-transform: translateY(-61%);
-      -ms-transform: translateY(-61%);
       transform: translateY(-61%);
       padding-top: 1.571rem;
       width: 233px;
@@ -1861,7 +1868,6 @@ img {
     transition: all 0.2s; }
     .address__icon:hover {
       -webkit-transform: scale(1.05);
-      -ms-transform: scale(1.05);
       transform: scale(1.05);
       box-shadow: 0 5px 15px rgba(227, 184, 115, 0.2); }
     .address__icon-image {
@@ -2200,6 +2206,8 @@ img {
       margin: 0 auto; }
     .section-title--visible {
       display: none; }
+  .projects {
+    background-image: none; }
   .swiper1__slide {
     padding-bottom: 2rem; }
   .swiper1__text {
@@ -2259,7 +2267,8 @@ img {
   .design__card {
     margin-bottom: 5.6rem; }
   .steps {
-    display: none; }
+    display: none;
+    background-image: none; }
   .team {
     margin-top: 60px;
     padding-top: 2rem;
@@ -2278,6 +2287,8 @@ img {
       margin-left: 1.5rem; }
   .customers {
     display: none; }
+  .team-customers {
+    background-image: none; }
   .footer__wrap {
     margin-top: auto;
     min-height: 0; } }
@@ -2591,7 +2602,6 @@ img {
     line-height: 2.1rem; }
   .address__icon:hover {
     -webkit-transform: none;
-    -ms-transform: none;
     transform: none;
     box-shadow: none; }
   .scrollup {
