@@ -739,7 +739,7 @@ img {
   justify-content: center;
   padding-top: 100px;
   background-color: #131313;
-  background: url("../img/hero-bg.jpg");
+  background: url("../img/hero-bg.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -961,7 +961,7 @@ img {
   max-width: 58.357rem;
   min-height: 31rem;
   background-color: #131313;
-  background-image: url("../img/control/video-bg.jpg");
+  background-image: url("../img/control/video-bg.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
@@ -1360,7 +1360,7 @@ img {
   height: 36px;
   border-radius: 50%;
   background-color: #E3B873;
-  background-image: url("../img/implement-next.svg");
+  background-image: url("../img/implement/next.svg");
   background-repeat: no-repeat;
   background-position: center; }
 
@@ -1372,7 +1372,7 @@ img {
   height: 36px;
   border-radius: 50%;
   background-color: #E3B873;
-  background-image: url("../img/implement-prev.svg");
+  background-image: url("../img/implement/prev.svg");
   background-repeat: no-repeat;
   background-position: center; }
 
