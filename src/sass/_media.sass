@@ -66,6 +66,11 @@
           margin: 0
 
 @media screen and ( max-width: 992px )
+  .scrollup
+    &__content
+      &:hover
+        transform: none
+        box-shadow: none
   .menu
     &__logo
       margin-left: 1.5rem
@@ -73,6 +78,8 @@
       margin-right: 1.5rem
   .nav
     &__item
+      &:hover
+        color: $light
       &:nth-of-type(n+2):nth-of-type(-n+6)
         margin-left: 1.643rem
   .button
@@ -196,6 +203,11 @@
     &__wrap
       margin-top: auto
       min-height: 0
+  .address
+    &__icon
+      &:hover
+        transform: none
+        box-shadow: none
 
 @media screen and ( max-width: 760px )
   .nav
@@ -487,5 +499,23 @@
         box-shadow: none
   .scrollup
     display: none
+
+@media screen and ( max-height: 500px )
+  .hero
+    &__content
+      margin: 0
+      max-width: 42rem
+    &__title
+      font-size: 1.5rem
+    &__text
+      max-width: 40rem
+      margin-bottom: 1.5rem
+      font-size: 1.3rem
+      line-height: normal
+    &__button
+      display: inline-block
+      width: 40%
+      padding-top: 1rem
+      padding-bottom: 1rem
 
       

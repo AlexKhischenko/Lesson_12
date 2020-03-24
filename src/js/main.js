@@ -110,8 +110,7 @@ $(document).ready(function () {
   });
 
 // Инициализация слайдера "Завершенные проекты"
-var mySwiper1 = new Swiper ('.swiper1', {  
-  loop: true,
+var mySwiper1 = new Swiper ('.swiper1', {
   pagination: {
     el: '.swiper-pagination',
     type: 'bullets',
