@@ -1071,7 +1071,8 @@ img[data-src] {
 
 .video__play {
   position: relative;
-  margin: auto; }
+  margin: auto;
+  cursor: pointer; }
 
 #control-user-name::-webkit-input-placeholder {
   color: #131313; }
@@ -2633,3 +2634,19 @@ img[data-src] {
     width: 40%;
     padding-top: 1rem;
     padding-bottom: 1rem; } }
+
+_:-ms-fullscreen, :root .footer__wrap {
+  position: relative; }
+
+_:-ms-fullscreen, :root .hero__container {
+  margin: 20rem 0 auto 0; }
+
+_:-ms-fullscreen, :root .video__play {
+  display: block;
+  margin-top: 150px; }
+
+_:-ms-fullscreen, :root .footer__form {
+  margin-left: 10.5rem; }
+
+_:-ms-fullscreen, :root .instagram__link::after {
+  content: "\e5c5"; }
