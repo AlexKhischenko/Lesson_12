@@ -338,6 +338,7 @@ $(document).ready(function () {
           $(form)[0].reset();
           controlForm.addClass('control__form--hidden');
           controlSuccessMessage.addClass('control__success-message--visible');
+          ym('61237666', 'reachGoal', 'broadcast'); return true;
         }
       });
     }
@@ -487,6 +488,7 @@ $(document).ready(function () {
           footerTitle.addClass('footer__title--hidden');
           footerForm.addClass('footer__form--hidden');
           footerSuccessMessage.addClass('footer__success-message--visible');
+          ym('61237666', 'reachGoal', 'questions'); return true;
         }
       });
     }
