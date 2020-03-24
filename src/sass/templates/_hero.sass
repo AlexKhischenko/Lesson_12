@@ -88,12 +88,15 @@
     color: $primary
     transform: rotate(90deg)
     line-height: 0.8
+    transition: color 0.2s
     &::after
       content: ''
       width: 50px
       height: 1px
       margin-left: 1rem
       background-color: $primary
+    &:hover
+      color: $light
 .title
   margin: 0
   font-family: 'Yeseva One', cursive

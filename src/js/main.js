@@ -181,82 +181,29 @@ $(document).ready(function () {
 
   // Переключение активного раздела по кнопке вперед
   getNextClick.click( function () {
-    if (mySwiper3.activeIndex === 0) {
-      getAllSteps.each(function (indes, element) {
-        $(element).removeClass('active');    
-      });
-      $('.steps-content__step--1').addClass('active');
-    }
-    if (mySwiper3.activeIndex === 1) {
-      getAllSteps.each(function (indes, element) {
-        $(element).removeClass('active');    
-      });
-      $('.steps-content__step--2').addClass('active');
-    }
-    if (mySwiper3.activeIndex === 2) {
-      getAllSteps.each(function (indes, element) {
-        $(element).removeClass('active');    
-      });
-      $('.steps-content__step--3').addClass('active');
-    }
-    if (mySwiper3.activeIndex === 3) {
-      getAllSteps.each(function (indes, element) {
-        $(element).removeClass('active');    
-      });
-      $('.steps-content__step--4').addClass('active');
-    }
-    if (mySwiper3.activeIndex === 4) {
-      getAllSteps.each(function (indes, element) {
-        $(element).removeClass('active');    
-      });
-      $('.steps-content__step--5').addClass('active');
-    }
-    if (mySwiper3.activeIndex === 5) {
-      getAllSteps.each(function (indes, element) {
-        $(element).removeClass('active');    
-      });
-      $('.steps-content__step--6').addClass('active');
-    }
+    getAllSteps.each(function (index, element) {
+      $(element).removeClass('active');    
+    });
+    for (i = 1; i < 7; i++) {
+      if (mySwiper3.activeIndex === i) {
+        console.log(mySwiper3.activeIndex);
+        let b = mySwiper3.activeIndex + 1;
+        $('.steps-content__step--' + b ).addClass('active');
+      }
+    };
   });
-
   // Переключение активного разеда по кнопке назад
   getPrevClick.click( function () {
-    if (mySwiper3.activeIndex === 0) {
-      getAllSteps.each(function (indes, element) {
-        $(element).removeClass('active');    
-      });
-      $('.steps-content__step--1').addClass('active');
-    }
-    if (mySwiper3.activeIndex === 1) {
-      getAllSteps.each(function (indes, element) {
-        $(element).removeClass('active');    
-      });
-      $('.steps-content__step--2').addClass('active');
-    }
-    if (mySwiper3.activeIndex === 2) {
-      getAllSteps.each(function (indes, element) {
-        $(element).removeClass('active');    
-      });
-      $('.steps-content__step--3').addClass('active');
-    }
-    if (mySwiper3.activeIndex === 3) {
-      getAllSteps.each(function (indes, element) {
-        $(element).removeClass('active');    
-      });
-      $('.steps-content__step--4').addClass('active');
-    }
-    if (mySwiper3.activeIndex === 4) {
-      getAllSteps.each(function (indes, element) {
-        $(element).removeClass('active');    
-      });
-      $('.steps-content__step--5').addClass('active');
-    }
-    if (mySwiper3.activeIndex === 5) {
-      getAllSteps.each(function (indes, element) {
-        $(element).removeClass('active');    
-      });
-      $('.steps-content__step--6').addClass('active');
-    }
+    getAllSteps.each(function (index, element) {
+      $(element).removeClass('active');    
+    });
+    for (i = 0; i < 6; i++) {
+      if (mySwiper3.activeIndex === i) {
+        console.log(mySwiper3.activeIndex);
+        let b = mySwiper3.activeIndex + 1;
+        $('.steps-content__step--' + b ).addClass('active');
+      }
+    };
   });
 
   // Переключение слайдеров нажатием на раздел
@@ -536,9 +483,19 @@ $(document).ready(function () {
       }
     });
   });
-
   function videoPlay (event) {
     event.target.playVideo();
   };
+
+  // Загрузка карты при скролле
+  let showBigMap = $('.footer__map--big');
+  let documentEl = $(document);  
+  let footer = $('.footer');
+  let topFooter = footer.offset().top;
+  documentEl.scroll( function () {
+  if (documentEl.scrollTop() > topFooter) {
+    showBigMap.addClass('footer__map--visible');
+    }
+  });
 
 });

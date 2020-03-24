@@ -76,6 +76,12 @@
       margin-left: 1.5rem
     &__contacts
       margin-right: 1.5rem
+  .logo
+    &:hover
+      color: $primary
+  .phone
+    &:hover
+      color: $primary  
   .nav
     &__item
       &:hover
@@ -89,6 +95,10 @@
     &--outline
       padding-top: 1.5rem
       padding-bottom: 1.5rem
+      &:hover
+        background-color: transparent
+        box-shadow: none
+        border: 1px solid $light
   .contacts
     &__phone
       margin-right: 0
@@ -148,6 +158,11 @@
     order: -1
   .control
     padding-bottom: 3rem
+    &__button
+      box-shadow: none
+      transition: none
+      &:hover
+        box-shadow: none
   .types
     &__card
       margin-bottom: 7rem

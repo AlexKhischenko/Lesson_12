@@ -340,7 +340,13 @@ template {
     padding: 1.214rem 2.571rem 1.286rem 2.857rem;
     border: 1px solid #ffffff;
     background-color: transparent;
-    color: #ffffff; }
+    color: #ffffff;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s; }
+    .button--outline:hover {
+      background-color: #E3B873;
+      box-shadow: 0 5px 15px rgba(227, 184, 115, 0.2);
+      border: 1px solid #E3B873; }
 
 .label {
   font-size: 1.07rem; }
@@ -714,7 +720,11 @@ img[data-src] {
   text-transform: uppercase;
   font-weight: 500;
   letter-spacing: 0.033rem;
-  text-decoration: none; }
+  text-decoration: none;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s; }
+  .logo:hover {
+    color: #ffffff; }
 
 .nav__item {
   color: #ffffff;
@@ -729,6 +739,10 @@ img[data-src] {
 
 .phone {
   color: #E3B873; }
+  .phone:hover {
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+    color: #ffffff; }
 
 .contacts__phone {
   margin-right: 3.143rem; }
@@ -858,13 +872,17 @@ img[data-src] {
     color: #E3B873;
     -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
-    line-height: 0.8; }
+    line-height: 0.8;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s; }
     .instagram__link::after {
       content: '';
       width: 50px;
       height: 1px;
       margin-left: 1rem;
       background-color: #E3B873; }
+    .instagram__link:hover {
+      color: #ffffff; }
 
 .title {
   margin: 0;
@@ -1050,7 +1068,12 @@ img[data-src] {
 
 .control__button {
   padding: 1.2rem 4.33rem;
-  font-size: 1.071rem; }
+  font-size: 1.071rem;
+  box-shadow: 0 5px 15px rgba(227, 184, 115, 0.2);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s; }
+  .control__button:hover {
+    box-shadow: none; }
 
 .control__policy {
   position: relative;
@@ -1484,7 +1507,8 @@ img[data-src] {
       position: relative;
       width: 7.2rem;
       margin-bottom: 3.1rem;
-      text-align: left; }
+      text-align: left;
+      cursor: pointer; }
       .steps-content__step::before {
         content: '';
         position: absolute;
@@ -1830,8 +1854,12 @@ img[data-src] {
     max-height: 465px;
     min-height: 465px;
     box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.15); }
+    .footer__map--big {
+      display: none; }
     .footer__map--small {
       display: none; }
+    .footer__map--visible {
+      display: block; }
   .footer__success-message {
     display: none; }
     .footer__success-message--visible {
@@ -1841,6 +1869,7 @@ img[data-src] {
   margin: auto;
   max-width: 35rem; }
   .address__title {
+    display: none;
     font-family: 'Yeseva One', cursive;
     font-weight: normal;
     font-size: 1.428rem;
@@ -2169,6 +2198,10 @@ img[data-src] {
     margin-left: 1.5rem; }
   .menu__contacts {
     margin-right: 1.5rem; }
+  .logo:hover {
+    color: #E3B873; }
+  .phone:hover {
+    color: #E3B873; }
   .nav__item:hover {
     color: #ffffff; }
   .nav__item:nth-of-type(n+2):nth-of-type(-n+6) {
@@ -2180,6 +2213,10 @@ img[data-src] {
     .button--outline {
       padding-top: 1.5rem;
       padding-bottom: 1.5rem; }
+      .button--outline:hover {
+        background-color: transparent;
+        box-shadow: none;
+        border: 1px solid #ffffff; }
   .contacts__phone {
     margin-right: 0;
     text-decoration: none; }
@@ -2252,6 +2289,12 @@ img[data-src] {
     order: -1; }
   .control {
     padding-bottom: 3rem; }
+    .control__button {
+      box-shadow: none;
+      -webkit-transition: none;
+      transition: none; }
+      .control__button:hover {
+        box-shadow: none; }
   .types__card {
     margin-bottom: 7rem; }
   .implement {
