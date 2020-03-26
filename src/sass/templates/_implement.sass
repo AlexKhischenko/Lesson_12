@@ -1,7 +1,7 @@
 .implement
   position: relative
-  padding-top: 9.5rem
-  padding-bottom: 5.5rem
+  padding-top: 133px
+  padding-bottom: 60px
   background: url("../img/implement/implement-bg.jpg")
   background-repeat: no-repeat
   background-position: center
@@ -16,25 +16,31 @@
     background: linear-gradient(120.96deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.9) 100%)
   &__title
     letter-spacing: 0.005rem
-    margin-bottom: 2.7rem
+    margin-bottom: 38px
+    font-size: 1.928rem
   &__list
+    display: flex
+    flex-direction: column
+    align-items: flex-start
     padding: 0
     list-style: none    
     &-item
       position: relative
-      display: block
-      margin-bottom: 1.16rem
+      display: inline-block
+      font-family: Arial, Helvetica, sans-serif
+      margin-bottom: 16px
       color: $light
       font-weight: 500
-      font-size: 1.65rem
-      line-height: 2.428rem
+      font-size: 20px
+      line-height: 33px
+      letter-spacing: 0.75px
       transition: all 0.2s
       &--active
         color: $primary
         &::after
           display: block
           content: ''
-          width: 30%
+          width: 62%
           height: 1px
           background: black
           position: absolute
@@ -47,35 +53,44 @@
 .gallary
   position: relative
   display: flex
-  width: 100%
+  width: 100%  
   &__left
     position: absolute
+    overflow-x: hidden
     padding-right: 1rem
     top: -176px
     left: 0    
     width: 50%
   &__tl
     margin-left: auto
+    overflow-x: hidden
     margin-bottom: 2.5rem
     max-width: 356px
   &__bl
     margin-left: auto
+    overflow-x: hidden
     max-width: 356px
   &__right
     position: absolute
+    overflow-x: hidden
     padding-left: 1rem
     top: -248px
     right: 0
     width: 50%
   &__tr
     margin-left: auto
+    overflow-x: hidden
     margin-bottom: 2.5rem
     max-width: 356px
   &__br
     margin-left: auto
+    overflow-x: hidden
     max-width: 356px
   &--hidden
     display: none
+  .itest
+    max-width: none
+    object-fit: cover
 .swiper4
   &__image
     display: block

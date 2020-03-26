@@ -47,9 +47,6 @@ function buildCSS(done) {
   src("./src/css/**/**.css")
     .pipe(cleanCSS({ compatibility: 'ie8' }))
     .pipe(dest("./dist/css/"));
-  // .pipe(rename({suffix: ".min"}))  
-  // .pipe(cleanCSS())  
-  // .pipe(dest("./src/css"));  
   done();
 };
 

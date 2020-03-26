@@ -46,22 +46,30 @@
     &--hidden
       display: none
   &__input
+    color: #363636
     &::placeholder
-        color: $dark
+      color: #363636
+    &::-moz-placeholder, &:-moz-placeholder
+      opacity: 1
     &-group
       position: relative
       display: flex
       flex-direction: column
       flex-basis: 30%
-  &__label
+  &__label    
     margin-bottom: -7px
+    color: rgba(54, 54, 54, 0.5)
   &__button
     padding: 1.2rem 4.33rem
     font-size: 1.071rem
     box-shadow: 0 5px 15px rgba($primary, 0.2)
     transition: all 0.2s
+    border: 1px solid $primary
     &:hover
       box-shadow: none
+      background-color: $light
+      color: $primary
+      border: 1px solid $primary
   &__policy
     position: relative
     flex-basis: 100%
@@ -77,6 +85,9 @@
     position: relative
     margin: auto
     cursor: pointer
+    transition: transform 0.1s
+    &:hover
+      transform: scale(1.05)
 #control-user-name
   &::placeholder
         color: $dark

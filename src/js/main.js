@@ -3,17 +3,6 @@ $(document).ready(function () {
   let modalBtn = $('[data-toggle=modal]');
   let closeBtn = $('.modal__close');
   let scrollUpBtn = $('.scrollup');
-  
-  let controlSuccessMessage = $('.control__success-message');
-  let controlForm = $('.control__form');
-
-  let sampleSuccessMessage = $('.sample__success-message');
-  let sampleForm = $('.sample__form');
-  let sampleTitle = $('.sample__title');
-
-  let footerSuccessMessage = $('.footer__success-message');
-  let footerForm = $('.footer__form');
-  let footerTitle = $('.footer__title');
 
   let closeSuccessBtn = $('.modal-success__close');
   let modalSuccess = $('.modal-success');
@@ -31,7 +20,7 @@ $(document).ready(function () {
 
   //Подключение библиотеки анимации
   new WOW().init();
-
+  
   // Плавная прокрутка к якорю
   const navbar = $('.header');
   $('.nav__item').click(function(e) {
@@ -60,9 +49,9 @@ $(document).ready(function () {
     modal.toggleClass('modal--visible');
   });
 
-  // Закрытие модального окна крестиком
-  closeBtn.click( function () {       
-    modal.toggleClass('modal--visible');   
+  // Сброс полей модального окна после закрытия
+  function resetModalFormInputs () {
+    $('.modal__form')[0].reset();
     if (modalSuccessMessage.hasClass('modal__success-message--visible')) {
       modalSuccessMessage.removeClass('modal__success-message--visible');
     };
@@ -71,7 +60,13 @@ $(document).ready(function () {
     };
     if (modalForm.hasClass('modal__form--hidden')) {
       modalForm.removeClass('modal__form--hidden');
-    };  
+    };
+    modal.toggleClass('modal--visible');
+  };
+
+  // Закрытие модального окна крестиком
+  closeBtn.click( function () {
+    resetModalFormInputs();
   });
 
   // Закрытие модального окна об успешной отправке крестиком
@@ -82,8 +77,8 @@ $(document).ready(function () {
   // Закрытие модального окна клавишей Esc
   $(document).keydown( function(event) {
     if (modal.hasClass('modal--visible')) {
-      if (event.which == 27) {        
-        modal.toggleClass('modal--visible');        
+      if (event.which == 27) {
+        resetModalFormInputs();
       };
     };
   });
@@ -91,23 +86,79 @@ $(document).ready(function () {
   // Закрытие модального окна кликом вне модального окна
   modal.click( function(e) {
     if (modal.is(e.target) && modal.has(e.target).length === 0) {
-      modal.toggleClass('modal--visible');
+      resetModalFormInputs();
     };
   });
 
   // Кнопка возврата в начало страницы
   $(window).scroll( function () {
-    if ($(this).scrollTop() > 150) {
-      scrollUpBtn.addClass('scrollup--visible');
-      scrollUpBtn.fadeIn();
-    } else {
-      scrollUpBtn.fadeOut();
+    if (window.matchMedia("(max-width: 992px)").matches) {
       scrollUpBtn.removeClass('scrollup--visible');
-    }    
+    }
+    else {
+      if ($(this).scrollTop() > 150) {
+        scrollUpBtn.addClass('scrollup--visible');
+        scrollUpBtn.fadeIn();
+      } else {
+        scrollUpBtn.fadeOut();
+        scrollUpBtn.removeClass('scrollup--visible');
+      }
+    }        
   });
   scrollUpBtn.click( function () {
     $('html').animate({scrollTop : 0}, 900);
   });
+
+
+  // Маска для номера телефона модального окна
+  $(function() {
+    $('#modal-user-phone').data('holder', $('#modal-user-phone').attr('placeholder'));    
+    $('#modal-user-phone').focusin(function(){
+      $('#modal-user-phone').mask('+7(000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
+      $(this).attr('placeholder','+7 (___) ___-__-__');
+    });
+    $('#modal-user-phone').focusout(function(){
+      $(this).attr('placeholder', $(this).data('holder'));
+      $('#modal-user-phone').cleanVal();
+    });    
+  });   
+  // Маска для номера телефона секции "Онлайн контроль"
+  $(function() {
+    $('#control-user-phone').data('holder', $('#control-user-phone').attr('placeholder'));    
+    $('#control-user-phone').focusin(function(){
+      $('#control-user-phone').mask('+7(000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
+      $(this).attr('placeholder','+7 (___) ___-__-__');
+    });
+    $('#control-user-phone').focusout(function(){
+      $(this).attr('placeholder', $(this).data('holder'));
+      $('#control-user-phone').cleanVal();
+    });    
+  });   
+  // Маска для номера телефона секции "Вызов замерщика"
+  $(function() {
+    $('#sample-user-phone').data('holder', $('#sample-user-phone').attr('placeholder'));    
+    $('#sample-user-phone').focusin(function(){
+      $('#sample-user-phone').mask('+7(000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
+      $(this).attr('placeholder','+7 (___) ___-__-__');
+    });
+    $('#sample-user-phone').focusout(function(){
+      $(this).attr('placeholder', $(this).data('holder'));
+      $('#sample-user-phone').cleanVal();
+    });    
+  });   
+  // Маска для номера телефона секции "Остались вопросы"
+  $(function() {
+    $('#footer-user-phone').data('holder', $('#footer-user-phone').attr('placeholder'));    
+    $('#footer-user-phone').focusin(function(){
+      $('#footer-user-phone').mask('+7(000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
+      $(this).attr('placeholder','+7 (___) ___-__-__');
+    });
+    $('#footer-user-phone').focusout(function(){
+      $(this).attr('placeholder', $(this).data('holder'));
+      $('#footer-user-phone').cleanVal();
+    });    
+  });   
+
 
   // Инициализация слайдера "Завершенные проекты"
   var mySwiper1 = new Swiper ('.swiper1', {
@@ -186,7 +237,6 @@ $(document).ready(function () {
     });
     for (i = 1; i < 7; i++) {
       if (mySwiper3.activeIndex === i) {
-        console.log(mySwiper3.activeIndex);
         let b = mySwiper3.activeIndex + 1;
         $('.steps-content__step--' + b ).addClass('active');
       }
@@ -199,14 +249,13 @@ $(document).ready(function () {
     });
     for (i = 0; i < 6; i++) {
       if (mySwiper3.activeIndex === i) {
-        console.log(mySwiper3.activeIndex);
         let b = mySwiper3.activeIndex + 1;
         $('.steps-content__step--' + b ).addClass('active');
       }
     };
   });
 
-  // Переключение слайдеров нажатием на раздел
+   // Переключение слайдеров нажатием на раздел
   $('.steps-content__step--1').click( function () {
     getAllSteps.each(function (indes, element) {
       $(element).removeClass('active');    
@@ -262,7 +311,10 @@ $(document).ready(function () {
         required: true,
         minlength: 2,
       },
-      controlUserPhone: "required",    
+      controlUserPhone: {
+        required: true,
+        minlength: 17,
+      },    
       controlCheckbox: {
         required: true,
       },  
@@ -270,9 +322,12 @@ $(document).ready(function () {
     messages: {
       controlUserName: {
         required: "Заполните поле",
-        minlength: "Имя должно содержать не менее двух символов",
+        minlength: "Введите не менее 2 символов",
       },
-      controlUserPhone: "Заполните поле",
+      controlUserPhone: {
+        required: "Заполните поле",
+        minlength: "Введите не менее 10 цифр"
+      },
       controlCheckbox: "Подтвердите соглашение на обработку Ваших данных",
     },
     submitHandler: function(form) {
@@ -283,8 +338,7 @@ $(document).ready(function () {
         // dataType: "dataType",
         success: function (response) {
           $(form)[0].reset();
-          controlForm.addClass('control__form--hidden');
-          controlSuccessMessage.addClass('control__success-message--visible');
+          modalSuccess.addClass('modal-success--visible');
           ym('61237666', 'reachGoal', 'broadcast'); return true;
         }
       });
@@ -301,7 +355,10 @@ $(document).ready(function () {
         required: true,
         minlength: 2,
       },
-      modalUserPhone: "required",
+      modalUserPhone: {
+        required: true,
+        minlength: 17,
+      },
       // compound rule
       modalUserEmail: {
         required: true,
@@ -314,9 +371,12 @@ $(document).ready(function () {
     messages: {
       modalUserName: {
         required: "Заполните поле",
-        minlength: "Имя должно содержать не менее двух символов",
+        minlength: "Введите не менее 2 символов",
       },
-      modalUserPhone: "Заполните поле",
+      modalUserPhone: {
+        required: "Заполните поле",
+        minlength: "Введите не менее 10 цифр"
+      },
       modalUserEmail: {
         required: "Заполните поле",
         email: "Введите корректный email"
@@ -350,7 +410,10 @@ $(document).ready(function () {
         required: true,
         minlength: 2,
       },
-      sampleUserPhone: "required",
+      sampleUserPhone: {
+        required: true,
+        minlength: 17,
+      },
       // compound rule
       sampleUserEmail: {
         required: true,
@@ -363,10 +426,11 @@ $(document).ready(function () {
     messages: {
       sampleUserName: {
         required: "Заполните поле",
-        minlength: "Имя должно содержать не менее двух символов",
+        minlength: "Введите не менее 2 символов",
       },
       sampleUserPhone: {
         required: "Заполните поле",
+        minlength: "Введите не менее 10 цифр"
       },
       sampleUserEmail: {
         required: "Заполните поле",
@@ -382,9 +446,10 @@ $(document).ready(function () {
         // dataType: "dataType",
         success: function (response) {
           $(form)[0].reset();
-          sampleTitle.addClass('sample__title--hidden');
-          sampleForm.addClass('sample__form--hidden');
-          sampleSuccessMessage.addClass('sample__success-message--visible');
+          modalSuccess.addClass('modal-success--visible');
+          // sampleTitle.addClass('sample__title--hidden');
+          // sampleForm.addClass('sample__form--hidden');
+          // sampleSuccessMessage.addClass('sample__success-message--visible');
           ym('61237666', 'reachGoal', 'request'); return true;
         }
       });
@@ -402,7 +467,10 @@ $(document).ready(function () {
         required: true,
         minlength: 2,
       },
-      footerUserPhone: "required",
+      footerUserPhone: {
+        required: true,
+        minlength: 17,
+      },
         // compound rule
         footerUserText: {
         required: true,
@@ -414,9 +482,12 @@ $(document).ready(function () {
     messages: {
       footerUserName: {
         required: "Заполните поле",
-        minlength: "Имя должно содержать не менее двух символов",
+        minlength: "Введите не менее 2 символов",
       },
-      footerUserPhone: "Заполните поле",
+      footerUserPhone: {
+        required: "Заполните поле",
+        minlength: "Введите не менее 10 цифр"
+      },
       footerUserText: {
         required: "Заполните поле",
       },
@@ -432,27 +503,15 @@ $(document).ready(function () {
           // console.log('Ajax сработал. Ответ сервера: ' + response);
           // alert('Форма отправлена, ждите звонка!');
           $(form)[0].reset();
-          footerTitle.addClass('footer__title--hidden');
-          footerForm.addClass('footer__form--hidden');
-          footerSuccessMessage.addClass('footer__success-message--visible');
+          modalSuccess.addClass('modal-success--visible');
+          // footerTitle.addClass('footer__title--hidden');
+          // footerForm.addClass('footer__form--hidden');
+          // footerSuccessMessage.addClass('footer__success-message--visible');
           ym('61237666', 'reachGoal', 'questions'); return true;
         }
       });
     }
-  });
-
-  // Маска для номера телефона
-  $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
-
-  // Временное тестовое решение
-  let sampleDialog = $('.sample__dialog');
-  let moneyboxContainer = $('.moneybox__container');
-  moneyboxContainer.click( function () {
-    sampleDialog.fadeOut(500);
-    sampleDialog.addClass('sample__dialog--hidden');
-    sampleDialog.fadeIn(500);
-    sampleDialog.removeClass('sample__dialog--hidden');
-    });
+  });  
 
   // Перелистывание галереи с картинками
   let gallary = $('.gallary');
@@ -487,15 +546,16 @@ $(document).ready(function () {
     event.target.playVideo();
   };
 
-  // Загрузка карты при скролле
-  let showBigMap = $('.footer__map--big');
-  let documentEl = $(document);  
-  let footer = $('.footer');
-  let topFooter = footer.offset().top;
-  documentEl.scroll( function () {
-  if (documentEl.scrollTop() > topFooter) {
-    showBigMap.addClass('footer__map--visible');
-    }
+  // Загрузка большой карты при клике
+  let mapBig = $('.footer__map--big');
+  mapBig.click( function() {
+    mapBig.html('<iframe class="testmap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d957.621762225179!2d39.72301357360925!3d47.24468603957375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40e3b9b47a7e7029%3A0x9e8cb546a10601cc!2z0KLQpiAi0JTQtdC60L7RgNGD0Lwi!5e0!3m2!1sru!2sde!4v1584657018474!5m2!1sru!2sde" width="100%" height="465"  allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>');
   });
 
+  // Загрузка малой карты при клике
+  let mapSmall = $('.footer__map--small');
+  mapSmall.click( function() {
+    mapSmall.html('<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d957.621762225179!2d39.72301357360925!3d47.24468603957375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40e3b9b47a7e7029%3A0x9e8cb546a10601cc!2z0KLQpiAi0JTQtdC60L7RgNGD0Lwi!5e0!3m2!1sru!2sde!4v1584657018474!5m2!1sru!2sde" width="100%" height="255"  allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>');
+  });
+  
 });

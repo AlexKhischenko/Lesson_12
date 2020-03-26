@@ -32,6 +32,7 @@
   .row
     padding: 0
   .design
+    padding-top: 9rem
   .sample
     padding-top: 8rem
     &-image
@@ -64,9 +65,16 @@
       &-32
         &--second
           margin: 0
+  .address
+    &__icons
+      max-width: 8.2rem
+    &__icon
+      width: 39px
+      height: 39px
 
-@media screen and ( max-width: 992px )
+@media screen and ( max-width: 991px )
   .scrollup
+    display: none
     &__content
       &:hover
         transform: none
@@ -163,6 +171,13 @@
       transition: none
       &:hover
         box-shadow: none
+        background-color: $primary
+        color: $light
+        border: 1px solid $primary
+  .video
+    &__play
+      &:hover
+        transform: none
   .types
     &__card
       margin-bottom: 7rem
@@ -330,6 +345,15 @@
     padding: 0 1.5rem
   .section
     padding: 0
+  .menu
+    &__logo
+      margin-left: 0
+    &__contacts
+      margin-right: 0
+  .hero
+    &__content
+      margin-left: 0
+      margin-right: 0
   .projects
     padding-bottom: 0
     &__swiper
@@ -487,6 +511,10 @@
         display: none
       &--small
         display: block
+        background-image: url("../img/footer/map-bg.png")
+        background-repeat: no-repeat
+        background-position: center
+        background-size: cover
     &__menu
       display: none
   #footerCheckbox-error

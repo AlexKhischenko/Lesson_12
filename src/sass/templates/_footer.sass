@@ -35,7 +35,7 @@
     flex-wrap: wrap
     justify-content: space-between
     max-width: 37.142rem
-    margin: auto
+    margin: 0 auto auto auto
     &--hidden
       display: none
   &__input
@@ -53,6 +53,8 @@
     position: relative
     flex-basis: 100%
     margin-bottom: 3.6rem
+    &-label
+      margin-top: 1.2rem
   &__button
     margin: auto
     padding: 1.28rem 4.38rem
@@ -68,11 +70,12 @@
     min-height: 465px
     box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.15)
     &--big
-      display: none
+      background-image: url("../img/footer/map-bg.png")
+      background-repeat: no-repeat
+      background-position: center
+      background-size: cover
     &--small
       display: none
-    &--visible
-      display: block
   &__success-message
     display: none
     &--visible
@@ -81,7 +84,6 @@
   margin: auto
   max-width: 35rem  
   &__title
-    display: none
     font-family: 'Yeseva One', cursive
     font-weight: normal
     font-size: 1.428rem
@@ -95,10 +97,10 @@
     justify-content: space-between
     margin: auto
     margin-bottom: 3.15rem
-    max-width: 8.2rem
+    max-width: 5rem
   &__icon
-    width: 39px
-    height: 39px
+    width: 28px
+    height: 28px
     border-radius: 50%
     transition: all 0.2s
     &:hover

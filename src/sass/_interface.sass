@@ -5,6 +5,7 @@
   font-size: 0.929rem
   font-weight: 500
   letter-spacing: 0.025rem
+  outline: none
   &:hover
     cursor: pointer
   &--primary
@@ -31,6 +32,7 @@
     color: rgba($light, 0.5)
 .input
   border: none
+  outline: none
   border-bottom: 1px solid rgba(54, 54, 54, 0.3)
   background-color: transparent
   font-size: 1.285rem
@@ -38,7 +40,9 @@
   padding: 0.53rem 0
   &--light
     &::placeholder
-      color: $light
+      color: $light    
+    &::-moz-placeholder, &:-moz-placeholder
+      opacity: 1
   &--dark
     color: $dark
     &::placeholder
