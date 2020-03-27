@@ -449,6 +449,12 @@
     margin-bottom: 0
     padding-top: 15rem
     background-color: $dark
+  .card
+    &__text
+      &--visible
+        display: none
+      &--hidden
+        display: block
   .team
     margin-top: 0
     padding-top: 2.5rem
@@ -553,7 +559,7 @@
       margin: 0
       max-width: 42rem
     &__title
-      font-size: 1.5rem
+      font-size: 1rem
     &__text
       max-width: 40rem
       margin-bottom: 1.5rem
@@ -564,5 +570,18 @@
       width: 40%
       padding-top: 1rem
       padding-bottom: 1rem
-
+  .modal
+    &__dialog
+      min-height: 10rem
+      padding: 1.5rem 3.65rem 1.5rem
+    &__title
+      margin-bottom: 1.5rem
+    &__input
+      &-group
+        margin-bottom: 2rem
+    &__policy
+      margin-bottom: 2rem
+    &__button
+      padding-top: 1rem
+      padding-bottom: 1rem
       

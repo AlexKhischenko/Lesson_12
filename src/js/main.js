@@ -73,6 +73,22 @@ $(document).ready(function () {
   closeSuccessBtn.click( function () {       
     modalSuccess.removeClass('modal-success--visible');      
   });
+
+  // Закрытие модального окна об успешной отправке клавишей Esc
+  $(document).keydown( function(event) {
+    if (modalSuccess.hasClass('modal-success--visible')) {
+      if (event.which == 27) {
+        modalSuccess.removeClass('modal-success--visible');
+      };
+    };
+  });
+
+  // Закрытие модального окна об успешной отправке кликом вне модального окна
+  modalSuccess.click( function(e) {
+    if (modalSuccess.is(e.target) && modalSuccess.has(e.target).length === 0) {
+      modalSuccess.removeClass('modal-success--visible');
+    };
+  });
   
   // Закрытие модального окна клавишей Esc
   $(document).keydown( function(event) {
@@ -388,7 +404,6 @@ $(document).ready(function () {
         type: "POST",
         url: "modalSend.php",
         data: $(form).serialize(),
-        // dataType: "dataType",
         success: function (response) {
           $(form)[0].reset();          
           modalTitle.addClass('modal__title--hidden');
@@ -405,7 +420,6 @@ $(document).ready(function () {
     errorElement: "div",
     errorClass: "invalid",
     rules: {
-      // simple rule, converted to {required:true}
       sampleUserName: {
         required: true,
         minlength: 2,
@@ -443,13 +457,9 @@ $(document).ready(function () {
         type: "POST",
         url: "sampleSend.php",
         data: $(form).serialize(),
-        // dataType: "dataType",
         success: function (response) {
           $(form)[0].reset();
           modalSuccess.addClass('modal-success--visible');
-          // sampleTitle.addClass('sample__title--hidden');
-          // sampleForm.addClass('sample__form--hidden');
-          // sampleSuccessMessage.addClass('sample__success-message--visible');
           ym('61237666', 'reachGoal', 'request'); return true;
         }
       });
@@ -462,7 +472,6 @@ $(document).ready(function () {
     errorClass: "invalid",
   ignore: ":disabled",
     rules: {
-        // simple rule, converted to {required:true}
       footerUserName: {
         required: true,
         minlength: 2,
@@ -498,15 +507,10 @@ $(document).ready(function () {
         type: "POST",
         url: "footerSend.php",
         data: $(form).serialize(),
-        // dataType: "dataType",
         success: function (response) {
           // console.log('Ajax сработал. Ответ сервера: ' + response);
-          // alert('Форма отправлена, ждите звонка!');
           $(form)[0].reset();
           modalSuccess.addClass('modal-success--visible');
-          // footerTitle.addClass('footer__title--hidden');
-          // footerForm.addClass('footer__form--hidden');
-          // footerSuccessMessage.addClass('footer__success-message--visible');
           ym('61237666', 'reachGoal', 'questions'); return true;
         }
       });
