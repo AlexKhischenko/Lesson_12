@@ -1,0 +1,1868 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:3000/ -->
+<html lang="ru" data-livestyle-extension="available"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="http://localhost:3000/img/favicon.ico" type="image/x-icon">
+    <link href="./Repair Design_files/css" rel="stylesheet">
+    <link rel="stylesheet" href="./Repair Design_files/swiper.min.css">
+    <link rel="stylesheet" href="./Repair Design_files/animate.css">
+    <link rel="stylesheet" href="./Repair Design_files/style.css">
+    <title>Repair Design</title>
+  <style type="text/css">/*.lleo_errorSelection *::-moz-selection,
+.lleo_errorSelection *::selection,
+.lleo_errorSelection *::-webkit-selection {
+    background-color: red !important;
+    color: #fff !important;;
+}*/
+
+#lleo_dialog,
+#lleo_dialog * {
+    color: #000 !important;
+    font: normal 13px Arial, Helvetica !important;
+    line-height: 15px !important;
+    margin: 0 !important;
+	padding: 0 !important;
+	background: none !important;
+	border: none 0 !important;
+	position: static !important;
+	vertical-align: baseline !important;
+	overflow: visible !important;
+	width: auto !important;
+	height: auto !important;
+    max-width: none !important;
+    max-height: none !important;
+	float: none !important;
+	visibility: visible !important;
+	text-align: left !important;
+    text-transform: none !important;
+	border-collapse: separate !important;
+	border-spacing: 2px !important;
+    box-sizing: content-box !important;
+    box-shadow: none !important;
+    opacity: 1 !important;
+    text-shadow: none !important;
+    letter-spacing: normal !important;
+    -webkit-filter: none !important;
+    -moz-filter: none !important;
+    filter: none !important;
+}
+#lleo_dialog *:before,
+#lleo_dialog *:after {
+    content: '';
+}
+
+#lleo_dialog iframe {
+	height: 0 !important;
+	width: 0 !important;
+}
+
+#lleo_dialog {
+    position: absolute !important;
+    background: #fff !important;
+    border: solid 1px #ccc !important;
+    padding: 7px 0 0 !important;
+    left: -999px;
+    top: -999px;
+    width: 440px !important;
+    overflow: hidden;
+    display: block !important;
+    z-index: 999999999 !important;
+    box-shadow: 8px 16px 30px rgba(0, 0, 0, 0.16) !important;
+    border-radius: 3px !important;
+    opacity: 0 !important;
+    -webkit-transform: translateY(15px);
+    -moz-transform: translateY(15px);
+    -ms-transform: translateY(15px);
+    -o-transform: translateY(15px);
+    transform: translateY(15px);
+}
+#lleo_dialog.lleo_show_small {
+    width: 150px !important;
+}
+#lleo_dialog.lleo_show {
+    opacity: 1 !important;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s !important;
+    -moz-transition: -moz-transform 0.3s, opacity 0.3s !important;
+    -ms-transition: -ms-transform 0.3s, opacity 0.3s !important;
+    -o-transition: -o-transform 0.3s, opacity 0.3s !important;
+    transition: transform 0.3s, opacity 0.3s !important;
+}
+#lleo_dialog.lleo_collapse {
+    opacity: 0 !important;
+    -webkit-transform: scale(0.25, 0.1) translate(-550px, 100px);
+    -moz-transform: scale(0.25, 0.1) translate(-550px, 100px);
+    -ms-transform: scale(0.25, 0.1) translate(-550px, 100px);
+    -o-transform: scale(0.25, 0.1) translate(-550px, 100px);
+    transform: scale(0.25, 0.1) translate(-550px, 100px);
+    -webkit-transition: -webkit-transform 0.4s, opacity 0.4s !important;
+    -moz-transition: -moz-transform 0.4s, opacity 0.4s !important;
+    -ms-transition: -ms-transform 0.4s, opacity 0.4s !important;
+    -o-transition: -o-transform 0.4s, opacity 0.4s !important;
+    transition: transform 0.4s, opacity 0.4s !important;
+}
+#lleo_dialog input::-webkit-input-placeholder {
+    color: #aaa !important;
+}
+#lleo_dialog .lleo_has_pic #lleo_word {
+	margin-right: 80px !important;
+}
+#lleo_dialog #lleo_translationsContainer1 {
+	position: relative !important;
+}
+#lleo_dialog #lleo_translationsContainer2 {
+	padding: 7px 0 0 !important;
+	vertical-align: middle !important;
+}
+#lleo_dialog #lleo_word {
+    color: #000 !important;
+    margin: 0 5px 2px 0 !important;
+    /*float: left !important;*/
+}
+#lleo_dialog .lleo_has_sound #lleo_word {
+    margin-left: 30px !important;
+}
+#lleo_dialog #lleo_text {
+    font-weight: bold !important;
+    color: #d56e00 !important;
+    text-decoration: none !important;
+    cursor: default !important;
+}
+/*
+#lleo_dialog #lleo_text.lleo_known {
+    cursor: pointer !important;
+    text-decoration: underline !important;
+}
+*/
+/*#lleo_dialog #lleo_closeBtn {
+    position: absolute !important;
+    right: 6px !important;
+    top: 5px !important;
+    line-height: 1px !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    font-size: 0 !important;
+    color: #aaa !important;
+    display: block !important;
+	z-index: 9999999999 !important;
+	width: 7px !important;
+	height: 7px !important;
+	padding: 0 !important;
+	margin: 0 !important;
+}*/
+
+#lleo_dialog #lleo_optionsBtn {
+    position: absolute !important; 
+    right: 3px !important;
+    top: 5px !important;
+    line-height: 1px !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    font-size: 13px !important;
+    color: #aaa !important;
+    padding: 2px !important;
+	display: none;
+}
+    #lleo_dialog.lleo_optionsShown #lleo_optionsBtn {
+        display: block !important;
+    }
+    #lleo_dialog #lleo_optionsBtn img {
+        width: 12px !important;
+        height: 12px !important;
+    }
+#lleo_dialog #lleo_sound {
+    float: left !important;
+    width: 16px !important;
+    height: 16px !important;
+    margin-left: 9px !important;
+    margin-right: 3px !important;
+    background: 0 0 no-repeat !important;
+    cursor: pointer !important;
+    display: none !important;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAfNJREFUeNq0U01IVFEU/u57Oo5WhBRIBBptykWLYBa2soWiEKQQEbrSFsGbVRQKQc2iFqGitXqvjQxCoCJCqyI0aBUtZILaJNUuYWYWo8HovJ/707nP94bnz0rxwvfOuefd8517fi5TSuE4i50YwZ3l37ZhNlpgzFkaaM/G9sHF1YskNrT+7l4PjMOcb78t2JL71uxgB+2UlfxHTtq5N94fIOh/88kWgWfl73ZCSQkpeGg3H091JY6dI2S00qA/N3KO3dDUYhFgEmZGurG+w9FqApIHsVM7kaTF9Nhn0r8Q7hPWQgIRuNaH3AMUA4W/Lkdh04cpFS43G0TgxQTvCdMETVAk3KynIHwXZU/ge8XDt7KH9bKLjU0P2zVO5LsEpSejVRJ9UR18EtfqKegovs9R3Q6w9c/H1o4Aa2Jwm1lIvn9RJ4w9RdRRzqcYrpwycCll4Cy1lnkS3Bc6vfBg28v8aRIfI78zhB/1GygROH3jLyyzMQ0zlUZuZBSlKkeLoegGtTjYLcJ8pF+NakHOFC2J6w+f25mxSfWrWFF/ShXVPTGvtN14NNkVnxlYWJkgZEL7/vwKr55lKSVnaGYWkuYgrgG172uUv47+U7fw0EHaJXmalUQy/HqO6lBzEsVjJC4Q8kd6TETQpjuaGOvjv8b/AgwA/ij1XMx58NIAAAAASUVORK5CYII=) !important;
+}
+#lleo_dialog .lleo_has_sound #lleo_sound {
+    display: block !important;
+}
+
+#lleo_dialog #lleo_soundWave {
+    border: solid 5px #4495CC !important;
+    border-radius: 5px !important;
+    position: absolute !important;
+    left: -5px !important;
+    top: -5px !important;
+    right: -5px !important;
+    bottom: -5px !important;
+    z-index: 0 !important;
+    opacity: 0.9 !important;
+    display: none !important;
+}
+    #lleo_dialog #lleo_soundWave.lleo_beforePlaying {
+        display: block !important;
+    }
+    #lleo_dialog #lleo_soundWave.lleo_playing {
+        opacity: 0 !important;
+        border-width: 20px !important;
+        border-radius: 30px !important;
+
+        -webkit-transform: scale(1.07,1.1) !important;
+        -moz-transform: scale(1.07,1.1) !important;
+        -ms-transform: scale(1.07,1.1) !important;
+        transform: scale(1.07,1.1) !important;
+
+        -webkit-transition: all 0.6s !important;
+        -moz-transition: all 0.6s !important;
+        -ms-transition: all 0.6s !important;
+        transition: all 0.6s !important;
+    }
+
+
+#lleo_dialog #lleo_picOuter {
+    position: absolute !important;
+    float: right !important;
+    top: 4px;
+    right: 5px;
+    z-index: 9 !important;
+    display: none !important;
+    width: 100px !important;
+}
+    #lleo_dialog.lleo_optionsShown #lleo_picOuter {
+        right: 25px;
+    }
+#lleo_dialog .lleo_has_pic #lleo_picOuter {
+    display: block !important;
+}
+    #lleo_dialog #lleo_picOuter:hover {
+        width: auto !important;
+        z-index: 11 !important;
+    }
+#lleo_dialog #lleo_pic,
+#lleo_dialog #lleo_picBig {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    border: solid 2px #fff !important;
+    -webkit-border-radius: 2px !important;
+    -moz-border-radius: 2px !important;
+	border-radius: 2px !important;
+    z-index: 1 !important;
+}
+#lleo_dialog #lleo_pic {
+	position: relative !important;
+    border: none !important;
+	width: 30px !important;
+}
+#lleo_dialog #lleo_picBig {
+    box-shadow: -1px 2px 4px rgba(0,0,0,0.3);
+    z-index: 2 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+    #lleo_dialog #lleo_picOuter:hover #lleo_picBig {
+        visibility: visible !important;
+        opacity: 1 !important;
+        -webkit-transition: opacity 0.3s !important;
+        -webkit-transition-delay: 0.3s !important;
+    }
+#lleo_dialog #lleo_transcription {
+    margin: 0 80px 4px 31px !important;
+    color: #aaaaaa !important;
+}
+#lleo_dialog .lleo_no_trans {
+    color: #aaa !important;
+}
+
+#lleo_dialog .ll-translation-counter {
+	float: right !important;
+    font-size: 11px !important;
+    color: #aaa !important;
+    padding: 2px 2px 1px 10px !important;
+}
+
+#lleo_dialog .ll-translation-text {
+	float: left !important;
+	/*width: 80% !important;*/
+}
+
+#lleo_dialog #lleo_trans a {
+    color: #3F669F !important;
+    text-decoration: none !important;
+    text-overflow: ellipsis !important;
+    padding: 1px 4px !important;
+    overflow: hidden !important;
+    float: left !important;
+    width: 320px !important;
+}
+
+#lleo_dialog .ll-translation-item {
+    color: #3F669F !important;
+    border: solid 1px #fff !important;
+    padding: 3px !important;
+    width: 100% !important;
+    float: left !important;
+	-moz-border-radius: 2px !important;
+	-webkit-border-radius: 2px !important;
+	border-radius: 2px !important;
+}
+
+#lleo_dialog .ll-translation-item:hover {
+	border: solid 1px #9FC2C9 !important;
+    background: #EDF4F6 !important;
+	cursor: pointer !important;
+}
+#lleo_dialog .ll-translation-item:hover .ll-translation-counter {
+	color: #83a0a6 !important;
+}
+
+#lleo_dialog .ll-translation-marker {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAAWSURBVBhXY7RPm/+fAQkwIXNAbMICAJQ8AkvqWg/SAAAAAElFTkSuQmCC) !important;
+    display: inline-block !important;
+    width: 4px !important;
+    height: 4px !important;
+    margin: 7px 5px 2px 2px !important;
+    float: left !important;
+}
+
+#lleo_dialog #lleo_icons {
+    color: #aaa !important;
+    font-size: 11px !important;
+    background: #f8f8f8 !important;
+    padding: 10px 10px 10px 16px !important;
+}
+#lleo_icons a {
+    display: inline-block !important;
+    width: 16px !important;
+    height: 16px !important;
+    margin: 0 10px -4px 3px !important;
+    text-decoration: none !important;
+    opacity: 0.5 !important;
+    background: url(data:image/png;base64,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) !important;
+}
+#lleo_icons a:hover {
+    opacity: 1 !important;
+}
+#lleo_icons a.lleo_google     {background-position:-34px 0 !important;}
+#lleo_icons a.lleo_multitran  {background-position:-64px 0 !important;}
+#lleo_icons a.lleo_lingvo     {background-position:-51px 0 !important; width: 12px !important;}
+#lleo_icons a.lleo_dict       {background-position:-17px 0 !important;}
+#lleo_icons a.lleo_linguee    {background-position:-81px 0 !important;}
+#lleo_icons a.lleo_michaelis  {background-position:-98px 0 !important;}
+
+#lleo_dialog #lleo_contextContainer {
+    margin: 0 !important;
+    padding: 3px 15px 8px 10px !important;
+    background: #eee !important;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee)) !important;
+    background: -moz-linear-gradient(-90deg, #fff, #eee) !important;
+    border-bottom: solid 1px #ddd !important;
+    border-top-left-radius: 3px !important;
+    border-top-right-radius: 3px !important;
+    display: none !important;
+    overflow: hidden !important;
+}
+#lleo_dialog .lleo_has_context #lleo_contextContainer {
+    display: block !important;
+}
+#lleo_dialog #lleo_context {
+    color: #444 !important;
+    text-shadow: 1px 1px 0 #f4f4f4 !important;
+    line-height: 12px !important;
+    font-size: 11px !important;
+    margin-left: 2px !important;
+}
+#lleo_dialog #lleo_context b {
+    line-height: 12px !important;
+    color: #000 !important;
+    font-weight: bold !important;
+    font-size: 11px !important;
+}
+/*#lleo_dialog #lleo_gBrand {
+    color: #aaa !important;
+    font-size: 10px !important;
+    *//*padding-right: 52px !important;*//*
+    padding-bottom: 14px !important;
+    margin: -3px 4px 0 4px !important;
+    background: left bottom url(data:image/png;base64,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) no-repeat !important;
+    display: inline-block !important;
+    float: right !important;
+}
+#lleo_dialog #lleo_gBrand.hidden {
+    display: none !important;
+}*/
+#lleo_dialog #lleo_translateContextLink {
+    color: #444 !important;
+    text-shadow: 1px 1px 0 #f4f4f4 !important;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f4f4f4), to(#ddd)) !important;
+    background: -moz-linear-gradient(-90deg, #f4f4f4, #ddd) !important;
+    border: solid 1px !important;
+    box-shadow: 1px 1px 0 #f6f6f6 !important;
+    border-color: #999 #aaa #aaa #999 !important;
+    -moz-border-radius: 2px !important;
+	-webkit-border-radius: 2px !important;
+	border-radius: 2px !important;
+    padding: 0 3px !important;
+    font-size: 11px !important;
+    text-decoration: none !important;
+    margin: 1px 5px 0 !important;
+    display: inline-block !important;
+    white-space: nowrap !important;
+}
+#lleo_dialog #lleo_translateContextLink:hover {
+    background: #f8f8f8 !important;
+}
+#lleo_dialog #lleo_translateContextLink.hidden {
+    visibility: hidden !important;
+}
+
+#lleo_dialog #lleo_setTransForm {
+    display: block !important;
+    margin-top: 3px !important;
+    padding-top: 5px !important;
+    /* Set position and background because the form might be overlapped by an image when no translations */
+    position: relative !important;
+    background: #fff !important;
+    z-index: 10 !important;
+    padding-bottom: 10px !important;
+    padding-left: 16px !important;
+}
+#lleo_dialog .lleo-custom-translation {
+    padding: 4px 5px !important;
+    border: solid 1px #ddd !important;
+	border-radius: 2px !important;
+    width: 90% !important;
+    min-width: 270px !important;
+    background: -webkit-gradient(linear, 0 0, 0 20, from(#f1f1f1), to(#fff)) !important;
+    background: -moz-linear-gradient(-90deg, #f1f1f1, #fff) !important;
+	font: normal 13px Arial, Helvetica !important;
+	line-height: 15px !important;
+}
+#lleo_dialog .lleo-custom-translation:hover {
+    border: solid 1px #aaa !important;
+}
+#lleo_dialog .lleo-custom-translation:focus {
+    background: #FFFEC9 !important;
+}
+
+#lleo_dialog *.hidden {
+    display: none !important;
+}
+
+#lleo_dialog .infinitive{
+    color: #D56E00 !important;
+    text-decoration: none;
+    border-bottom: 1px dotted #D56E00 !important;
+}
+#lleo_dialog .infinitive:hover{
+    border: none !important;
+}
+
+#lleo_dialog .lleo_separator {
+    height: 1px !important;
+    background: #eee;
+    margin-top: 10px !important;
+    background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%,#eee 8%,rgba(255,255,255,1) 80%) !important;
+    background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, #eee 8%, rgba(255,255,255,1) 80%) !important;
+    background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%,#eee 8%,rgba(255,255,255,1) 80%) !important;
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%,#eee 8%,rgba(255,255,255,1) 80%) !important;
+}
+#lleo_dialog #lleo_trans {
+    /*border-top: 1px solid #eeeeee !important;*/
+    padding: 5px 30px 0 14px !important;
+    zoom: 1;
+}
+
+#lleo_dialog .lleo_clearfix {
+	display: block !important;
+	clear: both !important;
+	visibility: hidden !important;
+	height: 0 !important;
+	font-size: 0 !important;
+}
+
+
+#lleo_dialog #lleo_picOuter table {
+    width: 44px !important;
+    position: absolute !important;
+    right: 0 !important;
+    top: 0 !important;
+    vertical-align: middle !important;
+}
+
+#lleo_dialog #lleo_picOuter td {
+    width: 38px !important;
+    height: 38px !important;
+    /*border: 1px solid #eeeeee !important;*/
+    vertical-align: middle !important;
+    text-align: center !important;
+}
+
+#lleo_dialog #lleo_picOuter td div {
+	height: 38px !important;
+	overflow: hidden !important;
+}
+
+#lleo_dialog .lleo_empty {
+    margin: 0 5px 7px !important;
+}
+
+#lleo_youtubeExportBtn {
+    margin-left: 10px;
+    height: 24px;
+}
+    #lleo_youtubeExportBtn i {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background: 0 0 url(https://d144fqpiyasmrr.cloudfront.net/plugins/all/images/i16.png) !important;
+    }
+    #lleo_youtubeExportBtn .yt-uix-button-content {
+        font-size: 12px;
+        line-height: 2px;
+    }
+
+
+/*** Parsed Lyrics Content *****************************/
+
+.lleo_lyrics tran {
+    background: transparent !important;
+    border-radius: 2px !important;
+    text-shadow: none !important;
+    cursor: pointer !important;
+}
+    .lleo_lyrics tran:hover {
+        color: #fff !important;
+        background: #C77213 !important;
+        -webkit-transition: all 0.1s !important;
+        -moz-transition: all 0.1s !important;
+        -ms-transition: all 0.1s !important;
+        -o-transition: all 0.1s !important;
+        transition: all 0.1s !important;
+    }
+
+.lleo_songName {
+    border: solid 1px #ffd47c;
+    background: #fff1c2;
+    border-radius: 2px;
+}
+
+.lleo_hidden_iframe {
+    visibility: hidden;
+}</style></head>
+  <body data-gr-c-s-loaded="true"><script type="text/javascript" id="www-widgetapi-script" src="./Repair Design_files/www-widgetapi.js.Без названия" async=""></script><script async="" src="./Repair Design_files/tag.js.Без названия"></script><script id="__bs_script__">//<![CDATA[
+    document.write("<script async src='/browser-sync/browser-sync-client.js?v=2.26.7'><\/script>".replace("HOST", location.hostname));
+//]]></script><script async="" src="./Repair Design_files/browser-sync-client.js.Без названия"></script>
+
+    <!-- Yandex.Metrika counter --> <script type="text/javascript"> (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(61237666, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/61237666" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+    <header class="header" id="main">
+      <div class="container">
+        <div class="menu">
+          <div class="menu__logo">
+            <a href="http://akhischenko.com/project/" class="logo">Repair Design Project</a>
+          </div>
+          <nav class="nav menu__nav">
+            <a href="http://localhost:3000/#main" class="nav__item">Главная</a>
+            <a href="http://localhost:3000/#projects" class="nav__item">Проекты</a>
+            <a href="http://localhost:3000/#sample" class="nav__item">Замер</a>
+            <a href="http://localhost:3000/#team" class="nav__item">Команда</a>
+            <a href="http://localhost:3000/#feedbacks" class="nav__item">Отзывы</a>
+            <a href="http://localhost:3000/#contacts" class="nav__item">Контакты</a>
+          </nav>
+          <div class="contacts menu__contacts">
+            <a href="tel:+79997683299" class="phone contacts__phone">+7 (999) 768-32-99</a>
+            <button class="button contacts__button button--primary" data-toggle="modal">Заказать звонок</button>
+          </div>
+          <!-- /.contacts -->
+        </div>
+        <!-- /.menu -->
+      </div>
+      <!-- /.container -->
+    </header>
+    <!-- /.header -->
+
+    <main>
+      <section class="hero">
+        <div class="instagram hero__instagram">
+          <a href="https://www.instagram.com/" class="instagram__link">Instagram</a>
+        </div>
+        <div class="container hero__container">
+          <div class="hero__content">
+            <h1 class="title hero__title">Турецкий ремонт в&nbsp;<span class="title--primary">Ростове-на-дону</span></h1>
+            <p class="hero__text">Получите готовый ремонт под ключ в срок с&nbsp;экономией рабочего времени до 45 дней и&nbsp;20% от стоимости материалов за счет организации работы</p>
+            <button class="button hero__button button--primary" data-toggle="modal">Рассчитать стоимость</button>
+            <button class="button hero__button button--outline" data-toggle="modal">Отправить заявку</button>
+          </div>
+          <!-- /.hero__content -->
+        </div>
+        <!-- /.container -->
+        <a href="http://localhost:3000/#projects" class="hero__scroll-down fix-align-items">Листайте вниз</a>
+      </section>
+      <!-- /.hero -->
+
+      <section class="section section--dark projects" id="projects">
+        <div class="container">
+
+          <div class="col-100">
+            <div class="section-title">
+              <h2 class="section-title__heading section-title__heading--primary">Завершенные проекты</h2>
+              <p class="section-title__text">На сайте представлена ​​лишь небольшая часть работ, выполняемых нашей компанией. За 14 лет работы на строительном рынке мы осчастливили более 1000 семей</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-40 row__col-40">
+              <div class="section-title section-title--left section-title--visible">
+                <h2 class="section-title__heading section-title__heading--primary wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">Завершенные <span class="section-title__word">проекты</span></h2>
+                <!-- /.section-title__heading -->
+                <p class="section-title__text">На сайте представлена ​​лишь небольшая часть работ, выполняемых нашей компанией. За 14 лет работы на строительном рынке мы осчастливили более 1000 семей</p>
+              </div>
+              <!-- /.section-title -->       
+              <!-- Slider main container -->
+              <div class="swiper-container swiper1 swiper-container-initialized swiper-container-horizontal">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper swiper-no-swiping">
+                    <!-- Slides -->
+                    <div class="swiper-slide projects__swiper swiper1__slide swiper-slide-active" style="width: 339px;">
+                      <div class="swiper1__text">
+                        <h3 class="swiper1__heading">Город:</h3>
+                        <!-- /.swiper-slide__heading -->
+                        <span class="swiper1__value">Ростов-на-Дону <span class="swiper1__word">ЖК Адмирал</span></span>
+                        <!-- /.swiper-slide__value -->
+                      </div>
+                      <!-- /.swiper-slide__text -->
+                      <div class="swiper1__text">
+                        <h3 class="swiper1__heading">Площадь:</h3>
+                        <!-- /.swiper-slide__heading -->
+                        <span class="swiper1__value">81 м2</span>
+                        <!-- /.swiper-slide__value -->
+                      </div>
+                      <!-- /.swiper-slide__text -->
+                      <div class="swiper1__text">
+                        <h3 class="swiper1__heading">Срок ремонта:</h3>
+                        <!-- /.swiper-slide__heading -->
+                        <span class="swiper1__value">3,5 месяца</span>
+                        <!-- /.swiper-slide__value -->
+                      </div>
+                      <!-- /.swiper-slide__text -->
+                      <div class="swiper1__text">
+                        <h3 class="swiper1__heading">Стоимость:</h3>
+                        <!-- /.swiper-slide__heading -->
+                        <span class="swiper1__value">По запросу</span>
+                        <!-- /.swiper-slide__value -->
+                      </div>
+                      <!-- /.swiper-slide__text -->
+                    </div>
+                    <div class="swiper-slide projects__swiper swiper1__slide swiper-slide-next" style="width: 339px;">
+                      <div class="swiper1__text">
+                        <h3 class="swiper1__heading">Город:</h3>
+                        <!-- /.swiper-slide__heading -->
+                        <span class="swiper1__value">Ростов-на-Дону <span class="swiper1__word">ЖК Адмирал</span></span>
+                        <!-- /.swiper-slide__value -->
+                      </div>
+                      <!-- /.swiper-slide__text -->
+                      <div class="swiper1__text">
+                        <h3 class="swiper1__heading">Площадь:</h3>
+                        <!-- /.swiper-slide__heading -->
+                        <span class="swiper1__value">81 м2</span>
+                        <!-- /.swiper-slide__value -->
+                      </div>
+                      <!-- /.swiper-slide__text -->
+                      <div class="swiper1__text">
+                        <h3 class="swiper1__heading">Срок ремонта:</h3>
+                        <!-- /.swiper-slide__heading -->
+                        <span class="swiper1__value">3,5 месяца</span>
+                        <!-- /.swiper-slide__value -->
+                      </div>
+                      <!-- /.swiper-slide__text -->
+                      <div class="swiper1__text">
+                        <h3 class="swiper1__heading">Стоимость:</h3>
+                        <!-- /.swiper-slide__heading -->
+                        <span class="swiper1__value">По запросу</span>
+                        <!-- /.swiper-slide__value -->
+                      </div>
+                      <!-- /.swiper-slide__text -->
+                    </div>
+                    <div class="swiper-slide projects__swiper swiper1__slide" style="width: 339px;">
+                      <div class="swiper1__text">
+                        <h3 class="swiper1__heading">Город:</h3>
+                        <!-- /.swiper-slide__heading -->
+                        <span class="swiper1__value">Ростов-на-Дону <span class="swiper1__word">ЖК Адмирал</span></span>
+                        <!-- /.swiper-slide__value -->
+                      </div>
+                      <!-- /.swiper-slide__text -->
+                      <div class="swiper1__text">
+                        <h3 class="swiper1__heading">Площадь:</h3>
+                        <!-- /.swiper-slide__heading -->
+                        <span class="swiper1__value">81 м2</span>
+                        <!-- /.swiper-slide__value -->
+                      </div>
+                      <!-- /.swiper-slide__text -->
+                      <div class="swiper1__text">
+                        <h3 class="swiper1__heading">Срок ремонта:</h3>
+                        <!-- /.swiper-slide__heading -->
+                        <span class="swiper1__value">3,5 месяца</span>
+                        <!-- /.swiper-slide__value -->
+                      </div>
+                      <!-- /.swiper-slide__text -->
+                      <div class="swiper1__text">
+                        <h3 class="swiper1__heading">Стоимость:</h3>
+                        <!-- /.swiper-slide__heading -->
+                        <span class="swiper1__value">По запросу</span>
+                        <!-- /.swiper-slide__value -->
+                      </div>
+                      <!-- /.swiper-slide__text -->
+                    </div>
+                    
+                </div>              
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev swiper1__prev swiper-button-disabled" tabindex="0" role="button" aria-label="Previous slide" aria-disabled="true"></div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination projects__pagination swiper-pagination-bullets" style="left: 62px;"><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span></div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-next swiper1__next" tabindex="0" role="button" aria-label="Next slide" aria-disabled="false" style="left: 155.125px;"></div>
+              <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+            </div>
+            <!-- /.col-40 -->
+            <div class="col-60">
+              <!-- Slider main container -->
+              <div class="swiper-container swiper1 swiper-container-initialized swiper-container-horizontal">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper swiper-no-swiping" style="transform: translate3d(0px, 0px, 0px);">
+                  <!-- Slides -->
+                  <div class="swiper-slide pswiper1__slide swiper-slide-active" style="width: 339px;">
+                    <img src="./Repair Design_files/projects-1.jpg" alt="Project" class="swiper1__image">
+                  </div>
+                  <div class="swiper-slide swiper1__slide swiper-slide-next" style="width: 339px;">
+                    <img src="./Repair Design_files/projects-1.jpg" alt="Project" class="swiper1__image">
+                  </div> 
+                  <div class="swiper-slide swiper1__slide" style="width: 339px;">
+                    <img src="./Repair Design_files/projects-1.jpg" alt="Project" class="swiper1__image">
+                  </div> 
+                </div>                 
+              <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+            </div>
+            <!-- /.col-60 -->
+          </div>
+          <!-- /.row -->
+        </div>
+        <!-- /.container -->
+      </section>
+      <!-- /.section -->
+
+      <section class="section control">
+        <div class="container">
+          <div class="section-title control__section-title section-title--light wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+            <h2 class="section-title__heading control__heading">Онлайн контроль</h2>
+            <!-- /.section-title__heading -->
+            <div class="section-title__image">
+              <img src="./Repair Design_files/video.svg" alt="Видеокамера">
+            </div>
+            <!-- /.decsion-title__image -->
+          </div>
+          <!-- /.section-title -->
+          <div class="control__video video" id="player">
+            <script src="./Repair Design_files/iframe_api"></script>
+            <img src="./Repair Design_files/play-icon.svg" alt="play icon" class="video__play">
+          </div>
+          <!-- /.control__vide video -->
+          <p class="control__text">На каждом объекте установлена ​​камера, которая транслирует ход работы на часах. В любой момент вы можете зайти на наш сайт и следить за ходом работы в вашей квартире. Посмотрите прямую трансляцию с одного из наших объектов! Оставьте заявку ниже чтобы получить ссылку на трансляцию.</p>
+          <form action="http://localhost:3000/controlSend.php" method="POST" class="form control__form" novalidate="novalidate">
+            <div class="control__input-group">
+              <label for="control-user-name" class="label form__label control__label">Имя</label>
+              <input type="text" name="controlUserName" maxlength="15" class="input form__input control__input input--dark" id="control-user-name" placeholder="Как вас зовут:">
+            </div>
+            <div class="control__input-group">
+              <label for="control-user-phone" class="label form__label control__label">Телефон</label>
+              <input type="tel" name="controlUserPhone" class="input form__input control__input input--dark" id="control-user-phone" placeholder="Ваш номер телефона:">
+            </div>
+            <button class="button button--primary control__button">Отправить</button>
+            <div class="policy control__policy">
+              <input type="checkbox" name="controlCheckbox" id="control-checkbox" class="policy__checkbox" checked="">
+              <label for="control-checkbox" class="policy__label control__policy-label" id="control-checkbox-label">Я соглашаюсь с обработкой данных</label>
+            </div>
+            <!-- /.policy -->
+          </form>
+          <!-- /.form control__form -->
+        </div>
+        <!-- /.container -->
+      </section>
+      <!-- /.section control -->
+
+      <section class="section types">
+        <div class="container">
+          <div class="section-title types__section-title wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+            <h2 class="section-title__heading">Виды ремонта</h2>
+            <!-- /.section-title__heading -->
+            <div class="section-title__image">
+              <img src="./Repair Design_files/repair.svg" alt="Repair">
+            </div>
+            <!-- /.decsion-title__image -->
+          </div>
+          <!-- /.section-title -->
+          <div class="row">
+            <div class="col-32">
+              <div class="card types__card">
+                <img src="./Repair Design_files/type-1.jpg" alt="Косметический ремонт" class="card__image">
+                <div class="card__text">
+                  <h3 class="card__title">Косметический ремонт</h3>
+                  <!-- /.card__title -->
+                  <ul class="card__list">
+                    <li class="card__item">Демонтаж старых покрытий</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">Поклейка обоев</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">Роспись стен и потолков</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">Укладка полов</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">Замена сантехники</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">Замена розеток и выключателей</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">Замена дверей</li>
+                    <!-- /.card__item -->
+                  </ul>
+                  <!-- /.card__list -->
+                  <strong class="types__pricetag card__pricetag">
+                    от 900 руб / м<sup>2</sup>
+                  </strong>
+                  <!-- /.card__pricetag -->
+                </div>
+                <!-- /.card__text -->
+              </div>
+              <!-- /.card -->
+            </div>
+            <!-- /.col -->
+            <div class="col-32">
+              <div class="card types__card">
+                <img src="./Repair Design_files/type-2.jpg" alt="Капитальный ремонт" class="card__image">
+                <div class="card__text">
+                  <h3 class="card__title">Капитальный ремонт</h3>
+                  <!-- /.card__title -->
+                  <ul class="card__list">
+                    <li class="card__item">Демонтаж старых покрытий</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">Поклейка обоев</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">Роспись стен и потолков</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">Укладка полов</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">Замена сантехники</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">Замена розеток и выключателей</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">Замена дверей</li>
+                    <!-- /.card__item -->
+                  </ul>
+                  <!-- /.card__list -->
+                  <strong class="types__pricetag card__pricetag">
+                    от 1800 руб / м<sup>2</sup>
+                  </strong>
+                  <!-- /.card__pricetag -->
+                </div>
+                <!-- /.card__text -->
+              </div>
+              <!-- /.card -->
+            </div>
+            <!-- /.col -->
+            <div class="col-32">
+              <div class="card types__card">
+                <img src="./Repair Design_files/type-3.jpg" alt="Дизайнерский ремонт" class="card__image">
+                <div class="card__text">
+                  <h3 class="card__title">Дизайнерский ремонт</h3>
+                  <!-- /.card__title -->
+                  <ul class="card__list">
+                    <li class="card__item">Демонтаж старых покрытий</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">Поклейка обоев</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">Роспись стен и потолков</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">Укладка полов</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">Замена сантехники</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">Замена розеток и выключателей</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">Замена дверей</li>
+                    <!-- /.card__item -->
+                  </ul>
+                  <!-- /.card__list -->
+                  <strong class="types__pricetag card__pricetag">
+                    от 4000 руб / м<sup>2</sup>
+                  </strong>
+                  <!-- /.card__pricetag -->
+                </div>
+                <!-- /.card__text -->
+              </div>
+              <!-- /.card -->
+            </div>
+            <!-- /.col -->
+          </div>
+          <!-- /.row -->
+        </div>
+        <!-- /.container -->
+      </section>
+      <!-- /.section types -->
+
+      <section class="section sample" id="sample">
+        <div class="container">
+          <div class="row">
+            <div class="col-50">
+              <div class="sample__image"><img src="./Repair Design_files/sample-bg.png" alt="" class="sample-image"></div>
+              <p class="sample-text sample__description-1">Наш специалист приедет для замеров в день контакта или назначит удобную для вас дату</p>
+              <!-- /.sample-text sample__description-1 -->
+              <p class="sample-text sample__description-2">Бесплатный замер</p>
+              <!-- /.sample-text sample__description-2 -->
+              <p class="sample-text sample__description-3">Бесплатная консультация</p>
+              <!-- /.sample-text sample__description-3 -->
+              <p class="sample-text sample__description-4">Получите смету расходов и сроки вашего будущего ремонта
+              </p>
+              <!-- /.sample-text sample__description-4 -->
+            </div>
+            <!-- /.col-50 -->
+            <div class="col-50">
+              <div class="sample__dialog">
+                <h3 class="sample__title">Оставьте заявку на бесплатный выезд замерщика</h3>
+                <form action="http://localhost:3000/sampleSend.php" method="POST" class="sample__form" novalidate="novalidate">
+                  <div class="input-group sample__input-group">
+                    <label for="sample-user-name" class="label form__label label--light">Имя</label>
+                    <input type="text" name="sampleUserName" maxlength="15" class="input form__input sample__input input--light" id="sample-user-name" placeholder="Как вас зовут:">
+                  </div>
+                  <div class="input-group sample__input-group">
+                    <label for="sample-user-phone" class="label form__label label--light">Телефон</label>
+                    <input type="tel" name="sampleUserPhone" class="input form__input sample__input input--light" id="sample-user-phone" placeholder="Ваш телефон:">
+                  </div>
+                  <div class="input-group sample__input-group sample__input-group--last">
+                    <label for="sample-user-email" class="label form__label label--light">Email</label>
+                    <input type="email" name="sampleUserEmail" class="input form__input sample__input input--light" id="sample-user-email" placeholder="Ваш email">
+                  </div>
+                  <div class="policy sample__policy">
+                    <input type="checkbox" name="sampleCheckbox" id="sample-checkbox" class="policy__checkbox" checked="">
+                    <label for="sample-checkbox" class="policy__label" id="sample-checkbox-label">Я соглашаюсь с обработкой данных</label>
+                  </div>
+                  <!-- /.policy -->
+                  <button class="button button--primary sample__button">вызвать замерщика</button>
+                </form>
+                <!-- /.form sample__form -->      
+              </div>
+              <!-- /.sample__dialog -->
+              <div class="moneybox sample__moneybox">
+                <div class="moneybox__container">
+                  <img src="./Repair Design_files/moneybox.svg" alt="moneybox">
+                </div>
+                <!-- /.moneybox__container -->
+                <p class="moneybox__text">Это поможет сэкономить 10 - 20% от стоимости материалов
+                </p>
+                <!-- /.moneybox__text -->
+              </div>
+              <!-- /.moneybox sample__moneybox -->
+            </div>
+            <!-- /.col-50 -->
+          </div>
+          <!-- /.row -->
+        </div>
+        <!-- /.container -->
+      </section>
+      <!-- /.section sample -->
+
+      <section class="section implement">
+        <div class="container">
+          <div class="section-title section-title--hidden">
+            <h2 class="section-title__heading section-title__heading--primary implement__title">Мы реализуем ваши самые&nbsp;смелые фантазии</h2>
+          </div>
+
+          <div class="swiper-container swiper4 swiper4--hidden swiper-container-fade swiper-container-initialized swiper-container-horizontal">
+            <div class="swiper-wrapper swiper4__wrapper swiper-no-swiping">
+              <div class="swiper-slide swiper4__slide swiper-slide-active" style="width: 339px; opacity: 1; transform: translate3d(0px, 0px, 0px);"><img src="./Repair Design_files/slide-1.jpg" alt="Design" class="swiper4__image"></div>
+              <div class="swiper-slide swiper4__slide swiper-slide-next" style="width: 339px; opacity: 0; transform: translate3d(-339px, 0px, 0px);"><img src="./Repair Design_files/slide-2.jpg" alt="Design" class="swiper4__image"></div>
+              <div class="swiper-slide swiper4__slide" style="width: 339px; opacity: 0; transform: translate3d(-678px, 0px, 0px);"><img src="./Repair Design_files/slide-3.jpg" alt="Design" class="swiper4__image"></div>
+              <div class="swiper-slide swiper4__slide" style="width: 339px; opacity: 0; transform: translate3d(-1017px, 0px, 0px);"><img src="./Repair Design_files/slide-4.jpg" alt="Design" class="swiper4__image"></div>
+              <div class="swiper-slide swiper4__slide" style="width: 339px; opacity: 0; transform: translate3d(-1356px, 0px, 0px);"><img src="./Repair Design_files/slide-5.jpg" alt="Design" class="swiper4__image"></div>
+            </div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next swiper4__next" tabindex="0" role="button" aria-label="Next slide" aria-disabled="false" style="left: 155.125px;"></div>
+            <div class="swiper-button-prev swiper4__prev swiper-button-disabled" tabindex="0" role="button" aria-label="Previous slide" aria-disabled="true"></div>
+          <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+
+          <div class="row implement__row">
+            <div class="col-40">
+              <div class="section-title section-title--left">
+                <h2 class="section-title__heading section-title__heading--primary implement__title wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">Мы реализуем ваши самые&nbsp;смелые фантазии</h2>
+              </div>
+              <ul class="implement__list">
+                <li class="implement__list-item implement__list-item--active item-1">Американская классика</li>
+                <li class="implement__list-item item-2">Имперский стиль</li>
+                <li class="implement__list-item item-3">Классика</li>
+                <li class="implement__list-item item-4">Лофт</li>
+                <li class="implement__list-item item-5">Минимализм</li>
+                <li class="implement__list-item item-6">Прованс</li>
+                <li class="implement__list-item item-7">Романтизм</li>
+                <li class="implement__list-item item-8">Скандинавский стиль</li>
+                <li class="implement__list-item item-9">Средиземноморский стиль</li>
+                <li class="implement__list-item item-10">Хайтек</li>
+                <li class="implement__list-item item-11">Эклектизм</li>
+              </ul>
+            </div>
+            <!-- /.col-32 -->
+            <div class="col-60">
+              <div class="gallary gallary-1">
+                <div class="gallary__left">
+                  <div class="gallary__tl">
+                    <img src="./Repair Design_files/tl-1.jpg" alt="Design" class="itest">
+                  </div>
+                  <div class="gallary__bl">
+                    <img src="./Repair Design_files/bl-1.jpg" alt="Design" class="itest">
+                  </div>
+                </div>
+                <!-- /.gallary__left -->
+                <div class="gallary__right">
+                  <div class="gallary__tr">
+                    <img src="./Repair Design_files/tr-1.jpg" alt="Design" class="itest">
+                  </div>
+                  <div class="gallary__br">
+                    <img src="./Repair Design_files/br-1.jpg" alt="Design" class="itest">
+                  </div>
+                </div>
+                <!-- /.gallary__right -->
+              </div>
+              <!-- /.gallary -->
+              <div class="gallary gallary--hidden gallary-2">
+                <div class="gallary__left">
+                  <div class="gallary__tl">
+                    <img src="./Repair Design_files/tl-2.jpg" alt="Design">
+                  </div>
+                  <div class="gallary__bl">
+                    <img src="./Repair Design_files/bl-2.jpg" alt="Design">
+                  </div>
+                </div>
+                <!-- /.gallary__left -->
+                <div class="gallary__right">
+                  <div class="gallary__tr">
+                    <img src="./Repair Design_files/tr-2.jpg" alt="Design">
+                  </div>
+                  <div class="gallary__br">
+                    <img src="./Repair Design_files/br-2.jpg" alt="Design">
+                  </div>
+                </div>
+                <!-- /.gallary__right -->
+              </div>
+              <!-- /.gallary -->
+              <div class="gallary gallary--hidden gallary-3">
+                <div class="gallary__left">
+                  <div class="gallary__tl">
+                    <img src="./Repair Design_files/tl-3.jpg" alt="Design">
+                  </div>
+                  <div class="gallary__bl">
+                    <img src="./Repair Design_files/bl-3.jpg" alt="Design">
+                  </div>
+                </div>
+                <!-- /.gallary__left -->
+                <div class="gallary__right">
+                  <div class="gallary__tr">
+                    <img src="./Repair Design_files/tr-3.jpg" alt="Design">
+                  </div>
+                  <div class="gallary__br">
+                    <img src="./Repair Design_files/br-3.jpg" alt="Design">
+                  </div>
+                </div>
+                <!-- /.gallary__right -->
+              </div>
+              <!-- /.gallary -->
+              <div class="gallary gallary--hidden gallary-4">
+                <div class="gallary__left">
+                  <div class="gallary__tl">
+                    <img src="./Repair Design_files/tl-4.jpg" alt="Design">
+                  </div>
+                  <div class="gallary__bl">
+                    <img src="./Repair Design_files/bl-4.jpg" alt="Design">
+                  </div>
+                </div>
+                <!-- /.gallary__left -->
+                <div class="gallary__right">
+                  <div class="gallary__tr">
+                    <img src="./Repair Design_files/tr-4.jpg" alt="Design">
+                  </div>
+                  <div class="gallary__br">
+                    <img src="./Repair Design_files/br-4.jpg" alt="Design">
+                  </div>
+                </div>
+                <!-- /.gallary__right -->
+              </div>
+              <!-- /.gallary -->
+              <div class="gallary gallary--hidden gallary-5">
+                <div class="gallary__left">
+                  <div class="gallary__tl">
+                    <img src="./Repair Design_files/tl-5.jpg" alt="Design">
+                  </div>
+                  <div class="gallary__bl">
+                    <img src="./Repair Design_files/bl-5.jpg" alt="Design">
+                  </div>
+                </div>
+                <!-- /.gallary__left -->
+                <div class="gallary__right">
+                  <div class="gallary__tr">
+                    <img src="./Repair Design_files/tr-5.jpg" alt="Design">
+                  </div>
+                  <div class="gallary__br">
+                    <img src="./Repair Design_files/br-5.jpg" alt="Design">
+                  </div>
+                </div>
+                <!-- /.gallary__right -->
+              </div>
+              <!-- /.gallary -->
+              <div class="gallary gallary--hidden gallary-6">
+                <div class="gallary__left">
+                  <div class="gallary__tl">
+                    <img src="./Repair Design_files/tl-6.jpg" alt="Design">
+                  </div>
+                  <div class="gallary__bl">
+                    <img src="./Repair Design_files/bl-6.jpg" alt="Design">
+                  </div>
+                </div>
+                <!-- /.gallary__left -->
+                <div class="gallary__right">
+                  <div class="gallary__tr">
+                    <img src="./Repair Design_files/tr-6.jpg" alt="Design">
+                  </div>
+                  <div class="gallary__br">
+                    <img src="./Repair Design_files/br-6.jpg" alt="Design">
+                  </div>
+                </div>
+                <!-- /.gallary__right -->
+              </div>
+              <!-- /.gallary -->
+              <div class="gallary gallary--hidden gallary-7">
+                <div class="gallary__left">
+                  <div class="gallary__tl">
+                    <img src="./Repair Design_files/tl-7.jpg" alt="Design">
+                  </div>
+                  <div class="gallary__bl">
+                    <img src="./Repair Design_files/bl-7.jpg" alt="Design">
+                  </div>
+                </div>
+                <!-- /.gallary__left -->
+                <div class="gallary__right">
+                  <div class="gallary__tr">
+                    <img src="./Repair Design_files/tr-7.jpg" alt="Design">
+                  </div>
+                  <div class="gallary__br">
+                    <img src="./Repair Design_files/br-7.jpg" alt="Design">
+                  </div>
+                </div>
+                <!-- /.gallary__right -->
+              </div>
+              <!-- /.gallary -->
+              <div class="gallary gallary--hidden gallary-8">
+                <div class="gallary__left">
+                  <div class="gallary__tl">
+                    <img src="./Repair Design_files/tl-8.jpg" alt="Design">
+                  </div>
+                  <div class="gallary__bl">
+                    <img src="./Repair Design_files/bl-8.jpg" alt="Design">
+                  </div>
+                </div>
+                <!-- /.gallary__left -->
+                <div class="gallary__right">
+                  <div class="gallary__tr">
+                    <img src="./Repair Design_files/tr-8.jpg" alt="Design">
+                  </div>
+                  <div class="gallary__br">
+                    <img src="./Repair Design_files/br-8.jpg" alt="Design">
+                  </div>
+                </div>
+                <!-- /.gallary__right -->
+              </div>
+              <!-- /.gallary -->
+              <div class="gallary gallary--hidden gallary-9">
+                <div class="gallary__left">
+                  <div class="gallary__tl">
+                    <img src="./Repair Design_files/tl-9.jpg" alt="Design">
+                  </div>
+                  <div class="gallary__bl">
+                    <img src="./Repair Design_files/bl-9.jpg" alt="Design">
+                  </div>
+                </div>
+                <!-- /.gallary__left -->
+                <div class="gallary__right">
+                  <div class="gallary__tr">
+                    <img src="./Repair Design_files/tr-9.jpg" alt="Design">
+                  </div>
+                  <div class="gallary__br">
+                    <img src="./Repair Design_files/br-9.jpg" alt="Design">
+                  </div>
+                </div>
+                <!-- /.gallary__right -->
+              </div>
+              <!-- /.gallary -->
+              <div class="gallary gallary--hidden gallary-10">
+                <div class="gallary__left">
+                  <div class="gallary__tl">
+                    <img src="./Repair Design_files/tl-10.jpg" alt="Design">
+                  </div>
+                  <div class="gallary__bl">
+                    <img src="./Repair Design_files/bl-10.jpg" alt="Design">
+                  </div>
+                </div>
+                <!-- /.gallary__left -->
+                <div class="gallary__right">
+                  <div class="gallary__tr">
+                    <img src="./Repair Design_files/tr-10.jpg" alt="Design">
+                  </div>
+                  <div class="gallary__br">
+                    <img src="./Repair Design_files/br-10.jpg" alt="Design">
+                  </div>
+                </div>
+                <!-- /.gallary__right -->
+              </div>
+              <!-- /.gallary -->
+              <div class="gallary gallary--hidden gallary-11">
+                <div class="gallary__left">
+                  <div class="gallary__tl">
+                    <img src="./Repair Design_files/tl-11.jpg" alt="Design">
+                  </div>
+                  <div class="gallary__bl">
+                    <img src="./Repair Design_files/bl-11.jpg" alt="Design">
+                  </div>
+                </div>
+                <!-- /.gallary__left -->
+                <div class="gallary__right">
+                  <div class="gallary__tr">
+                    <img src="./Repair Design_files/tr-11.jpg" alt="Design">
+                  </div>
+                  <div class="gallary__br">
+                    <img src="./Repair Design_files/br-11.jpg" alt="Design">
+                  </div>
+                </div>
+                <!-- /.gallary__right -->
+              </div>
+              <!-- /.gallary -->
+            </div>
+            <!-- /.col-60 -->
+          </div>
+          <!-- /.row -->
+        </div>
+        <!-- /.container -->        
+      </section>
+      <!-- /.section implement -->
+
+      <section class="section design">
+        <div class="container animateDesign">        
+          <div class="section-title design__section-title wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+            <h2 class="section-title__heading design__heading--light">Дизайн проект</h2>
+            <!-- /.section-title__heading -->
+            <div class="section-title__image">
+              <img src="./Repair Design_files/design.svg" alt="Design">
+            </div>
+            <!-- /.decsion-title__image -->
+          </div>
+          <!-- /.section-title -->
+          <p class="design__info">Дизайн-проект не только помогает сделать ремонт вашей квартиры более современным, но и значительно удешевляет материалы и сокращает время ремонтных работ</p>
+          <div class="row">
+            <div class="col-32">
+              <div class="card design__card">
+                <img src="./Repair Design_files/design-1.jpg" alt="Косметический ремонт" class="card__image">
+                <div class="card__text">
+                  <h3 class="card__title">Минимальный</h3>
+                  <!-- /.card__title -->
+                  <ul class="card__list">
+                    <li class="card__item">Измерительные чертежи</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">Перепланировка</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">Планировка мебели</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">Сантехнический план</li>
+                    <!-- /.card__item -->                  
+                  </ul>
+                  <!-- /.card__list -->
+                  <strong class="design__pricetag card__pricetag">
+                    150 руб / м<sup>2</sup>
+                  </strong>
+                  <!-- /.card__pricetag -->
+                </div>
+                <!-- /.card__text -->
+              </div>
+              <!-- /.card -->
+            </div>
+            <!-- /.col -->
+            <div class="col-32">
+              <div class="card design__card">
+                <img src="./Repair Design_files/design-2.jpg" alt="Капитальный ремонт" class="card__image">
+                <div class="card__text">
+                  <h3 class="card__title">Стандартный</h3>
+                  <!-- /.card__title -->
+                  <ul class="card__list">
+                    <li class="card__item">Измерительные чертежи</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">Перепланировка</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">Планировка мебели</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">План потолков</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">План этажей</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">План электрики</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">План света</li>
+                    <!-- /.card__item -->
+                  </ul>
+                  <!-- /.card__list -->
+                  <strong class="design__pricetag card__pricetag">
+                    400 руб / м<sup>2</sup>
+                  </strong>
+                  <!-- /.card__pricetag -->
+                </div>
+                <!-- /.card__text -->
+              </div>
+              <!-- /.card -->
+            </div>
+            <!-- /.col -->
+            <div class="col-32">
+              <div class="card design__card">
+                <img src="./Repair Design_files/design-3.jpg" alt="Дизайнерский ремонт" class="card__image">
+                <div class="card__text">
+                  <h3 class="card__title">Полный</h3>
+                  <!-- /.card__title -->
+                  <ul class="card__list">
+                    <li class="card__item">Измерительные чертежи</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">Перепланировка</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">Планировка мебели</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">План потолков</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">План этажей</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">План электрики</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">План света</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">Стенные развертки</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">3D визуализация</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">Смета на материалы</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">Выезд на подбор материалов</li>
+                    <!-- /.card__item -->
+                    <li class="card__item">Выбор мебели</li>
+                    <!-- /.card__item -->
+                  </ul>
+                  <!-- /.card__list -->
+                  <strong class="design__pricetag card__pricetag">
+                    900 руб / м<sup>2</sup>
+                  </strong>
+                  <!-- /.card__pricetag -->
+                </div>
+                <!-- /.card__text -->
+              </div>
+              <!-- /.card -->
+            </div>
+            <!-- /.col -->
+          </div>
+          <!-- /.row -->
+        </div>
+        <!-- /.container -->
+      </section>
+      <!-- /.section -->
+
+      <section class="section steps">
+        <div class="container">
+          <div class="row">          
+            <div class="col-40">
+              <div class="steps-title wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                <p class="steps-title__text">Как мы работаем</p>
+                <h2 class="steps-title__heading steps-title__heading--primary">6 шагов <span class="steps-title__word">до цели</span></h2>
+              </div>
+              <div class="swiper-container swiper2 swiper2__content swiper-container-fade swiper-container-initialized swiper-container-horizontal">
+                <div class="swiper-wrapper swiper-no-swiping" style="transition-duration: 0ms;">
+                    <div class="swiper-slide swiper2__item swiper-slide-active" style="width: 388px; transition-duration: 0ms; opacity: 1; transform: translate3d(0px, 0px, 0px);">
+                      <div class="steps__heading">Выезд на замеры <span class="steps-content__word">помещения</span></div>
+                      <p class="steps__description steps__description-first">После вашего звонка мы идем к вам, чтобы проконсультироваться и измерить помещения вашей квартиры. Во время нашей встречи вы можете задать абсолютно любые вопросы, касаемо ремонта.</p>
+                      <p class="steps__description steps__description-second">Оценщик приходит, чтобы измерить комнату.</p>
+                      <p class="steps__description">Он проконсультирует вас по вопросам техники ремонта, дизайна квартиры, сроков ремонта квартиры в целом и отдельных ее этапов.</p>
+                    </div>
+                    <div class="swiper-slide swiper-slide-next" style="width: 388px; transition-duration: 0ms; opacity: 0; transform: translate3d(-388px, 0px, 0px);">
+                      <div class="steps__heading">Составление сметы</div>
+                      <p class="steps__description steps__description-first">После вашего звонка мы идем к вам, чтобы проконсультироваться и измерить помещения вашей квартиры. Во время нашей встречи вы можете задать абсолютно любые вопросы, касаемо ремонта.</p>
+                      <p class="steps__description steps__description-second">Оценщик приходит, чтобы измерить комнату.</p>
+                      <p class="steps__description">Он проконсультирует вас по вопросам техники ремонта, дизайна квартиры, сроков ремонта квартиры в целом и отдельных ее этапов.</p>
+                    </div>
+                    <div class="swiper-slide" style="width: 388px; transition-duration: 0ms; opacity: 0; transform: translate3d(-776px, 0px, 0px);">
+                      <div class="steps__heading">Разработка дизайн проекта</div>
+                      <p class="steps__description steps__description-first">После вашего звонка мы идем к вам, чтобы проконсультироваться и измерить помещения вашей квартиры. Во время нашей встречи вы можете задать абсолютно любые вопросы, касаемо ремонта.</p>
+                      <p class="steps__description steps__description-second">Оценщик приходит, чтобы измерить комнату.</p>
+                      <p class="steps__description">Он проконсультирует вас по вопросам техники ремонта, дизайна квартиры, сроков ремонта квартиры в целом и отдельных ее этапов.</p>
+                    </div>
+                    <div class="swiper-slide" style="width: 388px; transition-duration: 0ms; opacity: 0; transform: translate3d(-1164px, 0px, 0px);">
+                      <div class="steps__heading">Закупка расходных материалов</div>
+                      <p class="steps__description steps__description-first">После вашего звонка мы идем к вам, чтобы проконсультироваться и измерить помещения вашей квартиры. Во время нашей встречи вы можете задать абсолютно любые вопросы, касаемо ремонта.</p>
+                      <p class="steps__description steps__description-second">Оценщик приходит, чтобы измерить комнату.</p>
+                      <p class="steps__description">Он проконсультирует вас по вопросам техники ремонта, дизайна квартиры, сроков ремонта квартиры в целом и отдельных ее этапов.</p>
+                    </div>
+                    <div class="swiper-slide" style="width: 388px; transition-duration: 0ms; opacity: 0; transform: translate3d(-1552px, 0px, 0px);">
+                      <div class="steps__heading">Ремонтно-отделочные работы</div>
+                      <p class="steps__description steps__description-first">После вашего звонка мы идем к вам, чтобы проконсультироваться и измерить помещения вашей квартиры. Во время нашей встречи вы можете задать абсолютно любые вопросы, касаемо ремонта.</p>
+                      <p class="steps__description steps__description-second">Оценщик приходит, чтобы измерить комнату.</p>
+                      <p class="steps__description">Он проконсультирует вас по вопросам техники ремонта, дизайна квартиры, сроков ремонта квартиры в целом и отдельных ее этапов.</p>
+                    </div>
+                    <div class="swiper-slide" style="width: 388px; transition-duration: 0ms; opacity: 0; transform: translate3d(-1940px, 0px, 0px);">
+                      <div class="steps__heading">Приемка-сдача работ</div>
+                      <p class="steps__description steps__description-first">После вашего звонка мы идем к вам, чтобы проконсультироваться и измерить помещения вашей квартиры. Во время нашей встречи вы можете задать абсолютно любые вопросы, касаемо ремонта.</p>
+                      <p class="steps__description steps__description-second">Оценщик приходит, чтобы измерить комнату.</p>
+                      <p class="steps__description">Он проконсультирует вас по вопросам техники ремонта, дизайна квартиры, сроков ремонта квартиры в целом и отдельных ее этапов.</p>
+                    </div>
+                </div>
+                <div class="swiper-pagination pagination-top swiper-pagination-bullets swiper-pagination-fraction" id="pagination-top" style="left: 62px;"><span class="swiper-pagination-current">1</span> / <span class="swiper-pagination-total">6</span></div>
+                <div class="swiper-button-prev swiper2-prev swiper-button-disabled" tabindex="0" role="button" aria-label="Previous slide" aria-disabled="true"></div>
+                <div class="swiper-pagination pagination-bottom swiper-pagination-bullets" id="pagination-bottom" style="left: 62px;"><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span></div> 
+                <div class="swiper-button-next swiper2-next" tabindex="0" role="button" aria-label="Next slide" aria-disabled="false" style="left: 82px;"></div>
+              <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+            </div>
+            
+            <div class="col-60">
+              <div class="steps-content">
+                <div class="steps-content__row">
+                  <div class="steps-content__container">
+                    <div class="steps-content__step steps-content__step--1 active">
+                      <div class="steps-content__step-number">01</div>
+                      <div class="steps-content__step-description">Выезд на замер помещения</div>
+                    </div>
+                  </div>
+                  <div class="steps-content__container">
+                    <div class="steps-content__step steps-content__step--2">
+                      <div class="steps-content__step-number">02</div>
+                      <div class="steps-content__step-description">Составление <span class="steps-content__step--word">сметы</span></div>
+                    </div>
+                  </div>
+                  <div class="steps-content__container">
+                    <div class="steps-content__step steps-content__step--3">
+                      <div class="steps-content__step-number">03</div>
+                      <div class="steps-content__step-description">Разработка дизайн проекта</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="steps-content__row">
+                  <div class="steps-content__container">
+                    <div class="steps-content__step steps-content__step--4">
+                      <div class="steps-content__step-number">04</div>
+                      <div class="steps-content__step-description">Закупка расходных материалов</div>
+                    </div>
+                  </div>
+                  <div class="steps-content__container">
+                    <div class="steps-content__step steps-content__step--5">
+                      <div class="steps-content__step-number">05</div>
+                      <div class="steps-content__step-description">Ремонтно-отделочные работы</div>
+                    </div>
+                  </div>
+                  <div class="steps-content__container">
+                    <div class="steps-content__step steps-content__step--6">
+                      <div class="steps-content__step-number">06</div>
+                      <div class="steps-content__step-description">Приемка-сдача работ</div>
+                    </div>
+                  </div>
+                </div>
+              </div>            
+              
+              <div class="steps__image">
+                <div class="swiper-container swiper3 swiper-container-fade swiper-container-initialized swiper-container-horizontal">
+                  <div class="swiper-wrapper swiper-no-swiping" style="transition-duration: 0ms;">
+                      <div class="swiper-slide swiper-slide-active" style="width: 633px; transition-duration: 0ms; opacity: 1; transform: translate3d(0px, 0px, 0px);">
+                        <div class="steps-image">
+                          <img src="./Repair Design_files/1.jpg" alt="measurement">
+                        </div>
+                      </div>
+                      <div class="swiper-slide swiper-slide-next" style="width: 633px; transition-duration: 0ms; opacity: 0; transform: translate3d(-633px, 0px, 0px);">
+                        <div class="steps-image">
+                          <img src="./Repair Design_files/2.jpg" alt="measurement">
+                        </div>
+                      </div>
+                      <div class="swiper-slide" style="width: 633px; transition-duration: 0ms; opacity: 0; transform: translate3d(-1266px, 0px, 0px);">
+                        <div class="steps-image">
+                          <img src="./Repair Design_files/3.jpg" alt="measurement">
+                        </div>
+                      </div>
+                      <div class="swiper-slide" style="width: 633px; transition-duration: 0ms; opacity: 0; transform: translate3d(-1899px, 0px, 0px);">
+                        <div class="steps-image">
+                          <img src="./Repair Design_files/4.jpg" alt="measurement">
+                        </div>
+                      </div>
+                      <div class="swiper-slide" style="width: 633px; transition-duration: 0ms; opacity: 0; transform: translate3d(-2532px, 0px, 0px);">
+                        <div class="steps-image">
+                          <img src="./Repair Design_files/5.jpg" alt="measurement">
+                        </div>
+                      </div>
+                      <div class="swiper-slide" style="width: 633px; transition-duration: 0ms; opacity: 0; transform: translate3d(-3165px, 0px, 0px);">
+                        <div class="steps-image">
+                          <img src="./Repair Design_files/6.jpg" alt="measurement">
+                        </div>
+                      </div>
+                  </div>                               
+                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /.container -->
+      </section>
+      <!-- /.steps -->
+
+      <div class="team-customers" id="team">
+        <section class="team">
+          <div class="container">
+            <div class="section-title team__section-title wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+              <h2 class="section-title__heading team__heading">Наша команда</h2>
+              <!-- /.section-title__heading -->
+              <div class="section-title__image">
+                <img src="./Repair Design_files/team.svg" alt="Team">
+              </div>
+              <!-- /.secsion-title__image -->
+            </div>
+            <!-- /.section-title -->
+            <p class="team__info">Наша команда помогла стать счастливее более чем 500 семьям, и мы не собираемся останавливаться</p>
+            <div class="row team__row">
+              <div class="team__col-32">
+                <div class="card team-card">
+                  <div class="team-card__icon">
+                    <img src="./Repair Design_files/idea.svg" alt="Idea" class="team-card__icon-image">
+                  </div>
+                  <div class="team-card__image">
+                    <img src="./Repair Design_files/manager.jpg" alt="Manager" class="team-card__image-1">
+                    <img src="./Repair Design_files/manager-h.jpg" alt="Manager" class="team-card__image-2">
+                  </div>
+                  <div class="team-card__container">
+                    <div class="team-card__person">
+                      <h4 class="team-card__name">Алексей Колмаков</h4>
+                      <p class="team-card__position">Проектный менеджер</p>
+                    </div>
+                    <div class="team-card__experience">Опыт работы 8 лет</div>
+                  </div>
+                </div>
+                <!-- /.card team__card -->
+              </div>
+              <!-- /.col-32 -->
+              <div class="team__col-32 team__col-32--second">
+                <div class="card team-card">
+                  <div class="team-card__icon">
+                    <img src="./Repair Design_files/thoughts.svg" alt="Thoughts" class="team-card__icon-image">
+                  </div>
+                  <div class="team-card__image">
+                    <img src="./Repair Design_files/designer.jpg" alt="Designer" class="team-card__image-1">
+                    <img src="./Repair Design_files/designer-h.jpg" alt="Designer" class="team-card__image-2">
+                  </div>
+                  <div class="team-card__container">
+                    <div class="team-card__person">
+                      <h4 class="team-card__name">Алиса Сухорукова</h4>
+                      <p class="team-card__position">Дизайнер</p>
+                    </div>
+                    <div class="team-card__experience">Опыт работы 6 лет</div>
+                  </div>
+                </div>
+                <!-- /.card team__card -->
+              </div>
+              <!-- /.col-32 -->
+              <div class="team__col-32">
+                <div class="card team-card">
+                  <div class="team-card__icon">
+                    <img src="./Repair Design_files/portfolio.svg" alt="Portfolio" class="team-card__icon-image">
+                  </div>
+                  <div class="team-card__image">
+                    <img src="./Repair Design_files/worker.jpg" alt="Worker" class="team-card__image-1">
+                    <img src="./Repair Design_files/worker-h.jpg" alt="Worker" class="team-card__image-2">
+                  </div>
+                  <div class="team-card__container">
+                    <div class="team-card__person">
+                      <h4 class="team-card__name">Давид Волынев</h4>
+                      <p class="team-card__position">Бригадир</p>
+                    </div>
+                    <div class="team-card__experience">Опыт работы 7 лет</div>
+                  </div>
+                </div>
+                <!-- /.card team__card -->
+              </div>
+              <!-- /.col-32 -->
+            </div>
+            <!-- /.row -->
+            <p class="team__text">Каждый сотрудник нашей компании является квалифицированным штатным специалистом с опытом работы от 6 лет. У нас нет  гастарбайтеров, каждый сотрудник выполняет работу, соответствующую его специальности.</p>
+          </div>    
+          <!-- /.container -->
+        </section>
+        <!-- /.team -->
+    
+        <section class="customers" id="feedbacks">
+          <div class="container">
+            <div class="section-title customers__section-title wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+              <h2 class="section-title__heading customers__heading">Наши клиенты</h2>
+              <!-- /.section-title__heading -->
+              <div class="section-title__image">
+                <img src="./Repair Design_files/customers.svg" alt="Customers">
+              </div>
+              <!-- /.secsion-title__image -->
+            </div>
+            <!-- /.section-title -->
+            <p class="customers__info">80% наших клиентов рекомендуют нас своим знакомым и друзьям</p>
+            <div class="row customers__row">
+              <div class="customers__col-32">
+                <div class="card customers__card">
+                  <div class="customers__title">
+                    <div class="customers__image">
+                      <img src="./Repair Design_files/customer-1.png" alt="Customer">
+                    </div>
+                    <!-- /.customers__image -->
+                    <div class="customers__name">Савельева Екатерина Львовна</div>
+                    <!-- /.customers__name -->
+                  </div>
+                  <!-- /.customers__title -->
+                  <p class="customers__feedback">Я хочу поблагодарить ребят за их работу. Они вложили душу в ремонт. Я очень благодарна, что сделали как для самих себя. Большое спасибо, я выражаю проектному менеджеру за его профессионализм и подход. Процесс ремонта был завершен быстрее, чем ожидалось. Команда мобильная и профессиональная. Работы выполнены качественно без нареканий. Цены демократические. Я рекомендую этих мастеров.</p>
+                  <div class="sticker customers__sticker">
+                    <div class="sticker__left">
+                      <div class="sticker__image">
+                        <img src="./Repair Design_files/customer-graph.svg" alt="Graph">
+                      </div>
+                      <!-- /.sticker__image -->
+                      <span class="sticker__text">40 M<sup>2</sup></span>
+                      <!-- /.sticker__square -->
+                    </div>
+                    <!-- /.sticker__left -->
+                    <div class="sticker__right">
+                      <div class="sticker__image">
+                        <img src="./Repair Design_files/customer-list.svg" alt="List">
+                      </div>
+                      <!-- /.sticker__image -->
+                      <span class="sticker__text">48 дней</span>
+                      <!-- /.sticker__square -->
+                    </div>
+                    <!-- /.stiker__right -->
+                  </div>
+                  <!-- /.sticker customers__sticker -->
+                </div>
+                <!-- /.card customers__card -->
+              </div>
+              <!-- /.customers__col-32 -->
+              <div class="customers__col-32">
+                <div class="card customers__card">
+                  <div class="customers__title">
+                    <div class="customers__image">
+                      <img src="./Repair Design_files/customer-2.png" alt="Customer">
+                    </div>
+                    <!-- /.customers__image -->
+                    <div class="customers__name">Большов Михаил Анатольевич</div>
+                    <!-- /.customers__name -->
+                  </div>
+                  <!-- /.customers__title -->
+                  <p class="customers__feedback">Я хочу поблагодарить ребят за их работу. Они вложили душу в ремонт. Я очень благодарен, что сделали как для самих себя. Большое спасибо, я выражаю проектному менеджеру за его профессионализм и подход. Процесс ремонта был завершен быстрее, чем ожидалось. Команда мобильная и профессиональная. Работы выполнены качественно без нареканий. Качество высокое.  Я рекомендую этих мастеров.</p>
+                  <div class="sticker customers__sticker">
+                    <div class="sticker__left">
+                      <div class="sticker__image">
+                        <img src="./Repair Design_files/customer-graph.svg" alt="Graph">
+                      </div>
+                      <!-- /.sticker__image -->
+                      <span class="sticker__text">90 M<sup>2</sup></span>
+                      <!-- /.sticker__square -->
+                    </div>
+                    <!-- /.sticker__left -->
+                    <div class="sticker__right">
+                      <div class="sticker__image">
+                        <img src="./Repair Design_files/customer-list.svg" alt="List">
+                      </div>
+                      <!-- /.sticker__image -->
+                      <span class="sticker__text">128 дней</span>
+                      <!-- /.sticker__square -->
+                    </div>
+                    <!-- /.stiker__right -->
+                  </div>
+                  <!-- /.sticker customers__sticker -->
+                </div>
+                <!-- /.card customers__card -->
+              </div>
+              <!-- /.customers__col-32 -->
+              <div class="customers__col-32">
+                <div class="card customers__card">
+                  <div class="customers__title">
+                    <div class="customers__image">
+                      <img src="./Repair Design_files/customer-3.png" alt="Customer">
+                    </div>
+                    <!-- /.customers__image -->
+                    <div class="customers__name">Хасанов Даниил Муратович</div>
+                    <!-- /.customers__name -->
+                  </div>
+                  <!-- /.customers__title -->
+                  <p class="customers__feedback">Я хочу поблагодарить ребят за их работу. Они вложили душу в ремонт. Я очень благодарен, что сделали как для самих себя. Большое спасибо, я выражаю проектному менеджеру за его профессионализм и подход. Процесс ремонта был завершен быстрее, чем ожидалось. Команда мобильная и профессиональная. Работы выполнены качественно без нареканий. Качество высокое. Цены демократические. </p>
+                  <div class="sticker customers__sticker">
+                    <div class="sticker__left">
+                      <div class="sticker__image">
+                        <img src="./Repair Design_files/customer-graph.svg" alt="Graph">
+                      </div>
+                      <!-- /.sticker__image -->
+                      <span class="sticker__text">56 M<sup>2</sup></span>
+                      <!-- /.sticker__square -->
+                    </div>
+                    <!-- /.sticker__left -->
+                    <div class="sticker__right">
+                      <div class="sticker__image">
+                        <img src="./Repair Design_files/customer-list.svg" alt="List">
+                      </div>
+                      <!-- /.sticker__image -->
+                      <span class="sticker__text">86 дней</span>
+                      <!-- /.sticker__square -->
+                    </div>
+                    <!-- /.stiker__right -->
+                  </div>
+                  <!-- /.sticker customers__sticker -->
+                </div>
+                <!-- /.card customers__card -->
+              </div>
+              <!-- /.customers__col-32 -->              
+            </div>
+            <!-- /.customers__row -->
+          </div>
+          <!-- /.container -->
+        </section>
+        <!-- /.customers -->
+      </div>
+      <!-- /.team-customers -->
+
+    </main>
+    <!-- /.main -->  
+
+    <footer class="footer section--dark">
+      <div class="container">
+        <div class="footer__wrap">
+          <h3 class="footer__title">Остались вопросы?</h3>
+          <form action="http://localhost:3000/footerSend.php" method="POST" class="form footer__form" novalidate="novalidate">
+            <div class="input-group footer__input-group">
+              <label for="footer-user-name" class="label footer__label form__label label--light">Имя</label>
+              <input type="text" name="footerUserName" maxlength="15" class="input form__input footer__input input--light" id="footer-user-name" placeholder="Как вас зовут:">
+            </div>
+            <!-- /.input-group footer__input-group -->
+            <div class="input-group footer__input-group">
+              <label for="footer-user-phone" class="label footer__label form__label label--light">Телефон</label>
+              <input type="tel" name="footerUserPhone" class="input form__input footer__input input--light" id="footer-user-phone" placeholder="Ваш номер телефона:">
+            </div>
+            <!-- /.input-group footer__input-group -->
+            <div class="input-group footer__input-group footer__input-group--full-width">
+              <label for="footer-user-question" class="label footer__label form__label label--light">Вопрос</label>
+              <input type="text" name="footerUserText" class="input form__input footer__input input--light" id="footer-user-question" placeholder="Я хочу спросить:">
+            </div>
+            <!-- /.input-group footer__input-group -->
+            <div class="policy footer__policy">
+              <input type="checkbox" name="footerCheckbox" id="footer-checkbox" class="policy__checkbox" checked="">
+              <label for="footer-checkbox" class="policy__label footer__policy-label policy__label--center" id="footer-checkbox-label">Я соглашаюсь на обработку данных</label>
+            </div>
+            <!-- /.policy -->
+            <button class="button button--primary footer__button">Отправить</button>
+          </form>
+          <!-- /.form footer__form -->     
+        </div>
+        <!-- /.footer-wrap -->      
+        <div class="location">
+          <div class="address footer__address">
+            <h3 class="address__title" id="contacts">Ростов на дону, Торговый центр Plaza
+              Прямой телефон <a href="tel:+79997683299" class="address__phone">+7 (999) 768 32 99</a></h3>
+            <div class="address__icons">
+              <div class="address__icon"><a href="https://www.instagram.com/"><img src="./Repair Design_files/instagram.png" alt="Instagram" class="address__icon-image"></a></div>
+              <div class="address__icon"><a href="mailto:info@repair-design.com"><img src="./Repair Design_files/email.png" alt="Email" class="address__icon-image"></a></div>
+            </div>
+          </div>
+          <!-- /.adress footer__adress -->
+          <div class="map footer__map footer__map--small"></div>
+          <div class="map footer__map footer__map--big"></div>
+          <!-- /.map footer__map -->
+        </div>
+      </div>
+      <!-- /.container -->
+      <div class="footer__menu">
+        <div class="container">
+          <div class="menu">
+            <div class="menu__logo">
+              <a href="http://akhischenko.com/project/" class="logo">Repair Design Project</a>
+            </div>
+            <nav class="nav menu__nav">
+              <a href="http://localhost:3000/#main" class="nav__item">Главная</a>
+              <a href="http://localhost:3000/#projects" class="nav__item">Проекты</a>
+              <a href="http://localhost:3000/#sample" class="nav__item">Замер</a>
+              <a href="http://localhost:3000/#team" class="nav__item">Команда</a>
+              <a href="http://localhost:3000/#feedbacks" class="nav__item">Отзывы</a>
+              <a href="http://localhost:3000/#contacts" class="nav__item">Контакты</a>
+            </nav>
+            <div class="contacts menu__contacts">
+              <a href="tel:+79997683299" class="phone contacts__phone">+7 (999) 768-32-99</a>
+              <button class="button contacts__button button--primary" data-toggle="modal">Заказать звонок</button>
+            </div>
+            <!-- /.contacts -->
+          </div>
+          <!-- /.menu -->
+        </div>
+        <!-- /.container -->
+      </div>
+      <!-- /.footer__menu -->
+    </footer>
+    <!-- /.footer -->
+
+    <div class="modal">
+      <div class="modal__dialog">
+        <button class="modal__close"></button>
+        <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами</h3>
+        <form action="http://localhost:3000/modalSend.php" method="POST" class="form modal__form" novalidate="novalidate">
+          <div class="input-group modal__input-group">
+            <label for="modal-user-name" class="label form__label label--light">Имя</label>
+            <input type="text" name="modalUserName" maxlength="15" class="input form__input modal__input input--light" id="modal-user-name" placeholder="Как вас зовут:">
+          </div>
+          <div class="input-group modal__input-group">
+            <label for="modal-user-phone" class="label form__label label--light">Телефон</label>
+            <input type="tel" name="modalUserPhone" class="input form__input modal__input input--light" id="modal-user-phone" placeholder="Ваш номер телефона:">
+          </div>
+          <div class="input-group modal__input-group">
+            <label for="modal-user-email" class="label form__label label--light">Email</label>
+            <input type="email" name="modalUserEmail" class="input form__input modal__input input--light" id="modal-user-email" placeholder="Ваш email">
+          </div>
+          <div class="policy modal__policy">
+            <input type="checkbox" name="modalCheckbox" id="modal-checkbox" class="policy__checkbox" checked="">
+            <label for="modal-checkbox" class="policy__label" id="modal-checkbox-label">Я соглашаюсь с обработкой данных</label>
+          </div>
+          <!-- /.policy -->
+          <button class="button button--primary modal__button">Отправить заявку</button>
+        </form>
+        <!-- /.form modal__form -->        
+        <div class="modal__success-message success-message">
+          <p class="success-message__text">Сообщение успешно отправлено!</p>
+          <div class="success-message__invintation">Подпишитесь на нашу группу ВКонтакте</div>
+          <div><a href="https://vk.com/glo_academy" class="success-message__link">subscribe</a></div>
+        </div>
+        <!-- /.modal-success__dialog -->        
+      </div>
+      <!-- /.modal__dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <div class="modal-success">
+      <div class="modal-success__dialog">
+        <button class="modal-success__close"></button>
+        <p class="success-message__text">Сообщение успешно отправлено!</p>
+        <div class="success-message__invintation">Подпишитесь на нашу группу ВКонтакте</div>
+        <div><a href="https://vk.com/glo_academy" class="success-message__link">subscribe</a></div>
+      </div>
+    </div> 
+    <!-- /.modal-success -->
+
+    <div class="scrollup" style="display: none;">
+      <div class="scrollup__content">
+        <img src="./Repair Design_files/implement-next.svg" alt="ScrollUp">
+      </div>    
+    </div>
+    
+    <script src="./Repair Design_files/jquery-3.4.1.min.js.Без названия"></script>
+    <script src="./Repair Design_files/swiper.min.js.Без названия"></script>
+    <script src="./Repair Design_files/wow.min.js.Без названия"></script>
+    <script src="./Repair Design_files/jquery.validate.min.js.Без названия"></script>
+    <script src="./Repair Design_files/jquery.mask.min.js.Без названия"></script>
+    <script src="./Repair Design_files/main.js.Без названия"></script>
+  
+<iframe name="ym-native-frame" title="ym-native-frame" frameborder="0" aria-hidden="true" style="opacity: 0 !important; width: 0px !important; height: 0px !important; position: absolute !important; left: 100% !important; bottom: 100% !important; border: 0px !important;" src="./Repair Design_files/saved_resource.html"></iframe><ym-measure class="ym-viewport" style="display: block; top: 0px; right: 0px; bottom: 0px; left: 0px; position: fixed; transform: translate(0px, -100%); transform-origin: 0px 0px;"></ym-measure><ym-measure class="ym-zoom" style="bottom: 100%; position: fixed; width: 100vw;"></ym-measure><div id="chromeperfectpixel-panel-container" class="chromeperfectpixel-panel-container" style="animation: initial; transition: initial; color: initial; font: initial; font-feature-settings: initial; font-kerning: initial; font-optical-sizing: initial; font-variation-settings: initial; text-orientation: initial; text-rendering: initial; -webkit-font-smoothing: initial; -webkit-locale: initial; -webkit-text-orientation: initial; -webkit-writing-mode: initial; writing-mode: initial; zoom: initial; place-content: initial; place-items: initial; place-self: initial; alignment-baseline: initial; backdrop-filter: initial; backface-visibility: initial; background: initial; background-blend-mode: initial; baseline-shift: initial; block-size: initial; border-block-end: initial; border-block-start: initial; border: initial; border-radius: initial; border-collapse: initial; border-inline-end: initial; border-inline-start: initial; bottom: initial; box-shadow: initial; box-sizing: initial; break-after: initial; break-before: initial; break-inside: initial; buffered-rendering: initial; caption-side: initial; caret-color: initial; clear: initial; clip: initial; clip-path: initial; clip-rule: initial; color-interpolation: initial; color-interpolation-filters: initial; color-rendering: initial; columns: initial; column-fill: initial; gap: initial; column-rule: initial; column-span: initial; contain: initial; content: initial; counter-increment: initial; counter-reset: initial; cursor: initial; cx: initial; cy: initial; d: initial; display: initial; dominant-baseline: initial; empty-cells: initial; fill: initial; fill-opacity: initial; fill-rule: initial; filter: initial; flex: initial; flex-flow: initial; float: initial; flood-color: initial; flood-opacity: initial; grid: initial; grid-area: initial; height: initial; hyphens: initial; image-rendering: initial; inline-size: initial; isolation: initial; left: initial; letter-spacing: initial; lighting-color: initial; line-break: initial; list-style: initial; margin-block-end: initial; margin-block-start: initial; margin: initial; margin-inline-end: initial; margin-inline-start: initial; marker: initial; mask: initial; mask-type: initial; max-block-size: initial; max-height: initial; max-inline-size: initial; max-width: initial; min-block-size: initial; min-height: initial; min-inline-size: initial; min-width: initial; mix-blend-mode: initial; object-fit: initial; object-position: initial; offset: initial; opacity: initial; order: initial; orphans: initial; outline: initial; outline-offset: initial; overflow-anchor: initial; overflow-wrap: initial; overflow: initial; overscroll-behavior-block: initial; overscroll-behavior-inline: initial; overscroll-behavior: initial; padding-block-end: initial; padding-block-start: initial; padding: initial; padding-inline-end: initial; padding-inline-start: initial; page: initial; paint-order: initial; perspective: initial; perspective-origin: initial; pointer-events: initial; position: initial; quotes: initial; r: initial; resize: initial; right: initial; rx: initial; ry: initial; scroll-behavior: initial; scroll-margin-block: initial; scroll-margin: initial; scroll-margin-inline: initial; scroll-padding-block: initial; scroll-padding: initial; scroll-padding-inline: initial; scroll-snap-align: initial; scroll-snap-stop: initial; scroll-snap-type: initial; shape-image-threshold: initial; shape-margin: initial; shape-outside: initial; shape-rendering: initial; size: initial; speak: initial; stop-color: initial; stop-opacity: initial; stroke: initial; stroke-dasharray: initial; stroke-dashoffset: initial; stroke-linecap: initial; stroke-linejoin: initial; stroke-miterlimit: initial; stroke-opacity: initial; stroke-width: initial; tab-size: initial; table-layout: initial; text-align: initial; text-align-last: initial; text-anchor: initial; text-combine-upright: initial; text-decoration: initial; text-decoration-skip-ink: initial; text-indent: initial; text-overflow: initial; text-shadow: initial; text-size-adjust: initial; text-transform: initial; text-underline-position: initial; top: initial; touch-action: initial; transform: initial; transform-box: initial; transform-origin: initial; transform-style: initial; user-select: initial; vector-effect: initial; vertical-align: initial; visibility: initial; -webkit-app-region: initial; -webkit-appearance: initial; border-spacing: initial; -webkit-border-image: initial; -webkit-box-align: initial; -webkit-box-decoration-break: initial; -webkit-box-direction: initial; -webkit-box-flex: initial; -webkit-box-ordinal-group: initial; -webkit-box-orient: initial; -webkit-box-pack: initial; -webkit-box-reflect: initial; -webkit-font-size-delta: initial; -webkit-highlight: initial; -webkit-hyphenate-character: initial; -webkit-line-break: initial; -webkit-line-clamp: initial; -webkit-margin-collapse: initial; -webkit-margin-bottom-collapse: initial; -webkit-margin-top-collapse: initial; -webkit-mask-box-image: initial; -webkit-mask: initial; -webkit-mask-composite: initial; -webkit-perspective-origin-x: initial; -webkit-perspective-origin-y: initial; -webkit-print-color-adjust: initial; -webkit-rtl-ordering: initial; -webkit-ruby-position: initial; -webkit-tap-highlight-color: initial; -webkit-text-combine: initial; -webkit-text-decorations-in-effect: initial; -webkit-text-emphasis: initial; -webkit-text-emphasis-position: initial; -webkit-text-fill-color: initial; -webkit-text-security: initial; -webkit-text-stroke: initial; -webkit-transform-origin-x: initial; -webkit-transform-origin-y: initial; -webkit-transform-origin-z: initial; -webkit-user-drag: initial; -webkit-user-modify: initial; white-space: initial; widows: initial; width: initial; will-change: initial; word-break: initial; word-spacing: initial; x: initial; y: initial; z-index: 2147483647 !important;"><div class="draggable-wrapper"><div class="chromeperfectpixel-panel attached-right attached-top chromeperfectpixel-locale-ru" id="chromeperfectpixel-panel" style="transition: max-height 0.3s linear 0s; right: 0px; top: 0px;"><div class="chromeperfectpixel-panel-wrapper"><div class="chromeperfectpixel-panel-header"><button class="chromeperfectpixel-button-collapse chromeperfectpixel-button" title="">−</button><h1 class="chromeperfectpixel-title-container" style="background-image: url(&quot;chrome-extension://dkaagdgjmgdmbnecmcefdhjekcoceebi/assets/images/icons/logo.svg&quot;);"></h1><div class="chromeperfectpixel-dropdown"><button class="chromeperfectpixel-button-menu chromeperfectpixel-button" style="background-image: url(&quot;chrome-extension://dkaagdgjmgdmbnecmcefdhjekcoceebi/assets/images/icons/menu.svg&quot;);"></button><div class="chromeperfectpixel-dropdown-body"><div class="chromeperfectpixel-dropdown-content"><ul><li>Настройки</li><li>Сообщить об ошибке</li></ul></div></div></div></div><div class="chromeperfectpixel-panel-body"><div class="chromeperfectpixel-dropimage-wrapper" tabindex="0"><div class="chromeperfectpixel-panel-section chromeperfectpixel-panel-section--buttons"><div class="chromeperfectpixel-progressbar-area">Загрузка...</div><button class="chromeperfectpixel-button-actions chromeperfectpixel-button-actions--active chromeperfectpixel-button" title="Hotkey: Alt + S"><svg width="27px" height="15px" viewBox="0 0 24 13" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#C0C9D1"><g id="shown" fill-rule="nonzero"><path d="M11.872745,0.0321672355 C7.50102389,0.0321672355 3.53651877,2.29940273 0.611116529,5.98199659 C0.372403706,6.28370307 0.372403706,6.70520478 0.611116529,7.00691126 C3.53651877,10.693942 7.50102389,12.9611775 11.872745,12.9611775 C16.2444661,12.9611775 20.2089712,10.693942 23.1343735,7.01134812 C23.3730863,6.70964164 23.3730863,6.28813993 23.1343735,5.98643345 C20.2089712,2.29940273 16.2444661,0.0321672355 11.872745,0.0321672355 Z M12.1863481,11.0488908 C9.2843491,11.2219283 6.88785958,8.95469283 7.07040468,6.19940273 C7.22018528,3.92773038 9.16265236,2.08643345 11.5591419,1.94445392 C14.4611409,1.77141638 16.8576304,4.03865188 16.6750853,6.79394198 C16.5206241,9.06117747 14.578157,10.9024744 12.1863481,11.0488908 Z M12.0412482,8.94581911 C10.4779132,9.03899317 9.18605558,7.81885666 9.28902974,6.33694539 C9.36860068,5.11237201 10.4170648,4.12295222 11.7089225,4.04308874 C13.2722574,3.94991468 14.5641151,5.17005119 14.4611409,6.65196246 C14.3768893,7.8809727 13.3284252,8.87039249 12.0412482,8.94581911 Z" id="Shape"></path></g></svg></button><button class="chromeperfectpixel-button-actions chromeperfectpixel-button" title="Hotkey: Alt + C"><svg width="16px" height="15px" viewBox="0 0 12 14" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#C0C9D1"><g id="locked" transform="translate(-129.000000, -68.000000)" fill-rule="nonzero"><path d="M140.253918,74.6307915 C140.074892,74.4517989 139.857649,74.3623698 139.601854,74.3623698 L139.295216,74.3623698 L139.295216,72.5213661 C139.295216,71.3452541 138.873459,70.3354071 138.029675,69.4916571 C137.185959,68.6478735 136.176213,68.2259818 134.999933,68.2259818 C133.823687,68.2259818 132.813739,68.6478735 131.97009,69.4916235 C131.126306,70.3354071 130.704549,71.3452206 130.704549,72.5213661 L130.704549,74.3623698 L130.397776,74.3623698 C130.142183,74.3623698 129.924806,74.4517989 129.745813,74.6307915 C129.566821,74.8096497 129.477358,75.0270265 129.477358,75.2828549 L129.477358,80.8054967 C129.477358,81.06109 129.566854,81.278534 129.745813,81.4575601 C129.924806,81.6363847 130.142183,81.7259146 130.397776,81.7259146 L139.60209,81.7259146 C139.857884,81.7259146 140.075093,81.6364855 140.254153,81.4575601 C140.432978,81.278534 140.522608,81.06109 140.522608,80.8054967 L140.522608,75.2827541 C140.522743,75.0271273 140.432978,74.809784 140.253918,74.6307915 Z M137.454414,74.3623698 L132.545451,74.3623698 L132.545451,72.5213661 C132.545451,71.8438474 132.785194,71.2653288 133.264578,70.7860116 C133.74403,70.3066273 134.322448,70.0669855 135.000034,70.0669855 C135.677687,70.0669855 136.25597,70.3065937 136.735455,70.7860116 C137.214705,71.2652952 137.454414,71.8438474 137.454414,72.5213661 L137.454414,74.3623698 Z" id="Shape"></path></g></svg></button><button class="chromeperfectpixel-button-actions chromeperfectpixel-button-actions--active chromeperfectpixel-button" title="Hotkey: Alt + I"><svg width="17px" height="17px" viewBox="0 0 15 14" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#C0C9D1"><g id="uninversed" transform="translate(-209.000000, -68.000000)" fill-rule="nonzero"><path d="M220.171875,74.9759818 C220.171875,72.8759818 218.521875,71.2259818 216.421875,71.2259818 L216.421875,78.7259818 C218.521875,78.7259818 220.171875,77.0759818 220.171875,74.9759818 Z M221.671875,68.2259818 L211.171875,68.2259818 C210.346875,68.2259818 209.671875,68.9009818 209.671875,69.7259818 L209.671875,80.2259818 C209.671875,81.0509818 210.346875,81.7259818 211.171875,81.7259818 L221.671875,81.7259818 C222.496875,81.7259818 223.171875,81.0509818 223.171875,80.2259818 L223.171875,69.7259818 C223.171875,68.9009818 222.496875,68.2259818 221.671875,68.2259818 Z M221.671875,80.2259818 L216.421875,80.2259818 L216.421875,78.7259818 C214.321875,78.7259818 212.671875,77.0759818 212.671875,74.9759818 C212.671875,72.8759818 214.321875,71.2259818 216.421875,71.2259818 L216.421875,69.7259818 L221.671875,69.7259818 L221.671875,80.2259818 Z" id="Shape"></path></g></svg></button></div><div class="chromeperfectpixel-panel-section chromeperfectpixel-panel-section--origin"><div class="chromeperfectpixel-panel-origin"><div class="chromeperfectpixel-origin-coords"><h2 class="chromeperfectpixel-title">Положение:</h2><div class="chromeperfectpixel-origin-buttons"><div class="chromeperfectpixel-origin-row"><span class="chromeperfectpixel-button-coords"><button class="chromeperfectpixel-button" title="Hotkey: ↑"><svg width="9px" height="6px" viewBox="0 0 9 6" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000" fill-rule="nonzero"><g id="arrow-up" transform="translate(-70.000000, -149.000000)"><path d="M72.020079,152.10105 C71.7673751,151.845794 71.7673751,151.433133 72.0203292,151.177624 L75.5551005,147.61376 C75.8099225,147.356365 76.2250678,147.356365 76.4798897,147.61376 C76.7325936,147.869017 76.7325936,148.281677 76.4798897,148.536934 L73.4083854,151.639464 L76.4798897,154.741993 C76.7325936,154.99725 76.7325936,155.40991 76.4798897,155.665167 C76.3558263,155.790483 76.1923846,155.858214 76.0174951,155.858214 C75.8426764,155.858214 75.6792962,155.790538 75.5552511,155.665319 L72.020079,152.10105 Z M72.5649305,151.561147 C72.6084018,151.605057 72.6084018,151.67387 72.5651807,151.717527 L72.6426075,151.639463 L72.5649305,151.561147 Z" id="Shape-Copy-44" transform="translate(74.250000, 151.639464) rotate(90.000000) translate(-74.250000, -151.639464) "></path></g></svg></button></span></div><div class="chromeperfectpixel-origin-row"><span class="chromeperfectpixel-button-coords"><button class="chromeperfectpixel-button" title="Hotkey: ←"><svg width="5px" height="9px" viewBox="0 0 5 9" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000" fill-rule="nonzero"><g id="arrow-left" transform="translate(-38.000000, -181.000000)"><path d="M38.270079,185.85105 C38.0173751,185.595794 38.0173751,185.183133 38.2703292,184.927624 L41.8051005,181.36376 C42.0599225,181.106365 42.4750678,181.106365 42.7298897,181.36376 C42.9825936,181.619017 42.9825936,182.031677 42.7298897,182.286934 L39.6583854,185.389464 L42.7298897,188.491993 C42.9825936,188.74725 42.9825936,189.15991 42.7298897,189.415167 C42.6058263,189.540483 42.4423846,189.608214 42.2674951,189.608214 C42.0926764,189.608214 41.9292962,189.540538 41.8052511,189.415319 L38.270079,185.85105 Z M38.8149305,185.311147 C38.8584018,185.355057 38.8584018,185.42387 38.8151807,185.467527 L38.8926075,185.389463 L38.8149305,185.311147 Z" id="Shape-Copy-43"></path></g></svg></button></span><span class="chromeperfectpixel-button-coords"><button class="chromeperfectpixel-button-center chromeperfectpixel-button" title="Center layer horizontally"><svg width="9px" height="9px" viewBox="0 0 9 9" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="transparent" stroke="#000"><g id="center" transform="translate(-95.000000, -161.000000)"><rect id="Rectangle" x="95.421875" y="163.421875" width="7.59375" height="4.21875"></rect><rect id="Rectangle" x="99" y="161" width="0.25" height="8.4375"></rect></g></svg></button></span><span class="chromeperfectpixel-button-coords"><button class="chromeperfectpixel-button" title="Hotkey: ↓"><svg width="6px" height="9px" viewBox="0 0 6 9" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000" fill-rule="nonzero"><g id="arrow-right" transform="translate(-105.000000, -181.000000)"><path d="M105.770079,185.85105 C105.517375,185.595794 105.517375,185.183133 105.770329,184.927624 L109.305101,181.36376 C109.559922,181.106365 109.975068,181.106365 110.22989,181.36376 C110.482594,181.619017 110.482594,182.031677 110.22989,182.286934 L107.158385,185.389464 L110.22989,188.491993 C110.482594,188.74725 110.482594,189.15991 110.22989,189.415167 C110.105826,189.540483 109.942385,189.608214 109.767495,189.608214 C109.592676,189.608214 109.429296,189.540538 109.305251,189.415319 L105.770079,185.85105 Z M106.314931,185.311147 C106.358402,185.355057 106.358402,185.42387 106.315181,185.467527 L106.392608,185.389463 L106.314931,185.311147 Z" id="Shape-Copy-46" transform="translate(108.000000, 185.389464) scale(-1, 1) translate(-108.000000, -185.389464) "></path></g></svg></button></span></div><div class="chromeperfectpixel-origin-row"><span class="chromeperfectpixel-button-coords"><button class="chromeperfectpixel-button" title="Hotkey: ↓"><svg width="9px" height="6px" viewBox="0 0 9 6" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000" fill-rule="nonzero"><g id="arrow-down" transform="translate(-70.000000, -216.000000)"><path d="M72.020079,219.60105 C71.7673751,219.345794 71.7673751,218.933133 72.0203292,218.677624 L75.5551005,215.11376 C75.8099225,214.856365 76.2250678,214.856365 76.4798897,215.11376 C76.7325936,215.369017 76.7325936,215.781677 76.4798897,216.036934 L73.4083854,219.139464 L76.4798897,222.241993 C76.7325936,222.49725 76.7325936,222.90991 76.4798897,223.165167 C76.3558263,223.290483 76.1923846,223.358214 76.0174951,223.358214 C75.8426764,223.358214 75.6792962,223.290538 75.5552511,223.165319 L72.020079,219.60105 Z M72.5649305,219.061147 C72.6084018,219.105057 72.6084018,219.17387 72.5651807,219.217527 L72.6426075,219.139463 L72.5649305,219.061147 Z" id="Shape-Copy-47" transform="translate(74.250000, 219.139464) scale(1, -1) rotate(90.000000) translate(-74.250000, -219.139464) "></path></g></svg></button></span></div></div></div><div class="chromeperfectpixel-origin-inputs"><h2 class="chromeperfectpixel-title chromeperfectpixel-title-dark">Сброс</h2><div class="chromeperfectpixel-origin-column"><div class="chromeperfectpixel-origin-row"><div class="chromeperfectpixel-input"><input type="text" data-axis="x" size="2" maxlength="6" value="-1475"><label class="chromeperfectpixel-input-label">X</label></div></div><div class="chromeperfectpixel-origin-row"><div class="chromeperfectpixel-input"><input type="text" data-axis="y" size="2" maxlength="6" value="19"><label class="chromeperfectpixel-input-label">Y</label></div></div><div class="chromeperfectpixel-origin-row"><div class="chromeperfectpixel-input chromeperfectpixel-input-number"><input type="text" value=""><div class="rc-input-number"><div class="rc-input-number-handler-wrap"><span unselectable="unselectable" role="button" aria-label="Increase Value" aria-disabled="false" class="rc-input-number-handler rc-input-number-handler-up "><span unselectable="unselectable" class="rc-input-number-handler-up-inner"></span></span><span unselectable="unselectable" role="button" aria-label="Decrease Value" aria-disabled="false" class="rc-input-number-handler rc-input-number-handler-down "><span unselectable="unselectable" class="rc-input-number-handler-down-inner"></span></span></div><div class="rc-input-number-input-wrap" role="spinbutton" aria-valuemin="0.1" aria-valuemax="10" aria-valuenow="1"><input class="rc-input-number-input" autocomplete="off" max="10" min="0.1" step="0.1" value="1.0"></div></div><label class="chromeperfectpixel-input-label">↑</label></div></div></div></div></div><div class="chromeperfectpixel-section-opacity"><div class="chromeperfectpixel-section-opacity__titles"><h2 class="chromeperfectpixel-title">Прозрачность:</h2><h2 class="chromeperfectpixel-title chromeperfectpixel-title-dark">30%</h2></div><div aria-disabled="false" class="chromeperfectpixel-opacity"><span class="chromeperfectpixel-opacity__invisible"><span class="chromeperfectpixel-opacity__invisible">0</span></span><div class="chromeperfectpixel-opacity__track chromeperfectpixel-opacity__track--background"><div class="chromeperfectpixel-opacity__track chromeperfectpixel-opacity__track--active" style="left: 0%; width: 30%;"></div><span class="chromeperfectpixel-opacity__slider-container" style="position: absolute; left: 30%;"><span class="chromeperfectpixel-opacity--invisible"><span class="chromeperfectpixel-opacity__invisible">0.29999999999999966</span></span><div aria-valuemax="1" aria-valuemin="0" aria-valuenow="0.29999999999999966" class="chromeperfectpixel-opacity__slider" draggable="false" role="slider" tabindex="0"></div></span></div><span class="chromeperfectpixel-opacity__invisible"><span class="chromeperfectpixel-opacity__invisible">1</span></span></div><div class="chromeperfectpixel-initial-block"></div></div></div><div class="chromeperfectpixel-panel-section chromeperfectpixel-panel-section--layers"><h2 class="chromeperfectpixel-title">Слои:</h2><div class="chromeperfectpixel-dropdown"><div class="chromeperfectpixel-dropdown-button"><h2 class="chromeperfectpixel-title chromeperfectpixel-title-dark">Загрузить</h2><span class="chromeperfectpixel-dropdown-arrow"><svg width="9px" height="6px" viewBox="0 0 9 6" version="1.1" xmlns="http://www.w3.org/2000/svg" fill-rule="nonzero"><g id="Default---2+-layers-" transform="translate(-70.000000, -216.000000)"><path d="M72.020079,219.60105 C71.7673751,219.345794 71.7673751,218.933133 72.0203292,218.677624 L75.5551005,215.11376 C75.8099225,214.856365 76.2250678,214.856365 76.4798897,215.11376 C76.7325936,215.369017 76.7325936,215.781677 76.4798897,216.036934 L73.4083854,219.139464 L76.4798897,222.241993 C76.7325936,222.49725 76.7325936,222.90991 76.4798897,223.165167 C76.3558263,223.290483 76.1923846,223.358214 76.0174951,223.358214 C75.8426764,223.358214 75.6792962,223.290538 75.5552511,223.165319 L72.020079,219.60105 Z M72.5649305,219.061147 C72.6084018,219.105057 72.6084018,219.17387 72.5651807,219.217527 L72.6426075,219.139463 L72.5649305,219.061147 Z" id="Shape-Copy-47" transform="translate(74.250000, 219.139464) scale(1, -1) rotate(90.000000) translate(-74.250000, -219.139464) "></path></g></svg></span></div><div class="chromeperfectpixel-dropdown-body"><div class="chromeperfectpixel-dropdown-content"><ul><li>Загрузить</li><li>Вставить с URL</li><li>Вставить из буфера обмена</li></ul></div></div></div><div class="chromeperfectpixel-layers"><div class="chromeperfectpixel-layer chromeperfectpixel-layer--active" title="Макет.jpg"><label class="chromeperfectpixel-layer-img-container"><img class="chromeperfectpixel-layer-img" src="blob:http://localhost:3000/b528e00a-3e80-463a-b47b-26b32386051d" alt=""><input type="radio" name="chromeperfectpixel-selectedLayer" checked=""><div class="chromeperfectpixel-layer-name">Макет.jpg</div></label><button class="chromeperfectpixel-delete chromeperfectpixel-delete-shown chromeperfectpixel-button"></button></div><div class="chromeperfectpixel-layer chromeperfectpixel-layer--new">Добавить слой</div></div></div><div class="chromeperfectpixel-panel-ads"><h2 class="chromeperfectpixel-title">При поддержке:</h2><h2 class="chromeperfectpixel-title chromeperfectpixel-title-dark chromeperfectpixel-title--disable-ads">Обновить до PRO</h2><div class="chromeperfectpixel-panel-ads-container"><iframe name="chromeperfectpixel-ad-window" sandbox="allow-scripts allow-popups" referrerpolicy="no-referrer" src="./Repair Design_files/saved_resource(1).html"></iframe></div></div></div></div><span class="chromeperfectpixel-fileUploader-container"><input type="file" accept="image/*" multiple="" class="chromeperfectpixel-fileUploader"></span></div></div></div></div><div id="chromeperfectpixel-portal_2c4fc474-88d3-45ae-acfa-9c08465aaaf2" class="chromeperfectpixel-portal" style="animation: initial; transition: initial; color: initial; font: initial; font-feature-settings: initial; font-kerning: initial; font-optical-sizing: initial; font-variation-settings: initial; text-orientation: initial; text-rendering: initial; -webkit-font-smoothing: initial; -webkit-locale: initial; -webkit-text-orientation: initial; -webkit-writing-mode: initial; writing-mode: initial; zoom: initial; place-content: initial; place-items: initial; place-self: initial; alignment-baseline: initial; backdrop-filter: initial; backface-visibility: initial; background: initial; background-blend-mode: initial; baseline-shift: initial; block-size: initial; border-block-end: initial; border-block-start: initial; border: initial; border-radius: initial; border-collapse: initial; border-inline-end: initial; border-inline-start: initial; bottom: initial; box-shadow: initial; box-sizing: initial; break-after: initial; break-before: initial; break-inside: initial; buffered-rendering: initial; caption-side: initial; caret-color: initial; clear: initial; clip: initial; clip-path: initial; clip-rule: initial; color-interpolation: initial; color-interpolation-filters: initial; color-rendering: initial; columns: initial; column-fill: initial; gap: initial; column-rule: initial; column-span: initial; contain: initial; content: initial; counter-increment: initial; counter-reset: initial; cursor: initial; cx: initial; cy: initial; d: initial; display: initial; dominant-baseline: initial; empty-cells: initial; fill: initial; fill-opacity: initial; fill-rule: initial; filter: initial; flex: initial; flex-flow: initial; float: initial; flood-color: initial; flood-opacity: initial; grid: initial; grid-area: initial; height: initial; hyphens: initial; image-rendering: initial; inline-size: initial; isolation: initial; left: initial; letter-spacing: initial; lighting-color: initial; line-break: initial; list-style: initial; margin-block-end: initial; margin-block-start: initial; margin: initial; margin-inline-end: initial; margin-inline-start: initial; marker: initial; mask: initial; mask-type: initial; max-block-size: initial; max-height: initial; max-inline-size: initial; max-width: initial; min-block-size: initial; min-height: initial; min-inline-size: initial; min-width: initial; mix-blend-mode: initial; object-fit: initial; object-position: initial; offset: initial; opacity: initial; order: initial; orphans: initial; outline: initial; outline-offset: initial; overflow-anchor: initial; overflow-wrap: initial; overflow: initial; overscroll-behavior-block: initial; overscroll-behavior-inline: initial; overscroll-behavior: initial; padding-block-end: initial; padding-block-start: initial; padding: initial; padding-inline-end: initial; padding-inline-start: initial; page: initial; paint-order: initial; perspective: initial; perspective-origin: initial; pointer-events: initial; position: initial; quotes: initial; r: initial; resize: initial; right: initial; rx: initial; ry: initial; scroll-behavior: initial; scroll-margin-block: initial; scroll-margin: initial; scroll-margin-inline: initial; scroll-padding-block: initial; scroll-padding: initial; scroll-padding-inline: initial; scroll-snap-align: initial; scroll-snap-stop: initial; scroll-snap-type: initial; shape-image-threshold: initial; shape-margin: initial; shape-outside: initial; shape-rendering: initial; size: initial; speak: initial; stop-color: initial; stop-opacity: initial; stroke: initial; stroke-dasharray: initial; stroke-dashoffset: initial; stroke-linecap: initial; stroke-linejoin: initial; stroke-miterlimit: initial; stroke-opacity: initial; stroke-width: initial; tab-size: initial; table-layout: initial; text-align: initial; text-align-last: initial; text-anchor: initial; text-combine-upright: initial; text-decoration: initial; text-decoration-skip-ink: initial; text-indent: initial; text-overflow: initial; text-shadow: initial; text-size-adjust: initial; text-transform: initial; text-underline-position: initial; top: initial; touch-action: initial; transform: initial; transform-box: initial; transform-origin: initial; transform-style: initial; user-select: initial; vector-effect: initial; vertical-align: initial; visibility: initial; -webkit-app-region: initial; -webkit-appearance: initial; border-spacing: initial; -webkit-border-image: initial; -webkit-box-align: initial; -webkit-box-decoration-break: initial; -webkit-box-direction: initial; -webkit-box-flex: initial; -webkit-box-ordinal-group: initial; -webkit-box-orient: initial; -webkit-box-pack: initial; -webkit-box-reflect: initial; -webkit-font-size-delta: initial; -webkit-highlight: initial; -webkit-hyphenate-character: initial; -webkit-line-break: initial; -webkit-line-clamp: initial; -webkit-margin-collapse: initial; -webkit-margin-bottom-collapse: initial; -webkit-margin-top-collapse: initial; -webkit-mask-box-image: initial; -webkit-mask: initial; -webkit-mask-composite: initial; -webkit-perspective-origin-x: initial; -webkit-perspective-origin-y: initial; -webkit-print-color-adjust: initial; -webkit-rtl-ordering: initial; -webkit-ruby-position: initial; -webkit-tap-highlight-color: initial; -webkit-text-combine: initial; -webkit-text-decorations-in-effect: initial; -webkit-text-emphasis: initial; -webkit-text-emphasis-position: initial; -webkit-text-fill-color: initial; -webkit-text-security: initial; -webkit-text-stroke: initial; -webkit-transform-origin-x: initial; -webkit-transform-origin-y: initial; -webkit-transform-origin-z: initial; -webkit-user-drag: initial; -webkit-user-modify: initial; white-space: initial; widows: initial; width: initial; will-change: initial; word-break: initial; word-spacing: initial; x: initial; y: initial; z-index: 2147483646 !important;"><div class="chromeperfectpixel-overlay-container" id="chromeperfectpixel-overlay-container" style="position: absolute; top: 19px; left: -1475px; pointer-events: auto;"><img class="chromeperfectpixel-overlay" src="blob:http://localhost:3000/f415cb25-1f3b-4681-9cc3-04f99c49aa9d" style="opacity: 0.3; width: 2425px; height: 10150px; margin: 0px; padding: 0px; pointer-events: auto; filter: invert(100%);"></div></div></body></html>
